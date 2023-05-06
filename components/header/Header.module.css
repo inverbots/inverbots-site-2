@@ -1,0 +1,41 @@
+.header{
+  box-shadow: rgba(0, 0, 0, 0.17) 0px 0px 8px;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 14px 0px;
+  position: sticky;
+  top: 0;
+}
+
+.logo_ref{
+  position: relative;
+}
+
+.logo_title{
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  background: black;
+  display: inline-block;
+  padding: 17px;
+  font-size: 32px;
+  margin: 0;
+  top: -18px;
+}
+
+.menu{
+  display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-transform: uppercase;
+    color: black;
+    max-width: 87%;
+}
+
+.menu_link a {
+  text-decoration: none;
+  columns: black;
+}
