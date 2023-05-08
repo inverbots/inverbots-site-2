@@ -6,7 +6,7 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='en, es'>
       <head>
-        <title>Inverbots | La mejor academia de trading con robots</title>
+        <title>Inverbots | La mejor academia de trading </title>
       </head>
       <body>
         <Header />

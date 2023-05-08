@@ -1,0 +1,23 @@
+.banner{
+  position: relative;
+}
+
+.title{
+  position: absolute;
+  z-index: 1;
+  color: white;
+  left: 5%;
+  top: 25%;
+  font-size: 40px;
+  display: inline-block;
+  max-width: 40%;
+  letter-spacing: -4px;
+}
+
+.featured_image{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+

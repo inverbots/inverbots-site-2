@@ -1,0 +1,16 @@
+.content{
+  text-align: right;
+}
+
+.content_shared{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+  color: black;
+}
+
+.icon_social a{
+  color: black;
+}

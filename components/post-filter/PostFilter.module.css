@@ -1,11 +1,7 @@
-.contents{
+.contentFilter{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap:50px 40px;
+  gap: 50px;
   max-width: 90%;
   margin: auto;
-}
-
-.post_card{
-  position: relative;
 }

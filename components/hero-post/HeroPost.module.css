@@ -1,0 +1,46 @@
+.banner{
+  position: relative;
+}
+
+.title{
+  position: absolute;
+  z-index: 2;
+  color: white;
+  left: 10%;
+  top: 25%;
+  font-size: 40px;
+  display: inline-block;
+  max-width: 50%;
+  font-family: 'Century';
+}
+
+.featured_image{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/** Imagen gradient */
+.content_image {
+  position: relative;
+}
+
+.content_image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.content_image .featured_image {
+  filter: blur(10px);
+  z-index: 2;
+}
+
+

@@ -6,16 +6,16 @@ const link = [{
   route: '/'
 }, {
   label: 'Planes',
-  route: '/curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
+  route: '/promociones'
 }, {
   label: 'Resultados',
-  route: '/curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
+  route: '/planes'
 }, {
   label: 'Testimonios',
-  route: '/curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
+  route: '/testimonios'
 }, {
   label: 'Contáctenos',
-  route: '/curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
+  route: '/contacta'
 }
 
 ]
