@@ -69,13 +69,23 @@ export default async function HomePage () {
       </section>
       <section className={style.invest_robot}>
         <div className={style.info}>
-          <h2 className={style.invest_title}>
-            {seccion_invierte_con_robots.title}
-          </h2>
-          <div dangerouslySetInnerHTML={{ __html: seccion_invierte_con_robots.descripcion }} />
-          <div className={style.succes_case}>
-            <Link className={style.anchor_succes} href='/casos-de-exito/'>Casos de éxito</Link>
+          <div className={style.info_content}>
+            <h2 className={style.invest_title}>
+              {seccion_invierte_con_robots.titulo}
+            </h2>
+            <div className={style.descripcion} dangerouslySetInnerHTML={{ __html: seccion_invierte_con_robots.descripcion }} />
+            <div className={style.succes_case}>
+              <Link className={style.anchor_succes} href='/casos-de-exito/'>Casos de éxito</Link>
+            </div>
           </div>
+        </div>
+        <div className={style.imagen}>
+          <Image
+            src={seccion_invierte_con_robots.imagen}
+            alt={'Inverbots' + seccion_invierte_con_robots.titulo}
+            width={980}
+            height={750}
+          />
         </div>
       </section>
       <section className={style.information}>

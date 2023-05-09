@@ -1,0 +1,11 @@
+.content{
+  background-color: black;
+}
+
+.paragraph{
+  max-width: 90%;
+  margin: auto;
+  color: white;
+  padding: 25px 0px;
+  font-size: 12px;
+}

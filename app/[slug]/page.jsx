@@ -45,6 +45,8 @@ export default async function Post ({ params }) {
           </div>
         </>
         )
-      : null
+      : (
+        <h2>Error 500 pagina no encontrada</h2>
+        )
   )
 }

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import style from './PostFilter.module.css'
 import CardPost from '../card-post/CardPost'
+import Link from 'next/link'
 
 export default function PostFilter () {
   const [postData, setPostData] = useState([])
@@ -73,6 +74,9 @@ export default function PostFilter () {
           : (
             <h1>Cargando..</h1>
             )}
+      </div>
+      <div className={style.content_btn}>
+        <Link className={style.btn} href={'/' + filter}>APRENDER MÁS</Link>
       </div>
     </>
   )

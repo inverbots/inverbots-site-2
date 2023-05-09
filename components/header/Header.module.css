@@ -20,10 +20,21 @@
   color: white;
   background: black;
   display: inline-block;
-  padding: 17px;
+  padding: 17px 21px;
   font-size: 32px;
   margin: 0;
   top: -18px;
+  font-family: 'Century';
+  letter-spacing: 1px;
+}
+
+.logo_title:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -2px;
+  border-left: 15px solid transparent;
+  border-bottom: 24px solid #f2f2f2;
 }
 
 .menu{
