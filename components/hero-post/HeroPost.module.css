@@ -11,7 +11,7 @@
   font-size: 40px;
   display: inline-block;
   max-width: 50%;
-  font-family: 'Century';
+  font-family: 'Century' !important;
 }
 
 .featured_image{

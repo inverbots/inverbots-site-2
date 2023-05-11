@@ -4,6 +4,7 @@ import style from './page.module.css'
 import Header from '../components/header/Header'
 import Form from '@/components/form/Form'
 import Footer from '@/components/footer/Footer'
+import TextCallAction from '@/components/text-call-to-action/TextCallAction'
 
 export default function RootLayout ({ children }) {
   return (
@@ -15,13 +16,12 @@ export default function RootLayout ({ children }) {
         <Header />
         {children}
         <section className={style.content_form}>
-          <div className={style.form_text}>
-            <div className={style.form_content}>
-              <h2 className={style.form_title}>Comienza ya con</h2>
-              <h2 className={style.form_title}>robots de trading</h2>
-              <p className={style.from_description}>¡Optimiza tus operaciones de trading con nuestros robots! Deja tus datos en el formulario para más información. </p>
-            </div>
-          </div>
+          <TextCallAction
+            firstTitle='Comienza ya con'
+            secondTitle='robots de trading'
+            description='¡Optimiza tus operaciones de trading con nuestros robots!
+            Deja tus datos en el formulario para más información.'
+          />
           <Form />
         </section>
         <Footer />

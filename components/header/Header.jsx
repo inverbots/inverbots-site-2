@@ -1,26 +1,14 @@
 import Link from 'next/link'
 import styles from './Header.module.css'
 
-const link = [{
-  label: 'Trading',
-  route: '/'
-}, {
-  label: 'Planes',
-  route: '/promociones'
-}, {
-  label: 'Resultados',
-  route: '/planes'
-}, {
-  label: 'Testimonios',
-  route: '/testimonios'
-}, {
-  label: 'Contáctenos',
-  route: '/contacta'
+const fetchMenu = () => {
+  return fetch('https://inverbots.com/wp-json/wp/v2/menu/3337', { cache: 'no-store' })
+    .then(rest => rest.json())
 }
 
-]
+export default async function Header () {
+  const menuData = await fetchMenu()
 
-export default function Header () {
   return (
     <header className={styles.header}>
       <nav className={styles.navigation}>
@@ -28,12 +16,30 @@ export default function Header () {
           <h3 className={styles.logo_title}>INVERBOTS</h3>
         </Link>
         <ul className={styles.menu}>
-          {link.map(({ label, route }) => {
+          {menuData.map((data, key) => {
+            const { title, url, subitems } = data
+
             return (
-              <li className={styles.menu_link} key={route}>
-                <Link href={route}>
-                  {label}
+              <li className={styles.menu_link} key={key}>
+                <Link href={url}>
+                  {title}
                 </Link>
+                <ul className={styles.submenu}>
+                  {subitems
+                    ? (
+                        subitems.map((items, key) => {
+                          const { title, url } = items
+                          return (
+                            <li className={styles.submenu_link} key={key}>
+                              <Link href={url}>
+                                {title}
+                              </Link>
+                            </li>
+                          )
+                        })
+                      )
+                    : ('')}
+                </ul>
               </li>
             )
           })}

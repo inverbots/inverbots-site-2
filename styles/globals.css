@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'HYPE';
 } 
 
-*{
+span, p, label, ::placeholder, ul, li, select, button, input, a{
   font-family: 'Helvetica LT Std';
 }
 

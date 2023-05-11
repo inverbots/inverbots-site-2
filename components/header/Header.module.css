@@ -1,5 +1,8 @@
-.header{
+.header {
   box-shadow: rgba(0, 0, 0, 0.17) 0px 0px 8px;
+  background-color: white !important;
+  z-index: 2;
+  position: relative;
 }
 
 .navigation {
@@ -8,13 +11,14 @@
   padding: 14px 0px;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
-.logo_ref{
+.logo_ref {
   position: relative;
 }
 
-.logo_title{
+.logo_title {
   position: absolute;
   text-decoration: none;
   color: white;
@@ -34,19 +38,55 @@
   bottom: -1px;
   right: -2px;
   border-left: 15px solid transparent;
-  border-bottom: 24px solid #f2f2f2;
+  border-bottom: 24px solid white;
 }
 
-.menu{
+.menu {
   display: flex;
-    justify-content: space-around;
-    list-style: none;
-    text-transform: uppercase;
-    color: black;
-    max-width: 87%;
+  justify-content: space-around;
+  list-style: none;
+  text-transform: uppercase;
+  color: black;
+  max-width: 87%;
+}
+
+.menu {
+  font-size: 14px;
+}
+
+.menu_link {
+  position: relative;
 }
 
 .menu_link a {
   text-decoration: none;
   columns: black;
+}
+
+/** Sub menu */
+.submenu {
+  position: absolute;
+  z-index: 2;
+  background: white;
+  padding: 10px;
+  border-top: solid 4px;
+  top: 24px;
+  list-style: none;
+  transition: 0.35s;
+  width: 120px;
+}
+
+.submenu {
+  position: absolute;
+  z-index: 2;
+  max-height: 1000px;
+  transition: 0.35s;
+}
+
+.submenu_link {
+  margin-bottom: 8px;
+}
+
+.submenu_link a {
+  color: black;
 }

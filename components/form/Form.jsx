@@ -19,9 +19,10 @@ export default function Form () {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-
+    const dataLocation = location.href
     // send form data to server
     const formData = {
+      origin: dataLocation,
       fullName,
       whatsapp,
       selectedCountry,

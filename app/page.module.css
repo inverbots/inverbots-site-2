@@ -181,30 +181,3 @@
   margin-top: 80px;
   gap: 55px;
 }
-
-.text_form{
-  max-width: 80%;
-  margin: auto;
-}
-
-.form_text{
-  background: #D9D9D9;
-  margin: auto;
-  height: 380px;
-  display: flex;
-}
-
-.form_content{
-  max-width: 80%;
-  margin: auto;
-}
-
-.form_title{
-  margin:0px;
-  font-size: 30px;
-}
-
-.from_description{
-  max-width: 80%;
-  font-size: 18px;
-}
