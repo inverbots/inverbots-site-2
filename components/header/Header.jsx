@@ -30,7 +30,7 @@ export default async function Header () {
                         subitems.map((items, key) => {
                           const { title, url } = items
                           return (
-                            <li className={styles.submenu_link} key={key}>
+                            <li className={styles.submenu_link} key={+'-2'}>
                               <Link href={url}>
                                 {title}
                               </Link>
