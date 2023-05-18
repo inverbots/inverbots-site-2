@@ -1,8 +1,8 @@
-.hero_banner{
+.hero_banner {
   position: relative;
 }
 
-.hero_texts{
+.hero_texts {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -13,13 +13,13 @@
   margin: auto;
 }
 
-.hero_title{
+.hero_title {
   color: white;
   font-size: 48px;
   margin-bottom: 68px;
 }
 
-.hero_button{
+.hero_button {
   color: white;
   font-size: 20px;
   border: solid 3px white;
@@ -28,31 +28,31 @@
 }
 
 .hero_imagen {
-    width: 100%;
-    object-fit: cover;
-    filter: brightness(60%) grayscale(100%);
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(60%) grayscale(100%);
 }
 
 /** The process Inverbots */
-.trader_process{
+.trader_process {
   padding-top: 50px;
 }
 
-.process_title{
+.process_title {
   text-align: center;
 }
 
-.process_main{
+.process_main {
   font-size: 25px;
   margin: 0px;
 }
 
-.trader_secondary{
+.trader_secondary {
   font-size: 30px;
   margin: 0px;
 }
 
-.trader_process_grid{
+.trader_process_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 25px;
@@ -61,7 +61,7 @@
   margin-top: 50px;
 }
 
-.card_step{
+.card_step {
   display: flex;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -71,16 +71,16 @@
   height: 190px;
 }
 
-.card_info{
+.card_info {
   width: 60%;
 }
 
-.card_content{
+.card_content {
   max-width: 90%;
   margin: auto;
 }
 
-.card_number{
+.card_number {
   color: white;
   background: black;
   padding: 10px 15px;
@@ -90,12 +90,12 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.card_imagen{
+.card_imagen {
   width: 40%;
   height: 100%;
 }
 
-.card_img{
+.card_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -103,21 +103,21 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.card_title{
+.card_title {
   font-size: 18px;
   letter-spacing: -3px;
 }
 
-.card_description p{
+.card_description p {
   font-size: 14px;
 }
 
-.tarder_btn{
+.tarder_btn {
   text-align: center;
   margin: 50px 0px;
 }
 
-.btn{
+.btn {
   font-size: 21px;
   text-transform: uppercase;
   color: white;
@@ -130,50 +130,51 @@
 }
 
 /** Succes case */
-.invest_robot{
+.invest_robot {
   display: grid;
   grid-template-columns: 40% 60%;
   margin-bottom: 50px;
 }
 
-.info{
+.info {
   background: black;
   color: white;
   display: flex;
 }
 
-.info_content{
+.info_content {
   max-width: 80%;
   margin: auto;
 }
 
-.descripcion p{
+.descripcion p {
   font-size: 14px;
 }
 
-.anchor_succes{
+.anchor_succes {
   font-size: 18px;
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.imagen img{
+.imagen img {
   max-height: 418px;
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 
 
 /** More post */
-.information_title{
+.information_title {
   text-align: center;
   max-width: 60%;
   margin: auto;
 }
 
 /** ====== Form =======00 */
-.content_form{
+.content_form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;

@@ -61,7 +61,7 @@
 
 .menu_link a {
   text-decoration: none;
-  columns: black;
+  color: black;
 }
 
 /** Sub menu */
@@ -77,22 +77,23 @@
   transition: 0.35s;
   width: 120px;
   overflow: hidden;
+  background-color: black;
 }
-
-
 
 .menu_link:hover .submenu {
   padding: 10px;
   z-index: 2;
   max-height: 1000px;
-  transition: 0.35s;
+  transition: 0.35s ease-in;
 }
 
 .submenu_link {
   margin-bottom: 8px;
+  border-bottom: solid 1px white;
+  padding-bottom: 5px;
 }
 
 .submenu_link a {
-  color: black;
+  color: white;
   font-size: 12px;
 }

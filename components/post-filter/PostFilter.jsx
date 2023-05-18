@@ -16,6 +16,7 @@ export default function PostFilter () {
         ? 'https://inverbots.com/wp-json/wp/v2/publicaciones?per_page=4'
         : `https://inverbots.com/wp-json/wp/v2/publicaciones?per_page=4&category=${filter}`
       const response = await fetch(url)
+      console.log(response.ok)
       const data = await response.json()
       setPostData(data)
     }
