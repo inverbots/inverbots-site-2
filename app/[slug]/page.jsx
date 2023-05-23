@@ -16,6 +16,10 @@ export default async function Post ({ params }) {
   const { slug } = params
   const post = await fetchSinglePost(slug)
 
+  const postData = post[0]?.content.rendered
+  const regex = /youtube\.com\/embed\//
+  const hasYoutubeIframe = regex.test(postData)
+
   return (
     post.length > 0
       ? (
@@ -30,13 +34,15 @@ export default async function Post ({ params }) {
               title={post[0].title.rendered}
             />
             <div className={style.content_image}>
-              <Image
-                src={post[0].uagb_featured_image_src.large[0]}
-                alt={post[0].title.rendered}
-                width={1440}
-                height={450}
-                className={style.post_imagen}
-              />
+              {!hasYoutubeIframe && (
+                <Image
+                  src={post[0].uagb_featured_image_src.large[0]}
+                  alt={post[0].title.rendered}
+                  width={1440}
+                  height={450}
+                  className={style.post_imagen}
+                />
+              )}
             </div>
             <div className={style.element} dangerouslySetInnerHTML={{ __html: post[0].content.rendered }} />
           </article>
@@ -46,7 +52,7 @@ export default async function Post ({ params }) {
         </>
         )
       : (
-        <h2>Error 500 pagina no encontrada</h2>
+        <h2>Página no encontrada</h2>
         )
   )
 }

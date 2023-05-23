@@ -1,0 +1,44 @@
+.content {
+  background-color: black;
+  padding: 100px 0px;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  color: white;
+}
+
+.content_slider {
+  max-width: 85%;
+  margin: auto;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 4%;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial_text {
+  text-align: center;
+  font-size: 25px;
+}
+
+.testimonial_name {
+  text-align: right;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: black;
+  background: white;
+  padding: 9px 21px;
+  border-radius: 38px;
+  position: relative;
+  z-index: 10;
+  left: 12px;
+  top: 47px;
+}

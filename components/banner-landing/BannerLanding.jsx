@@ -7,7 +7,7 @@ export default function BannerLanding (props) {
       <div className={style.hero__content}>
         <div className={style.info}>
           <h1 className={style.main_title}>{props.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: props.description }} className={style.main_description} />
+          <div className={style.main_text_content} dangerouslySetInnerHTML={{ __html: props.description }} />
           <VibrationBtn
             className={style.main_btn}
             text={props.textCallToAction}

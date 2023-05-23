@@ -1,5 +1,12 @@
 /* eslint-disable camelcase */
 import BannerLanding from '@/components/banner-landing/BannerLanding'
+import Form from '@/components/form/Form'
+import Caracteristics from '@/components/caracteristics/Caracteristic'
+import Testimonials from '@/components/testimonios/Testimonios'
+import style from './page.module.css'
+import Addinfo from '@/components/add-info/AddInfo'
+import VibrationBtn from '@/components/vibration-btn/VibrationBtn'
+import MoreInformation from '@/components/more-info/MoreInfor'
 
 const fetchSinglePage = (slug) => {
   return fetch(`https://inverbots.com/wp-json/wp/v2/get_pages?slug=${slug}`, { cache: 'no-store' })
@@ -8,9 +15,7 @@ const fetchSinglePage = (slug) => {
 
 export default async function CursoGratis () {
   const dataPage = await fetchSinglePage('aprende-a-invertir-con-ayuda-de-robots')
-  const { featured_image, hero_banner, formulario, testimonios, informacion_adicional_inverbots } = dataPage[0]
-
-  console.log(formulario)
+  const { featured_image, hero_banner, Incluye_programa, testimonios, informacion_adicional_inverbots, conoce_mas_de_inverbots__videos__ } = dataPage[0]
 
   return (
     <>
@@ -22,6 +27,36 @@ export default async function CursoGratis () {
         textCallToAction={hero_banner.texto_boton_llamado_a_la_accion}
         video={hero_banner.video_youtube}
       />
+      <section className={style.form_section}>
+        <h2 className={style.section_title}>!Accede a nuestro curso gratuito y recibrr más información</h2>
+        <div className={style.form_content}>
+          <div className={style.forms}>
+            <Form />
+          </div>
+          <div className={style.caracteristics}>
+            <Caracteristics data={Incluye_programa} />
+          </div>
+        </div>
+      </section>
+      <section className={style.Testimonials}>
+        <Testimonials data={testimonios} />
+      </section>
+      <section className={style.information}>
+        <Addinfo
+          className={style.component}
+          data={informacion_adicional_inverbots}
+        />
+      </section>
+      <div className={style.btn_content}>
+        <VibrationBtn
+          className={style.main_btn}
+          text='QUIERO ASESORÍA PERSONALIZADA'
+          url='#'
+        />
+      </div>
+      <section className={style.more_info}>
+        <MoreInformation data={conoce_mas_de_inverbots__videos__} />
+      </section>
     </>
   )
 }

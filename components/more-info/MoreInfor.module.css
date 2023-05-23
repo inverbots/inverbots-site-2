@@ -1,0 +1,24 @@
+.more_info_content {
+  padding-top: 100px;
+}
+
+.title_section {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 50px;
+}
+
+.contents_video {
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: 47% 47%;
+  gap: 6%;
+}
+
+.contents_video iframe {
+  max-width: 100%;
+}

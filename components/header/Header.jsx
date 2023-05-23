@@ -24,22 +24,21 @@ export default async function Header () {
                 <Link href={url}>
                   {title}
                 </Link>
-                <ul className={styles.submenu}>
-                  {subitems
-                    ? (
-                        subitems.map((items, key) => {
-                          const { title, url } = items
-                          return (
-                            <li className={styles.submenu_link} key={key + '-2'}>
-                              <Link href={url}>
-                                {title}
-                              </Link>
-                            </li>
-                          )
-                        })
+                {subitems &&
+                  <ul className={styles.submenu}>
+                    (
+                    {subitems.map((items, key) => {
+                      const { title, url } = items
+                      return (
+                        <li className={styles.submenu_link} key={key + '-2'}>
+                          <Link href={url}>
+                            {title}
+                          </Link>
+                        </li>
                       )
-                    : ('')}
-                </ul>
+                    })}
+                    )
+                  </ul>}
               </li>
             )
           })}

@@ -1,0 +1,37 @@
+.anchor {
+  background-color: white;
+  max-width: 85%;
+  margin: auto;
+  padding: 15px 0px;
+  text-transform: uppercase;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  position: relative;
+  top: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: black;
+  text-decoration: none;
+  padding: 15px 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255);
+  }
+
+  70% {
+    transform: scale(1.5);
+    box-shadow: 0 0 0 10px rgba(16, 25, 31, 0);
+  }
+
+  100% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255);
+  }
+}

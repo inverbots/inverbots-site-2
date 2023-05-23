@@ -1,18 +1,17 @@
-.content_post{
+.content_post {
   max-width: 80%;
   margin: auto;
 }
 
-.shared_content{
+.shared_content {
   text-align: right;
 }
 
-.content_image{
-  max-height: 350px;
+.content_image {
   overflow: hidden;
 }
 
-.post_imagen{
+.post_imagen {
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -22,6 +21,6 @@
   width: 100%;
 }
 
-.content_post p{
+.content_post p {
   font-size: 20px;
 }

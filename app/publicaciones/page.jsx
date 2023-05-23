@@ -12,8 +12,8 @@ export default async function Publicaciones () {
   return (
     <>
       <section className={style.contents}>
-        {posts.slice(0, 12).map(post => (
-          <article key={post.id} className={style.post_card}>
+        {posts.slice(0, 12).map((post, key) => (
+          <article key={key} className={style.post_card}>
             <CardPost
               title={post.title}
               date={post.date}

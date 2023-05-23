@@ -15,6 +15,7 @@ export default function Form () {
     fetch('https://restcountries.com/v3.1/all')
       .then((response) => response.json())
       .then((data) => setCountries(data))
+      .catch((error) => console.log(error))
   }, [])
 
   const handleSubmit = (event) => {
@@ -84,6 +85,7 @@ export default function Form () {
         <input
           type='checkbox'
           id='acceptTerms'
+          className={style.acceptTerms}
           checked={acceptTerms}
           onChange={(event) => setAcceptTerms(event.target.checked)}
           required

@@ -3,7 +3,7 @@
 }
 
 .form input,
-.form select{
+.form select {
   border: none;
   background: transparent;
   font-size: 22px;
@@ -13,19 +13,24 @@
   color: black;
 }
 
-.form input::placeholder{
+.form input::placeholder {
   color: #000;
 }
 
-.terms{
+.terms {
   font-size: 14px;
-  padding: 20px 0px;  
+  padding: 20px 0px;
 }
 
-.buton{
+.buton {
   font-size: 18px;
   background-color: #000;
   color: white;
   border: none;
   padding: 9px 28px;
+}
+
+
+.acceptTerms {
+  width: 22px !important;
 }
