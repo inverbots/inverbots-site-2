@@ -80,3 +80,21 @@ body {
   margin: auto;
   box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.50);
 }
+
+/** Slider */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: black;
+  background: white;
+  padding: 9px 14px;
+  border-radius: 38px;
+  position: relative;
+  z-index: 10;
+  left: 12px;
+  top: 47px;
+  font-size: 19px !important;
+}
+
+.swiper-button-next:after {
+  left: -23px;
+}

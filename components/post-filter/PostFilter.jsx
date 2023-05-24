@@ -60,8 +60,8 @@ export default function PostFilter () {
       <div className={style.contentFilter}>
         {isLoading
           ? (
-              postData.slice(0, 12).map(post => (
-                <article key={post.id} className={style.post_card}>
+              postData.slice(0, 12).map((post, key) => (
+                <article key={key} className={style.post_card}>
                   <CardPost
                     title={post.title}
                     date={post.date}

@@ -26,7 +26,6 @@ export default async function Header () {
                 </Link>
                 {subitems &&
                   <ul className={styles.submenu}>
-                    (
                     {subitems.map((items, key) => {
                       const { title, url } = items
                       return (
@@ -37,7 +36,6 @@ export default async function Header () {
                         </li>
                       )
                     })}
-                    )
                   </ul>}
               </li>
             )

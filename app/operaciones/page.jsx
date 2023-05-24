@@ -1,8 +1,8 @@
-import CardPost from '@/components/card-post/CardPost'
+import CardPost2 from '@/components/card-post2/CardPost2'
 import style from './page.module.css'
 
 const fetchPost = () => {
-  return fetch('https://inverbots.com/wp-json/wp/v2/publicaciones?category=estrategias', { cache: 'no-store' })
+  return fetch('https://inverbots.com/wp-json/wp/v2/publicaciones?category=operaciones', { cache: 'no-store' })
     .then(rest => rest.json())
 }
 
@@ -14,7 +14,7 @@ export default async function Publicaciones () {
       <section className={style.contents}>
         {posts.slice(0, 12).map((post, key) => (
           <article key={key} className={style.post_card}>
-            <CardPost
+            <CardPost2
               title={post.title}
               date={post.date}
               image={post.featured_image}

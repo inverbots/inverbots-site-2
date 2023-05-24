@@ -17,7 +17,6 @@ export default function Testimonials (props) {
         pagination={{
           dynamicBullets: true
         }}
-        spaceBetween={50}
         loop
         navigation
         modules={[Navigation, Pagination]}

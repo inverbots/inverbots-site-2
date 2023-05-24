@@ -15,8 +15,7 @@
 }
 
 .testimonial {
-  display: grid;
-  grid-template-columns: 48% 48%;
+  display: flex;
   gap: 4%;
   justify-content: center;
   align-items: center;
@@ -29,16 +28,4 @@
 
 .testimonial_name {
   text-align: right;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  color: black;
-  background: white;
-  padding: 9px 21px;
-  border-radius: 38px;
-  position: relative;
-  z-index: 10;
-  left: 12px;
-  top: 47px;
 }

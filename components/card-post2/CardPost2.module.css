@@ -1,0 +1,81 @@
+.content_card {
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  transition: 0.35s;
+  position: relative;
+  background-color: white;
+}
+
+.content_card:hover {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.35s;
+}
+
+.content_card img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.content_image {
+  position: relative;
+}
+
+.body_card {
+  padding: 0px 20px;
+  padding-bottom: 22px;
+  margin-top: 16px;
+}
+
+.card_to_instagram {
+  text-align: center;
+  color: #35B1F6;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.date_post {
+  position: absolute;
+  top: 8px;
+  z-index: 1;
+  color: white;
+  background: black;
+  padding: 6px 17px;
+  border-radius: 21px;
+  font-size: 10px;
+}
+
+.card_title {
+  margin: 9px 0px;
+  font-size: 16px;
+  font-family: 'Century';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.excerpt_text {
+  font-size: 14px;
+  color: #1C2B33;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.card_footer {
+  height: 22px;
+  width: 100%;
+}
+
+.card_link {
+  text-decoration: none;
+  color: #203D69;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 12px;
+  width: 80%;
+  text-align: right;
+}

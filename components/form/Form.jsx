@@ -1,6 +1,7 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import style from './Form.module.css'
+import countries from '../../services/countriesList.json'
 
 export default function Form () {
   const [fullName, setFullName] = useState('')
@@ -8,15 +9,8 @@ export default function Form () {
   const [selectedCountry, setSelectedCountry] = useState('')
   const [email, setEmail] = useState('')
   const [acceptTerms, setAcceptTerms] = useState(false)
-  const [countries, setCountries] = useState([])
 
-  // fetch countries from API on component mount
-  useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
-      .then((response) => response.json())
-      .then((data) => setCountries(data))
-      .catch((error) => console.log(error))
-  }, [])
+  console.log(countries)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -60,13 +54,13 @@ export default function Form () {
           placeholder='Seleccionar país'
           id='selectedCountry'
           value={selectedCountry}
-          onChange={(event) => setSelectedCountry(event.target.value)}
+          onChange={(event) => { setSelectedCountry(event.target.value) }}
           required
         >
           <option value=''>Selecciona un país</option>
           {countries.map((country, key) => (
-            <option key={key} value={country.name.common}>
-              {country.name.common}
+            <option key={key} value={country.CountryName}>
+              {country.CountryName}
             </option>
           ))}
         </select>

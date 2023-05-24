@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default async function HeroPost (props) {
   return (
-    <div className={style.content}>
+    <div>
       <div className={style.banner}>
         <h1 className={style.title} dangerouslySetInnerHTML={{ __html: props.title }} />
         {props.featured_image && (
