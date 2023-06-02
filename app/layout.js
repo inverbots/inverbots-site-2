@@ -1,6 +1,5 @@
 import 'normalize.css'
 import '../styles/globals.css'
-import style from './page.module.css'
 import Header from '../components/header/Header'
 import Form from '@/components/form/Form'
 import Footer from '@/components/footer/Footer'
@@ -15,7 +14,7 @@ export default function RootLayout ({ children }) {
       <body>
         <Header />
         {children}
-        <section className={style.content_form}>
+        <section className='content_form'>
           <TextCallAction
             firstTitle='Comienza ya con'
             secondTitle='robots de trading'

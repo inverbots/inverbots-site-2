@@ -20,7 +20,10 @@ export default async function Header () {
             const { title, url, subitems } = data
 
             return (
-              <li className={styles.menu_link} key={key}>
+              <li
+                className={styles.menu_link}
+                key={key}
+              >
                 <Link href={url}>
                   {title}
                 </Link>

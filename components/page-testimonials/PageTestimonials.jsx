@@ -5,7 +5,7 @@ export default function PageTestimonials (props) {
   return (
     <div className={style.testimonials}>
       <div className={style.main_comment}>
-        <div dangerouslySetInnerHTML={{ __html: props.mainTestimonial.url_del_video }} />
+        <div className={style.main_video} dangerouslySetInnerHTML={{ __html: props.mainTestimonial.url_del_video }} />
         <p className={style.testimonail_text}>{props.mainTestimonial?.texto_complementario_video}</p>
       </div>
       <div className={style.testimonials_list}>

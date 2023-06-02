@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import style from './Form.module.css'
 import countries from '../../services/countriesList.json'
+import sendData from './send-data/SendData'
 
 export default function Form () {
   const [fullName, setFullName] = useState('')
@@ -10,21 +11,23 @@ export default function Form () {
   const [email, setEmail] = useState('')
   const [acceptTerms, setAcceptTerms] = useState(false)
 
-  console.log(countries)
-
   const handleSubmit = (event) => {
     event.preventDefault()
     const dataLocation = location.href
+    const urlParams = new URLSearchParams(window.location.search)
+    const origin = urlParams.get('origin')
+
     // send form data to server
     const formData = {
-      origin: dataLocation,
+      URLorigin: dataLocation,
+      origin,
       fullName,
       whatsapp,
       selectedCountry,
       email,
       acceptTerms
     }
-    console.log(formData)
+    sendData(formData)
   }
 
   return (

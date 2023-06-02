@@ -14,6 +14,7 @@ export default async function HeroPost (props) {
               width={1440}
               height={450}
               className={style.featured_image}
+              priority
             />
           </div>
         )}

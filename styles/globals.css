@@ -98,3 +98,13 @@ body {
 .swiper-button-next:after {
   left: -23px;
 }
+
+/** ====== Form layout ======= */
+.content_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  gap: 55px;
+}
