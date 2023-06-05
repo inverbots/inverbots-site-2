@@ -15,16 +15,17 @@ export default function Form () {
     event.preventDefault()
     const dataLocation = location.href
     const urlParams = new URLSearchParams(window.location.search)
-    const origin = urlParams.get('origin')
+    const path = new URL(dataLocation).pathname
+    const origin = urlParams.get('origin') ? urlParams.get('origin') : path
 
     // send form data to server
     const formData = {
-      URLorigin: dataLocation,
-      origin,
-      fullName,
-      whatsapp,
-      selectedCountry,
-      email,
+      yourName: fullName,
+      yourEmail: email,
+      country: selectedCountry,
+      celular: whatsapp,
+      origen: origin,
+      tipo: path,
       acceptTerms
     }
     sendData(formData)

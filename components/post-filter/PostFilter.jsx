@@ -13,8 +13,8 @@ export default function PostFilter () {
     const fetchDataPost = async () => {
       setIsLoading(true)
       const url = filter === 'todos'
-        ? 'https://inverbots.com/wp-json/wp/v2/publicaciones?per_page=4'
-        : `https://inverbots.com/wp-json/wp/v2/publicaciones?per_page=4&category=${filter}`
+        ? `${process.env.NEXT_PUBLIC_API_URL}/publicaciones?per_page=4`
+        : `${process.env.NEXT_PUBLIC_API_URL}/publicaciones?per_page=4&category=${filter}`
       const response = await fetch(url)
       console.log(response.ok)
       const data = await response.json()

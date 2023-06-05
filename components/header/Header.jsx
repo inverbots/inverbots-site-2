@@ -2,7 +2,7 @@ import Link from 'next/link'
 import styles from './Header.module.css'
 
 const fetchMenu = () => {
-  return fetch('https://inverbots.com/wp-json/wp/v2/menu/3337', { cache: 'no-store' })
+  return fetch(`${process.env.API_URL}/menu/3337`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 
@@ -32,7 +32,7 @@ export default async function Header () {
                     {subitems.map((items, key) => {
                       const { title, url } = items
                       return (
-                        <li className={styles.submenu_link} key={key + '-2'}>
+                        <li className={styles.submenu_link} key={key}>
                           <Link href={url}>
                             {title}
                           </Link>

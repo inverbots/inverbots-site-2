@@ -8,6 +8,7 @@
   height: 100%;
   transition: 0.35s;
   position: relative;
+  background-color: white;
 }
 
 .content_card:hover {
@@ -30,6 +31,7 @@
 .body_card {
   padding: 0px 20px;
   padding-bottom: 22px;
+  background-color: white;
 
 }
 

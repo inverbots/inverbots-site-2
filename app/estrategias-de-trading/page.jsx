@@ -2,7 +2,7 @@ import CardPost from '@/components/card-post/CardPost'
 import style from './page.module.css'
 
 const fetchPost = () => {
-  return fetch('https://inverbots.com/wp-json/wp/v2/publicaciones?category=estrategias', { cache: 'no-store' })
+  return fetch(`${process.env.API_URL}/publicaciones?category=estrategias`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

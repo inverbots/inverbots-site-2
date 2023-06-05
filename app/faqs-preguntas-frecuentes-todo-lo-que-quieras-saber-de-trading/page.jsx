@@ -3,7 +3,7 @@ import style from './page.module.css'
 import PostAccordion from '@/components/post-accordion/PostAccordion'
 
 const Postfetch = () => {
-  return fetch('https://inverbots.com/wp-json/wp/v2/publicaciones?post_type=bunch_faqs', { cache: 'no-store' })
+  return fetch(`${process.env.API_URL}/publicaciones?post_type=bunch_faqs`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

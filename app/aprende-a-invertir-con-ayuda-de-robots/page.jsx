@@ -9,7 +9,7 @@ import VibrationBtn from '@/components/vibration-btn/VibrationBtn'
 import MoreInformation from '@/components/more-info/MoreInfor'
 
 const fetchSinglePage = (slug) => {
-  return fetch(`https://inverbots.com/wp-json/wp/v2/get_pages?slug=${slug}`, { cache: 'no-store' })
+  return fetch(`${process.env.API_URL}/get_pages?slug=${slug}`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 
