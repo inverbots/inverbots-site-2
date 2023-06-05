@@ -2,7 +2,8 @@ import CardPost2 from '@/components/card-post2/CardPost2'
 import style from './page.module.css'
 
 const fetchPost = () => {
-  return fetch(`${process.env.API_URL}/publicaciones?category=operaciones`, { cache: 'no-store' })
+  // eslint-disable-next-line quotes
+  return fetch(`https://inverbots.com/wp-json/wp/v2/publicaciones?category=operaciones`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

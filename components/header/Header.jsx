@@ -2,7 +2,8 @@ import Link from 'next/link'
 import styles from './Header.module.css'
 
 const fetchMenu = () => {
-  return fetch(`${process.env.API_URL}/menu/3337`, { cache: 'no-store' })
+  // eslint-disable-next-line quotes
+  return fetch(`https://inverbots.com/wp-json/wp/v2/menu/3337`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

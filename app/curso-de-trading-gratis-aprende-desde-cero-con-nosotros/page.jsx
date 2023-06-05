@@ -5,7 +5,8 @@ import HeroPost from '@/components/hero-post/HeroPost'
 import style from './page.module.css'
 
 const fetchSinglePage = (slug) => {
-  return fetch(`${process.env.API_URL}/get_pages?slug=curso-de-trading-gratis-aprende-desde-cero-con-nosotros/`, { cache: 'no-store' })
+  // eslint-disable-next-line quotes
+  return fetch(`https://inverbots.com/wp-json/wp/v2/get_pages?slug=curso-de-trading-gratis-aprende-desde-cero-con-nosotros/`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

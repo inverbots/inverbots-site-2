@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default async function HeroBaner (props) {
   const fetchPost = () => {
-    return fetch(`${process.env.API_URL}/get_pages?slug=${props.slug}`, {
+    return fetch(`https://inverbots.com/wp-json/wp/v2/get_pages?slug=${props.slug}`, {
       next: {
         revalidate: 60
       }
