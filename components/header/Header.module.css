@@ -1,9 +1,9 @@
 .header {
   box-shadow: rgba(0, 0, 0, 0.17) 0px 0px 8px;
-  background-color: white !important;
   z-index: 4;
   position: sticky;
   top: 0;
+  background-color: #F2F2F2;
 }
 
 .navigation {
@@ -39,7 +39,7 @@
   bottom: -1px;
   right: -2px;
   border-left: 15px solid transparent;
-  border-bottom: 24px solid white;
+  border-bottom: 24px solid #F2F2F2;
 }
 
 .menu {
@@ -63,6 +63,8 @@
 .menu_link a {
   text-decoration: none;
   color: black;
+  font-weight: 900;
+  letter-spacing: 1.5px;
 }
 
 /** Sub menu */

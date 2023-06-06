@@ -49,8 +49,14 @@
   font-display: swap;
 }
 
+html {
+  background-color: white;
+}
+
 body {
   background-color: #F2F2F2;
+  max-width: 1880px;
+  margin: auto;
 }
 
 h1,
@@ -73,12 +79,6 @@ button,
 input,
 a {
   font-family: 'Helvetica LT Std';
-}
-
-body {
-  max-width: 1880px;
-  margin: auto;
-  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.50);
 }
 
 /** Slider */

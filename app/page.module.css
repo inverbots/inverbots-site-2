@@ -36,7 +36,7 @@
 
 /** The process Inverbots */
 .trader_process {
-  padding-top: 50px;
+  padding-top: 85px;
 }
 
 .process_title {
@@ -49,8 +49,9 @@
 }
 
 .trader_secondary {
-  font-size: 30px;
+  font-size: 22px;
   margin: 0px;
+  margin-top: 8px;
 }
 
 .trader_process_grid {
@@ -166,6 +167,13 @@
   object-fit: cover;
   object-position: center;
   width: 100%;
+  filter: grayscale(100%);
+  transition: 0.35s;
+}
+
+.imagen:hover img {
+  filter: grayscale(0%);
+  transition: 0.35s;
 }
 
 

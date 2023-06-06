@@ -83,7 +83,7 @@ export default async function HomePage () {
             </h2>
             <div className={style.descripcion} dangerouslySetInnerHTML={{ __html: seccion_invierte_con_robots.descripcion }} />
             <div className={style.succes_case}>
-              <Link className={style.anchor_succes} href='/casos-de-exito/'>Casos de éxito</Link>
+              <Link className={style.anchor_succes} href='/testimonios/'>Casos de éxito</Link>
             </div>
           </div>
         </div>
