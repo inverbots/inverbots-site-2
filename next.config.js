@@ -5,7 +5,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
-    domains: ['inverbots.com'],
+    domains: ['inverbots.com', 'images.unsplash.com'],
     headers: [
       {
         key: 'Access-Control-Allow-Origin',

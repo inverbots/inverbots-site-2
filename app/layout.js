@@ -1,9 +1,10 @@
 import 'normalize.css'
 import '../styles/globals.css'
-import Header from '../components/header/Header'
+import Header from '@/components/header/Header'
 import Form from '@/components/form/Form'
 import Footer from '@/components/footer/Footer'
 import TextCallAction from '@/components/text-call-to-action/TextCallAction'
+import WhatsappBtn from '@/components/whats-btn/WhatsBtn'
 
 export default function RootLayout ({ children }) {
   return (
@@ -23,6 +24,7 @@ export default function RootLayout ({ children }) {
           />
           <Form />
         </section>
+        <WhatsappBtn />
         <Footer />
       </body>
     </html>

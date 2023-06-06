@@ -1,6 +1,6 @@
 .free_curse {
   display: grid;
-  grid-template-columns: 58% 40%;
+  grid-template-columns: 55% 43%;
   gap: 32px;
   margin-top: 54px;
   margin-bottom: 53px;
@@ -23,8 +23,24 @@
   border: solid 1px rgb(0 0 0 / 43%);
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  overflow: hidden;
 }
 
+.content_form div {
+  background: transparent;
+  margin: 10px;
+  max-height: 137px;
+  max-width: 100%;
+}
+
+.content_form h2 {
+  font-size: 20px;
+}
+
+.content_form p {
+  font-size: 18px;
+}
 
 /** Hidden default form */
 .free_curse+section {

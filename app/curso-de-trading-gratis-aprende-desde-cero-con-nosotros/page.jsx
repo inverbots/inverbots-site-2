@@ -21,12 +21,16 @@ export default async function CursoGratis () {
         featured_image={featured_image}
       />
       <div className={style.free_curse}>
-        <TextCallAction
-          firstTitle='Accede a nuestro'
-          secondTitle='curso gratis'
-          description='Este curso fue construido con la finalidad de ayudar, de manera gratuita, a todas las personas interesadas por aprender sobre la negociación en los mercados financieros.'
-        />
+        <div className={style.left_column}>
+          <iframe width='100%' height='80%' src='https://www.youtube.com/embed/aEtWRCayAzw' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' />
+        </div>
         <div className={style.content_form}>
+          <TextCallAction
+            className={style.form_freecurse}
+            firstTitle='Accede a nuestro'
+            secondTitle='curso gratis'
+            description='Este curso fue construido con la finalidad de ayudar, de manera gratuita, a todas las personas interesadas por aprender sobre la negociación en los mercados financieros.'
+          />
           <Form />
         </div>
       </div>

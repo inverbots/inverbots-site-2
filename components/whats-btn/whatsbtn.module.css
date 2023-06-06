@@ -1,0 +1,16 @@
+.whatsapp_btn {
+  position: fixed;
+  top: 75%;
+  background-color: #25D366;
+  z-index: 9;
+  font-size: 40px;
+  right: 0;
+  padding: 6px 14px 6px 16px;
+  line-height: 0;
+  margin: 0;
+  border-radius: 20px 0px 0px 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.35s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
