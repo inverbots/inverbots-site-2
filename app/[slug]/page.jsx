@@ -8,7 +8,7 @@ import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
 
 const fetchSinglePost = (slug) => {
-  return fetch(`https://inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
+  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 
@@ -26,7 +26,7 @@ export default async function Post ({ params }) {
         <>
           <HeroPost
             title={post[0].title.rendered}
-            featured_image={post[0].uagb_featured_image_src.medium[0]}
+            featured_image={post[0].uagb_featured_image_src?.medium[0]}
           />
           <article className={style.content_post}>
             <Shared
@@ -36,7 +36,7 @@ export default async function Post ({ params }) {
             <div className={style.content_image}>
               {!hasYoutubeIframe && (
                 <Image
-                  src={post[0].uagb_featured_image_src.large[0]}
+                  src={post[0].uagb_featured_image_src?.large[0]}
                   alt={post[0].title.rendered}
                   width={1440}
                   height={450}
