@@ -3,7 +3,7 @@ import Menu from './Menu/Menu'
 
 const fetchMenu = () => {
   // eslint-disable-next-line quotes
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/menu/3337`, { cache: 'no-store' })
+  return fetch(`https://inverbots.com/wp-json/wp/v2/menu/3337`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

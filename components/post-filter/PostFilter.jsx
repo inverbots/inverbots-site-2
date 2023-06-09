@@ -14,8 +14,8 @@ export default function PostFilter () {
       setIsLoading(true)
       const url = filter === 'todos'
         // eslint-disable-next-line quotes
-        ? `https://administrador.inverbots.com/wp-json/wp/v2/publicaciones?per_page=4`
-        : `https://administrador.inverbots.com/wp-json/wp/v2/publicaciones?per_page=4&category=${filter}`
+        ? `https://inverbots.com/wp-json/wp/v2/publicaciones?per_page=4`
+        : `https://inverbots.com/wp-json/wp/v2/publicaciones?per_page=4&category=${filter}`
       const response = await fetch(url)
       console.log(response.ok)
       const data = await response.json()

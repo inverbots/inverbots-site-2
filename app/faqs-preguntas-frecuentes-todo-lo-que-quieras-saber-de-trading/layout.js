@@ -9,7 +9,7 @@ export default function Faq ({ children }) {
       <div className={style.hero_banner}>
         <HeroPost
           title='PREGUNTAS FRECUENTES'
-          featured_image='https://administrador.inverbots.com/wp-content/uploads/2019/10/trading.jpg'
+          featured_image='https://inverbots.com/wp-content/uploads/2019/10/trading.jpg'
         />
 
       </div>

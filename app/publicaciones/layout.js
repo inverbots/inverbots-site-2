@@ -8,7 +8,7 @@ export default function PublicationLayout ({ children }) {
       <div className={style.hero_banner}>
         <HeroPost
           title='Publicaciones recientes'
-          featured_image='https://administrador.inverbots.com/wp-content/uploads/2023/02/Logo-negro-copia.jpeg'
+          featured_image='https://inverbots.com/wp-content/uploads/2023/02/Logo-negro-copia.jpeg'
         />
       </div>
       {children}
