@@ -19,8 +19,15 @@
 
 .content_post iframe {
   width: 100%;
+  max-height: 70vh;
 }
 
 .content_post p {
   font-size: 20px;
+}
+
+@media(max-width:780px) {
+  .content_post {
+    width: 98%;
+  }
 }

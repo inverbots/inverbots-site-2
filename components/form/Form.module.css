@@ -42,7 +42,10 @@
     max-width: 90%;
     margin: auto;
     overflow: hidden;
+    min-height: 380px;
   }
+
+
 
   .content_form {
     max-height: 250px;

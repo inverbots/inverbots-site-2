@@ -78,7 +78,7 @@ export default function PostFilter () {
             )}
       </div>
       <div className={style.content_btn}>
-        <Link className={style.btn} href={'/' + filter}>APRENDER MÁS</Link>
+        <Link className={style.btn} href='/publicaciones'>APRENDER MÁS</Link>
       </div>
     </>
   )
