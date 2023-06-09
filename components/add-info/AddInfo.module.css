@@ -43,3 +43,22 @@
 .flex_reverse {
   flex-direction: row-reverse;
 }
+
+@media(max-width:780px) {
+  .contents {
+    display: block;
+  }
+
+  .left_column {
+    width: 83%;
+  }
+
+  .titulo_card {
+    font-size: 20px;
+  }
+
+  .content_text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

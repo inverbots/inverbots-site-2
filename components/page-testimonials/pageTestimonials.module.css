@@ -1,8 +1,8 @@
 .testimonials_list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-  max-width: 95%;
+  max-width: 85%;
   margin: auto;
 }
 
@@ -14,4 +14,11 @@
 .main_video iframe {
   width: 100%;
   height: 90vh
+}
+
+@media(max-width:780px) {
+  .main_video iframe {
+    width: 100%;
+    height: 50vh;
+  }
 }

@@ -46,3 +46,23 @@
 .free_curse+section {
   display: none;
 }
+
+@media(max-width:780px) {
+  .free_curse {
+    display: block;
+  }
+
+  .free_curse iframe {
+    height: 300px;
+  }
+
+  .content_form {
+    padding: 11px;
+    padding-bottom: 37px;
+  }
+
+  .content_form div {
+    max-height: 238px;
+  }
+
+}

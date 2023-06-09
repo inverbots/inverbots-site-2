@@ -29,3 +29,23 @@
 .testimonial_name {
   text-align: right;
 }
+
+@media(max-width:780px) {
+
+  .testimonial {
+    display: block;
+  }
+
+  .content {
+    padding: 26px 0px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .testimonial_video__html iframe {
+    width: 100%;
+  }
+
+}

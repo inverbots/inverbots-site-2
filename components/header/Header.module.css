@@ -6,97 +6,64 @@
   background-color: #F2F2F2;
 }
 
-.navigation {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  padding: 14px 0px;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
 
-.logo_ref {
-  position: relative;
-}
 
-.logo_title {
-  position: absolute;
-  text-decoration: none;
-  color: white;
-  background: black;
-  display: inline-block;
-  padding: 17px 21px;
-  font-size: 32px;
-  margin: 0;
-  top: -18px;
-  font-family: 'Century';
-  letter-spacing: 1px;
-}
+@media(max-width:780px) {
 
-.logo_title:after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  right: -2px;
-  border-left: 15px solid transparent;
-  border-bottom: 24px solid #F2F2F2;
-}
+  .header {
+    background: black;
+    height: 68px;
+  }
 
-.menu {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  text-transform: uppercase;
-  color: black;
-  max-width: 87%;
-}
+  .logo_title::after {
+    border-left: transparent;
+    border-bottom: transparent;
+  }
 
-.menu {
-  font-size: 14px;
-}
+  .mobil_icon {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    height: 80%;
+    width: 45px;
+  }
 
-.menu_link {
-  position: relative;
-  width: 100%;
-}
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 17px;
+    margin: 0;
+    transition: 0.3s;
+  }
 
-.menu_link a {
-  text-decoration: none;
-  color: black;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-}
+  .menu.show__menu {
+    right: -100%;
+    transition: 0.3s;
+  }
 
-/** Sub menu */
-.submenu {
-  position: absolute;
-  z-index: 2;
-  background: white;
-  padding: 0px;
-  border-top: solid 4px;
-  top: 24px;
-  list-style: none;
-  max-height: 0px;
-  transition: 0.35s;
-  width: 120px;
-  overflow: hidden;
-  background-color: black;
-}
+  .menu_link {
+    position: relative;
+    width: 100%;
+    padding: 10px 0px;
+  }
 
-.menu_link:hover .submenu {
-  padding: 10px;
-  z-index: 2;
-  max-height: 1000px;
-  transition: 0.35s ease-in;
-}
+  .menu_link a {
+    color: white;
+    font-size: 20px;
+  }
 
-.submenu_link {
-  margin-bottom: 8px;
-  border-bottom: solid 1px white;
-  padding-bottom: 5px;
-}
+  .submenu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0px !important;
+    padding-top: 16px !important;
+  }
 
-.submenu_link a {
-  color: white;
-  font-size: 12px;
 }

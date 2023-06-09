@@ -30,7 +30,7 @@ export default function Testimonials (props) {
                 <p className={style.testimonial_name}>{e.nombre_de_quien_da_el_testimonio}</p>
               </div>
               <div className={style.testimonial_video}>
-                <div dangerouslySetInnerHTML={{ __html: e.video_de_testimonio }} />
+                <div className={style.testimonial_video__html} dangerouslySetInnerHTML={{ __html: e.video_de_testimonio }} />
               </div>
             </SwiperSlide>
           )

@@ -41,3 +41,29 @@
   background: black;
   color: white;
 }
+
+@media(max-width:780px) {
+  .form_section {
+    padding: 25px 0px;
+  }
+
+  .section_title {
+    font-size: 19px;
+  }
+
+  .form_content {
+    display: block;
+  }
+
+  .forms {
+    padding: 20px 14px 18px;
+  }
+
+  .more_info {
+    max-width: 100%;
+  }
+
+  .more_info_content {
+    padding-top: 29px;
+  }
+}

@@ -183,3 +183,48 @@
   max-width: 60%;
   margin: auto;
 }
+
+@media(max-width:780px) {
+  .hero_texts {
+    max-width: 95%;
+  }
+
+  .hero_title {
+    font-size: 25px;
+  }
+
+  .trader_process {
+    padding-top: 54px;
+  }
+
+  .process_main {
+    font-size: 17px;
+  }
+
+  .trader_secondary {
+    font-size: 14px;
+  }
+
+  .trader_process_grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 17px;
+  }
+
+  .invest_robot {
+    grid-template-columns: 1fr;
+  }
+
+  .info_content {
+    margin: 20px auto;
+  }
+
+  .imagen img {
+    object-position: left;
+  }
+
+  .information_title {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+}

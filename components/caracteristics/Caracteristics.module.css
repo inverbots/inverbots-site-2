@@ -8,3 +8,9 @@
 .text {
   font-size: 22px;
 }
+
+@media(max-width:780px) {
+  .content_accordion {
+    padding: 0;
+  }
+}

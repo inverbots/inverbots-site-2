@@ -8,7 +8,7 @@ export default function LoadingPosts () {
 
   for (let i = 0; i < 12; i++) {
     loadingPosts.push(
-      <Stack spacing={1}>
+      <Stack spacing={1} key={i}>
         <Skeleton variant='rectangular' width={250} height={150} />
         <Skeleton variant='rectangular' width={250} height={180} />
       </Stack>

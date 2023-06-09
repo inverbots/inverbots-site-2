@@ -41,3 +41,20 @@
   line-height: 25px;
   text-align: center;
 }
+
+@media(max-width:780px) {
+  .hero__content {
+    display: block;
+    height: 100%;
+  }
+
+  .main_title {
+    font-size: 27px;
+  }
+
+  .video iframe {
+    height: 350px;
+    width: 100%;
+    margin-top: 48px;
+  }
+}

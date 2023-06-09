@@ -25,3 +25,10 @@
   max-width: 80%;
   font-size: 18px;
 }
+
+@media(max-width:780px) {
+  .form_title {
+    margin: 0px;
+    font-size: 23px;
+  }
+}

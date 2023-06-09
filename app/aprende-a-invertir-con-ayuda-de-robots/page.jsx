@@ -28,9 +28,9 @@ export default async function CursoGratis () {
         video={hero_banner.video_youtube}
       />
       <section className={style.form_section}>
-        <h2 className={style.section_title}>!Accede a nuestro curso gratuito y recibrr más información</h2>
+        <h2 className={style.section_title}>!Accede a nuestro curso gratuito y recibir más información</h2>
         <div className={style.form_content}>
-          <div className={style.forms}>
+          <div id='contentForm' className={style.forms}>
             <Form />
           </div>
           <div className={style.caracteristics}>

@@ -108,3 +108,9 @@ a {
   margin-top: 80px;
   gap: 55px;
 }
+
+@media(max-width:780px) {
+  .content_form {
+    grid-template-columns: 1fr;
+  }
+}

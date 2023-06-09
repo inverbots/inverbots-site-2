@@ -15,7 +15,7 @@ export default function BannerLanding (props) {
           />
         </div>
         <div className={style.video}>
-          <div dangerouslySetInnerHTML={{ __html: props.video }} />
+          <div className={style.video__html} dangerouslySetInnerHTML={{ __html: props.video }} />
         </div>
       </div>
     </section>

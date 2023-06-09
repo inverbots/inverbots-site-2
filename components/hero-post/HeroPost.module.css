@@ -1,6 +1,7 @@
 .banner {
   position: relative;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .title {
@@ -42,4 +43,11 @@
 .content_image .featured_image {
   filter: blur(10px);
   z-index: 2;
+}
+
+@media(max-width:780px) {
+  .title {
+    max-width: 100%;
+    font-size: 30px;
+  }
 }

@@ -8,7 +8,7 @@ import WhatsappBtn from '@/components/whats-btn/WhatsBtn'
 
 export default function RootLayout ({ children }) {
   return (
-    <html lang='en, es'>
+    <html lang='es'>
       <head>
         <title>Inverbots | La mejor academia de trading </title>
       </head>
