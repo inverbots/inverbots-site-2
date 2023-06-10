@@ -14,17 +14,13 @@ const nextConfig = {
       {
         key: 'Access-Control-Allow-Origin',
         value: 'http://localhost:3000/'
+      },
+      {
+        key: 'Access-Control-Allow-Origin',
+        value: 'https://inverbots.com/'
       }
     ]
   },
-  async rewrites () {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://script.google.com/macros/u/1/s/AKfycbwR0Wmj68xM8krCP8GwMNvrLt_K8WP_nbyga_ZEi2UjlLbibagZPo7UnMVRNUkCJQn_HQ/exec/:path*'
-      }
-    ]
-  }
 }
 
 module.exports = nextConfig

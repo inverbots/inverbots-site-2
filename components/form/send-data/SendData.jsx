@@ -1,20 +1,21 @@
 'use client'
 
 export default function sendData (data) {
-  console.log(JSON.stringify(data))
+  console.log(data)
+  const jsonData = JSON.stringify(data);
 
-  fetch('https://script.google.com/macros/s/AKfycbz7dDfYsBkijbv8DbuSLzGT7hh1ktdz2iFhNi1EC7zgYmtWWVZ52RsgRYuCoueoYgmsnQ/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbxcUJeqhHZwEmyX2ZdSsZzG3of-PCJkUIz7Bm2iDVdrIEEpV7KET8yzvHEFEF9AymJB1A/exec', {
     method: 'POST',
-    body: JSON.stringify(data),
-    mode: 'no-cors',
+    body: jsonData,
+    mode: 'CORS',
     headers: {
-      'Access-Control-Allow-Origin': '*'
+      "Content-Type": "application/json"
     }
-  }).then(response => {
-    response.text()
-    console.log(response)
+  }).then((res) => res.json())
+  .then((data) => {
+    console.log(data);
   })
-    .catch(error => {
-      console.log(error)
-    })
+  .catch((error) => {
+    console.log(error);
+  });
 }

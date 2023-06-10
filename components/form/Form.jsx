@@ -18,18 +18,22 @@ export default function Form () {
     const urlParams = new URLSearchParams(window.location.search)
     const path = new URL(dataLocation).pathname
     const origin = urlParams.get('origin') ? urlParams.get('origin') : path
-
+    const PageReference = document.referrer;
     // send form data to server
     const formData = {
-      yourName: fullName,
-      yourEmail: email,
-      country: selectedCountry,
-      celular: whatsapp,
-      origen: origin,
-      tipo: path,
+      YourName: fullName,
+      YourEmail: email,
+      Country: selectedCountry,
+      Celular: whatsapp,
+      Origen: origin,
+      Reference: PageReference,
+      Tipo: path,
       acceptTerms
     }
-    sendData(formData)
+
+    if (formData.acceptTerms) {
+      sendData(formData) 
+    }
   }
 
   return (
