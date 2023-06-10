@@ -6,7 +6,7 @@ import details from '../public/img/dots.png'
 import PostFilter from '@/components/post-filter/PostFilter'
 
 const fetchSinglePage = () => {
-  return fetch('https://inverbots.com/wp-json/wp/v2/get_pages?slug=home-v2', { cache: 'no-store' })
+  return fetch('https://administrador.inverbots.com/wp-json/wp/v2/get_pages?slug=home-v2', { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

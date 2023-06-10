@@ -6,7 +6,7 @@ import style from './page.module.css'
 
 const fetchSinglePage = (slug) => {
   // eslint-disable-next-line quotes
-  return fetch(`https://inverbots.com/wp-json/wp/v2/get_pages?slug=curso-de-trading-gratis-aprende-desde-cero-con-nosotros/`, { cache: 'no-store' })
+  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/get_pages?slug=curso-de-trading-gratis-aprende-desde-cero-con-nosotros/`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

@@ -3,7 +3,7 @@ import style from './page.module.css'
 
 const fetchPost = () => {
   // eslint-disable-next-line quotes
-  return fetch(`https://inverbots.com/wp-json/wp/v2/publicaciones?category=estrategias`, { cache: 'no-store' })
+  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/publicaciones?category=estrategias`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 
