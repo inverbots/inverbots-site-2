@@ -12,7 +12,7 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='es'>
       <head>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta httpEquiv="content-type" content="text/html"/>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
         <meta name='keywords' content='Inverbots, Mercado de futuros, Inversiones,Robots de traiding, Academia de trading, trader, bolsa de valores' />
         <meta name='author' content='Inverbots' />

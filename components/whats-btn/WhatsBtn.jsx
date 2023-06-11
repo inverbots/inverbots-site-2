@@ -6,8 +6,8 @@ import Link from 'next/link'
 export default function WhatsappBtn () {
   const randomSite = () => {
     const sites = [
-      'https://api.whatsapp.com/send?phone=573127887846&text=¡Hola! Estoy interesado en saber más sobre Inverbots',
-      'https://api.whatsapp.com/send?phone=573222109312&text=¡Hola! Estoy interesado en saber más sobre Inverbots'
+      'https://api.whatsapp.com/send?phone=573127887846&text=¡Hola!20%Estoy20%interesado20%en20%saber20%más20%sobre20%Inverbots',
+      'https://api.whatsapp.com/send?phone=573222109312&text=¡Hola!20%Estoy20%interesado20%en20%saber20%más20%sobre20%Inverbots'
     ]
 
     const i = parseInt(Math.random() * sites.length)
