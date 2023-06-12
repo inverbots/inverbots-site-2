@@ -3,7 +3,7 @@
 export default function sendData (data) {
   console.log(JSON.stringify(data))
 
-  fetch(process.env.NEXT_PUBLIC_SHEET_ENDPOINT, {
+  fetch('https://script.google.com/macros/s/AKfycbz7dDfYsBkijbv8DbuSLzGT7hh1ktdz2iFhNi1EC7zgYmtWWVZ52RsgRYuCoueoYgmsnQ/exec', {
     method: 'POST',
     body: JSON.stringify(data),
   }).then(response => {
