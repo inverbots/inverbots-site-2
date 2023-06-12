@@ -8,7 +8,8 @@ export default function sendData (data) {
     body: JSON.stringify(data),
   }).then(response => {
     response.text()
-    console.log(response, data)
+    const status = response.ok
+    console.log(status, response)
   })
     .catch(error => {
       console.log(error)
