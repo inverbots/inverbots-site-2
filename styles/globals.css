@@ -51,6 +51,7 @@
 
 html {
   background-color: white;
+  scroll-behavior: smooth;
 }
 
 body {

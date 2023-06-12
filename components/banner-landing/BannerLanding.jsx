@@ -1,7 +1,7 @@
 import style from './BannerLanding.module.css'
 import VibrationBtn from '../vibration-btn/VibrationBtn'
 
-export default function BannerLanding (props) {
+export default function BannerLanding(props) {
   return (
     <section className={style.hero} style={{ backgroundImage: `url(${props.background})` }}>
       <div className={style.hero__content}>

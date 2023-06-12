@@ -9,7 +9,8 @@ export default function sendData (data) {
   }).then(response => {
     response.text()
     const status = response.ok
-    console.log(status, response)
+    status ? window.location.href = '/gracias' : ''
+    // console.log(status, response)
   })
     .catch(error => {
       console.log(error)

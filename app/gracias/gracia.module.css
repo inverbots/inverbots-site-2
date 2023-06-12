@@ -1,0 +1,34 @@
+.content {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  filter: brightness(93%) grayscale(92%);
+}
+
+.text_content {
+  position: relative;
+  text-align: center;
+  background: white;
+  padding: 46px;
+  max-width: 60%;
+  margin: auto;
+}
+
+.title_content {
+  font-size: 40px;
+}
+
+.paragraph {
+  font-size: 25px;
+}
