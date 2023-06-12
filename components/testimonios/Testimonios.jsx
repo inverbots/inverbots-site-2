@@ -9,6 +9,7 @@ import 'swiper/css/pagination'
 
 export default function Testimonials (props) {
   const data = props.data
+  const slidesPerView = props.slidesPerView || 1;
 
   return (
     <div className={style.content}>
@@ -21,6 +22,7 @@ export default function Testimonials (props) {
         navigation
         modules={[Navigation, Pagination]}
         className={style.content_slider}
+        slidesPerView={slidesPerView}
       >
         {data.agregar_testimonios.map((e, key) => {
           return (
