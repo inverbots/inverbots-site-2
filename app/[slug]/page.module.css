@@ -27,7 +27,12 @@
 }
 
 @media(max-width:780px) {
+
   .content_post {
-    width: 98%;
+    max-width: 98%;
+  }
+
+  .post_imagen {
+    height: auto;
   }
 }

@@ -2,12 +2,12 @@
 
 /** Register fonts */
 @font-face {
-  font-family: 'HYPE';
-  src: url('../public/fonts/HYPE/subset-HYPE.eot');
-  src: url('../public/fonts/HYPE/subset-HYPE.eot?#iefix') format('embedded-opentype'),
-    url('../public/fonts/HYPE/subset-HYPE.woff2') format('woff2'),
-    url('../public/fonts/HYPE/subset-HYPE.woff') format('woff'),
-    url('../public/fonts/HYPE/subset-HYPE.ttf') format('truetype');
+  font-family: 'segoe';
+  src: url('../public/fonts/segoe/SegoeUI-Bold.eot');
+  src: url('../public/fonts/segoe/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../public/fonts/segoe/SegoeUI-Bold.woff2') format('woff2'),
+    url('../public/fonts/segoe/SegoeUI-Bold.woff') format('woff'),
+    url('../public/fonts/segoe/SegoeUI-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -66,7 +66,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'HYPE';
+  font-family: 'segoe';
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 span,

@@ -3,9 +3,11 @@ import Image from 'next/image'
 import HeroPost from '@/components/hero-post/HeroPost'
 import Shared from '@/components/shared/Shared'
 import RelatedPost from '@/components/related-post/RelatedPost'
+import Redirection from '@/components/redirect/redirect'
+import '@wordpress/block-library/build-style/theme.css'
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
-import '@wordpress/block-library/build-style/theme.css'
+
 
 const fetchSinglePost = (slug) => {
   return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
@@ -52,7 +54,9 @@ export default async function Post ({ params }) {
         </>
         )
       : (
-        <h2>Página no encontrada</h2>
+        <>
+          <h2>Página no encontrada</h2>
+        </>
         )
   )
 }
