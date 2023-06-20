@@ -3,15 +3,35 @@ import Image from 'next/image'
 import HeroPost from '@/components/hero-post/HeroPost'
 import Shared from '@/components/shared/Shared'
 import RelatedPost from '@/components/related-post/RelatedPost'
-import Redirection from '@/components/redirect/redirect'
-import '@wordpress/block-library/build-style/theme.css'
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
-
+import '@wordpress/block-library/build-style/theme.css'
+import fetchYoast from '@/libs/fetchYoast'
 
 const fetchSinglePost = (slug) => {
   return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
     .then(rest => rest.json())
+}
+
+export async function generateMetadata({params}) {
+  const { slug } = params
+  const dataSEO = await fetchYoast(slug)
+  const JSONYoast = dataSEO.json  
+
+  if (!dataSEO)
+    return {
+      title: "No found",
+      Description: "The page is not found"
+    }
+
+  return {
+    title: JSONYoast.title,
+    description: JSONYoast.description,
+    alternates: {
+      canonical: `/${slug}`
+    }
+  }
+       
 }
 
 export default async function Post ({ params }) {
@@ -54,9 +74,7 @@ export default async function Post ({ params }) {
         </>
         )
       : (
-        <>
-          <h2>Página no encontrada</h2>
-        </>
+        <h2>Página no encontrada</h2>
         )
   )
 }

@@ -8,6 +8,11 @@ const Postfetch = () => {
     .then(rest => rest.json())
 }
 
+export const metadata = {
+  title: 'Preguntas frecuentes',
+  description:'Preguntas frecuentes Inverbots | Inverbots'
+}
+
 export default async function Faq () {
   const listPost = await Postfetch()
   console.log(listPost)

@@ -3,15 +3,19 @@ import Image from 'next/image'
 import Form from '@/components/form/Form'
 import Testimonials from '@/components/testimonios/Testimonios'
 import Link from 'next/link'
+import fetchYoast from '@/libs/fetchYoast'
+import fetchPage from '@/libs/fetchPage'
+import getMetadata from '@/libs/metadata'
 
-const fetchSinglePage = (slug) => {
-  // eslint-disable-next-line quotes
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/get_pages?slug=${slug}`, { cache: 'no-store' })
-    .then(rest => rest.json())
-}
+const slug = 'inversion-con-robots-de-trading'
+
+const dataSEO = await fetchYoast(slug)
+const JSONYoast = dataSEO.json
+
+export const metadata = getMetadata(JSONYoast)
 
 export default async function CursoGratis () {
-  const dataPage = await fetchSinglePage('inversion-con-robots-de-trading')
+  const dataPage = await fetchPage(slug)
   const getInfo = dataPage[0]
 
   return (

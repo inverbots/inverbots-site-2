@@ -3,15 +3,19 @@ import Form from '@/components/form/Form'
 import TextCallAction from '@/components/text-call-to-action/TextCallAction'
 import HeroPost from '@/components/hero-post/HeroPost'
 import style from './page.module.css'
+import fetchYoast from '@/libs/fetchYoast'
+import fetchPage from '@/libs/fetchPage'
+import getMetadata from '@/libs/metadata'
 
-const fetchSinglePage = (slug) => {
-  // eslint-disable-next-line quotes
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/get_pages?slug=curso-de-trading-gratis-aprende-desde-cero-con-nosotros/`, { cache: 'no-store' })
-    .then(rest => rest.json())
-}
+const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
+
+const dataSEO = await fetchYoast(slug)
+const JSONYoast = dataSEO.json
+
+export const metadata = getMetadata(JSONYoast)
 
 export default async function CursoGratis () {
-  const dataPage = await fetchSinglePage()
+  const dataPage = await fetchPage(slug)
   const { title, featured_image } = dataPage[0]
 
   return (

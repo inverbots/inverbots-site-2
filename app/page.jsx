@@ -4,14 +4,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import details from '../public/img/dots.png'
 import PostFilter from '@/components/post-filter/PostFilter'
+import fetchYoast from '../libs/fetchYoast'
+import fetchPage from '@/libs/fetchPage'
+import getMetadata from '@/libs/metadata'
 
-const fetchSinglePage = () => {
-  return fetch('https://administrador.inverbots.com/wp-json/wp/v2/get_pages?slug=home-v2', { cache: 'no-store' })
-    .then(rest => rest.json())
-}
+const slug = 'home-v2'
 
-export default async function HomePage () {
-  const dataPage = await fetchSinglePage()
+const dataSEO = await fetchYoast(slug)
+const JSONYoast = dataSEO.json
+export const metadata = getMetadata(JSONYoast)
+
+export default async function HomePage() {
+  const dataPage = await fetchPage(slug)
 
   const { banner_principal, section_best_academy, seccion_invierte_con_robots } = dataPage[0]
 

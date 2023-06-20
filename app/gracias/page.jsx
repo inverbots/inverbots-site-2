@@ -1,15 +1,20 @@
 import backgroundImage from './inverbot-contact.webp';
 import Image from 'next/image';
 import style from './gracia.module.css'
+import fetchYoast from '@/libs/fetchYoast'
+import fetchPage from '@/libs/fetchPage'
+import getMetadata from '@/libs/metadata';
 
-const fetchPost = (slug) => {
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/get_pages?slug=${slug}`, { cache: 'no-store' })
-    .then(rest => rest.json())
-}
+const slug = 'gracias'
 
-export default async function ThanYou(slug) {
+const dataSEO = await fetchYoast(slug)
+const JSONYoast = dataSEO.json
 
-  const posts = await fetchPost('gracias')
+export const metadata = getMetadata(JSONYoast)
+
+export default async function ThanYou() {
+
+  const posts = await fetchPage(slug)
 
   const {src, width, height} = backgroundImage
   return (

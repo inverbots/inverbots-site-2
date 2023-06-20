@@ -7,14 +7,19 @@ import style from './page.module.css'
 import Addinfo from '@/components/add-info/AddInfo'
 import VibrationBtn from '@/components/vibration-btn/VibrationBtn'
 import MoreInformation from '@/components/more-info/MoreInfor'
+import fetchYoast from '@/libs/fetchYoast'
+import fetchPage from '@/libs/fetchPage'
+import getMetadata from '@/libs/metadata'
 
-const fetchSinglePage = (slug) => {
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/get_pages?slug=${slug}`, { cache: 'no-store' })
-    .then(rest => rest.json())
-}
+const slug = 'aprende-a-invertir-con-ayuda-de-robots'
+
+const dataSEO = await fetchYoast(slug)
+const JSONYoast = dataSEO.json
+
+export const metadata = getMetadata(JSONYoast)
 
 export default async function CursoGratis () {
-  const dataPage = await fetchSinglePage('aprende-a-invertir-con-ayuda-de-robots')
+  const dataPage = await fetchPage(slug)
   const { featured_image, hero_banner, Incluye_programa, testimonios, informacion_adicional_inverbots, conoce_mas_de_inverbots__videos__ } = dataPage[0]
 
   return (

@@ -7,6 +7,11 @@ const fetchPost = () => {
     .then(rest => rest.json())
 }
 
+export const metadata = {
+  title: 'Estrategias de Trading',
+  description:'Estrategías de trading | Inverbots'
+}
+
 export default async function Publicaciones () {
   const posts = await fetchPost()
 
