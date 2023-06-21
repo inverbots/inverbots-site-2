@@ -13,7 +13,7 @@ export default function WhatsappBtnSimple (prosps) {
       className={style.whatsapp_btn__simple}
     >
       <WhatsAppIcon
-        sx={{ fontSize: 50 }}
+        sx={{ fontSize: 35 }}
         className={style.icon_content}
       />
       {prosps.btnText}

@@ -17,23 +17,24 @@ export const metadata = getMetadata(JSONYoast)
 export default async function CursoVirtual() {
   const dataPage = await fetchPage(slug)
   const {featured_image, title_page, description, texto_en_bold, text_url_curso_vitual, url, texto_boton_whatsapp} = dataPage[0]
-  console.log(dataPage[0])
-
+ 
   return (
     <main className={style.content}>
       <div className={style.content_grid}>
         <div className={style.content_grid__left}>
           <div className={style.contains_info}>
             <h1 className={style.contains_title}>{title_page}</h1>
-            <p className={style.contains_description}>{description}</p>
+            <div className={style.contains_description} dangerouslySetInnerHTML={{__html: description}}/>
             <h2 className={style.contains_bold_text}>{texto_en_bold}</h2>
             <div className={style.contains_btn}>
               <Link className={style.contains_btn__cv} href={url}>
                 {text_url_curso_vitual}
               </Link>
-              <WhatsappBtnSimple
-                btnText = {texto_boton_whatsapp}
-              />
+              <div className={style.whatsapp_btn__simple}>
+                <WhatsappBtnSimple
+                  btnText = {texto_boton_whatsapp}
+                />
+              </div>
             </div>
           </div>
         </div>
