@@ -28,6 +28,10 @@ export default async function sitemap() {
   const allPagesUrl = getMapElements(allPages, baseUrl)
 
   return [
+    { url: baseUrl,
+      lastModified: new Date()
+    },
+
     ...allPagesUrl,
     ...allPostUrl
   ]
