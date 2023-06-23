@@ -8,16 +8,32 @@ const fetchSinglePages = () => {
     .then(rest => rest.json())
 }
 
+const formatingDate = (infoDate) => {
+
+  const dateParseInt = new Date(infoDate)
+  const year = dateParseInt.getFullYear();
+  const month = dateParseInt.getMonth() + 1; 
+  const day = dateParseInt.getDate();
+  const dateFormated = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+
+  return (dateFormated)
+  
+}
+
 const getMapElements = (list, baseUrl) => {
-  const listObjects = list.map((singlePost, key) => {
+  const listObjects = list.map(singlePost => {
+    const {modified} = singlePost;  
+    const addDate = formatingDate(modified)
     return { 
       url: `${baseUrl + singlePost.slug}`,
-      lastModified: singlePost.modified
+      lastModified: addDate
     }
   })
 
   return listObjects
 }
+
+
 
 export default async function sitemap() {
   const allPost = await fetchSinglePost()
@@ -27,9 +43,11 @@ export default async function sitemap() {
   const allPostUrl = getMapElements(allPost, baseUrl)
   const allPagesUrl = getMapElements(allPages, baseUrl)
 
+  const addDate = formatingDate(new Date())
+
   return [
     { url: baseUrl,
-      lastModified: new Date()
+      lastModified: addDate
     },
 
     ...allPagesUrl,
