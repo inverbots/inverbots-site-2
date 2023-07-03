@@ -9,15 +9,7 @@ const nextConfig = {
     headers: [
       {
         key: 'Access-Control-Allow-Origin',
-        value: 'https://inverbots-site-2.vercel.app'
-      },
-      {
-        key: 'Access-Control-Allow-Origin',
-        value: 'http://localhost:3000'
-      },
-      {
-        key: 'Access-Control-Allow-Origin',
-        value: 'https://inverbots.com'
+        value: '*',
       }
     ]
   },

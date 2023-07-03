@@ -4,7 +4,7 @@ import Form from '../form/Form'
 
 export default function Footer () {
   return (
-  <>
+    <>  
       <section className='content_form'>
         <TextCallAction
           firstTitle='Comienza ya con'

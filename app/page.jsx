@@ -4,9 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import details from '../public/img/dots.png'
 import PostFilter from '@/components/post-filter/PostFilter'
-import fetchYoast from '../libs/fetchYoast'
-import fetchPage from '@/libs/fetchPage'
-import getMetadata from '@/libs/metadata'
+import fetchYoast from '../services/fetchYoast'
+import fetchPage from '@/services/fetchPage'
+import getMetadata from '@/services/metadata'
 
 const slug = 'home-v2'
 

@@ -1,9 +1,9 @@
 import style from './page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import fetchYoast from '@/libs/fetchYoast'
-import fetchPage from '@/libs/fetchPage'
-import getMetadata from '@/libs/metadata'
+import fetchYoast from '@/services/fetchYoast'
+import fetchPage from '@/services/fetchPage'
+import getMetadata from '@/services/metadata'
 import WhatsappBtnSimple from '@/components/whats-btn/WhatsBtnSimple'
 
 

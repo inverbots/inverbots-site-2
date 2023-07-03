@@ -2,9 +2,9 @@
 import HeroPost from '@/components/hero-post/HeroPost'
 import PageTestimonials from '@/components/page-testimonials/PageTestimonials'
 import style from './page.module.css'
-import fetchYoast from '@/libs/fetchYoast'
-import fetchPage from '@/libs/fetchPage'
-import getMetadata from '@/libs/metadata'
+import fetchYoast from '@/services/fetchYoast'
+import fetchPage from '@/services/fetchPage'
+import getMetadata from '@/services/metadata'
 
 const slug = 'testimonios-2'
 

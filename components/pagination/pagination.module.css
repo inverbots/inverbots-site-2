@@ -1,0 +1,21 @@
+.pagination {
+  text-align: center;
+}
+
+.pagination__content {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.pagination__single {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.icon_previous {
+  transform: rotate(180deg);
+}

@@ -1,5 +1,4 @@
 import style from './page.module.css'
-import Pagination from '@/components/pagination/pagination'
 import HeroPost from '@/components/hero-post/HeroPost'
 
 export default function PublicationLayout ({ children }) {
@@ -12,7 +11,6 @@ export default function PublicationLayout ({ children }) {
         />
       </div>
       {children}
-      <Pagination />
     </div>
   )
 }

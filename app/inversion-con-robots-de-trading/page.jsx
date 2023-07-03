@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Form from '@/components/form/Form'
 import Testimonials from '@/components/testimonios/Testimonios'
 import Link from 'next/link'
-import fetchYoast from '@/libs/fetchYoast'
-import fetchPage from '@/libs/fetchPage'
-import getMetadata from '@/libs/metadata'
+import fetchYoast from '@/services/fetchYoast'
+import fetchPage from '@/services/fetchPage'
+import getMetadata from '@/services/metadata'
 
 const slug = 'inversion-con-robots-de-trading'
 

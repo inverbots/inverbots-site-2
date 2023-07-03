@@ -1,9 +1,9 @@
 import backgroundImage from './inverbot-contact.webp';
 import Image from 'next/image';
 import style from './gracia.module.css'
-import fetchYoast from '@/libs/fetchYoast'
-import fetchPage from '@/libs/fetchPage'
-import getMetadata from '@/libs/metadata';
+import fetchYoast from '@/services/fetchYoast'
+import fetchPage from '@/services/fetchPage'
+import getMetadata from '@/services/metadata';
 
 const slug = 'gracias'
 

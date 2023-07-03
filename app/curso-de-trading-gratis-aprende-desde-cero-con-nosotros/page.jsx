@@ -3,9 +3,9 @@ import Form from '@/components/form/Form'
 import TextCallAction from '@/components/text-call-to-action/TextCallAction'
 import HeroPost from '@/components/hero-post/HeroPost'
 import style from './page.module.css'
-import fetchYoast from '@/libs/fetchYoast'
-import fetchPage from '@/libs/fetchPage'
-import getMetadata from '@/libs/metadata'
+import fetchYoast from '@/services/fetchYoast'
+import fetchPage from '@/services/fetchPage'
+import getMetadata from '@/services/metadata'
 
 const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 

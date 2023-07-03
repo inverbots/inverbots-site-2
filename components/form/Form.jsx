@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import style from './Form.module.css'
 import countries from '../../services/countriesList.json'
 import sendData from './send-data/SendData'
+import subMailChimp from './mail-chimp/mail-chimp'
+
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Form () {
@@ -19,6 +21,7 @@ export default function Form () {
     const path = new URL(dataLocation).pathname
     const origin = urlParams.get('origin') ? urlParams.get('origin') : path
     const PageReference = document.referrer;
+
     // send form data to server
     const formData = {
       YourName: fullName,
@@ -32,6 +35,7 @@ export default function Form () {
     }
 
     if (formData.acceptTerms) {
+      subMailChimp(formData)
       sendData(formData) 
     }
   }

@@ -15,7 +15,6 @@ export default function PublicationLayout ({ children }) {
 
       </div>
       {children}
-      <Pagination />
     </div>
   )
 }

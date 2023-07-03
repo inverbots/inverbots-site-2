@@ -6,7 +6,7 @@ import RelatedPost from '@/components/related-post/RelatedPost'
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
-import fetchYoast from '@/libs/fetchYoast'
+import fetchYoast from '@/services/fetchYoast'
 
 const fetchSinglePost = (slug) => {
   return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })

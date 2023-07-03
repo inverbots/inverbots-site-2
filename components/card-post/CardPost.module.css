@@ -1,3 +1,29 @@
+/** Card loop **/
+.contents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 50px 40px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.contents.contents__results {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.post_card {
+  position: relative;
+}
+
+@media(max-width:780px) {
+  .contents {
+    grid-template-columns: 1fr;
+  }
+}
+
+/** content card loop */
+
+
 .content_anchor {
   text-decoration: none;
 }
@@ -9,6 +35,7 @@
   transition: 0.35s;
   position: relative;
   background-color: white;
+  max-width: 320px;
 }
 
 .content_card:hover {
@@ -96,4 +123,12 @@
   left: -20px;
   top: -8px;
   background-color: #E1E1E1;
+}
+
+/** Pagination **/
+.pagination {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
 }
