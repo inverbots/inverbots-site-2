@@ -9,7 +9,7 @@ export default function sendData (data) {
   }).then(response => {
     response.text()
     const status = response.ok
-    status ? window.location.href = '/gracias' : ''
+    status ? window.location.href = 'https://cursos.inverbots.com/registro/' : ''
     // console.log(status, response)
   })
     .catch(error => {
