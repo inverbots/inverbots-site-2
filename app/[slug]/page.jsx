@@ -13,7 +13,7 @@ const fetchSinglePost = (slug) => {
     .then(rest => rest.json())
 }
 
-export async function generateMetadata({params}) {
+export async function generateMetadata({ params }) {
   const { slug } = params
   const dataSEO = await fetchYoast(slug)
   const JSONYoast = dataSEO.json  
@@ -37,6 +37,9 @@ export async function generateMetadata({params}) {
 export default async function Post ({ params }) {
   const { slug } = params
   const post = await fetchSinglePost(slug)
+
+  const catId = post[0].categories[0]
+  console.log(catId)
 
   const postData = post[0]?.content.rendered
   const regex = /youtube\.com\/embed\//
@@ -69,7 +72,7 @@ export default async function Post ({ params }) {
             <div className={style.element} dangerouslySetInnerHTML={{ __html: post[0].content.rendered }} />
           </article>
           <div className={style.realted}>
-            <RelatedPost />
+            <RelatedPost id={catId} />
           </div>
         </>
         )
