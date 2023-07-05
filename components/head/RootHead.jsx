@@ -6,6 +6,7 @@ export default function RootHead(props) {
   return (
     <head>
       <meta name="robots" content="index,follow" />
+      <meta name="google-site-verification" content="bPuKNVrJr2DOOOu0fhvQypoVd_yAnFBypnMclDZGbNE" />
       <Script
         strategy='afterInteractive'
         src='https://www.googletagmanager.com/gtag/js?id=UA-121855589-1'
