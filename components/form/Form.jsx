@@ -2,10 +2,18 @@
 import React, { useState } from 'react'
 import style from './Form.module.css'
 import countries from '../../services/countriesList.json'
+import jsonp from 'jsonp'
 import sendData from './send-data/SendData'
-import subMailChimp from './mail-chimp/mail-chimp'
+import MailChimpForm from './mail-chimp/mail-chimp'
 
 import { motion, AnimatePresence } from 'framer-motion'
+
+const onSubmit = (fullName, email) => {
+  const url = 'https://Inverbots.us19.list-manage.com/subscribe/post?u=0244fb5a09c74b3b464ac5f2f&amp;id=2b71f672a6&amp;f_id=004f8ce0f0';
+  jsonp(`${url}&EMAIL=${email}`, { param: 'c' }, (_, data) => {
+      console.log(data)
+  });
+};
 
 export default function Form () {
   const [fullName, setFullName] = useState('')
@@ -13,6 +21,7 @@ export default function Form () {
   const [selectedCountry, setSelectedCountry] = useState('')
   const [email, setEmail] = useState('')
   const [acceptTerms, setAcceptTerms] = useState(false)
+  const [isSubmit, setIsSubmit] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -35,13 +44,21 @@ export default function Form () {
     }
 
     if (formData.acceptTerms) {
-      subMailChimp(formData)
-      sendData(formData) 
+      setIsSubmit(true)
+      onSubmit(fullName, email)
+      sendData(formData)
     }
   }
 
   return (
     <AnimatePresence>
+      {/* <MailChimpForm
+        key={2}
+        name={fullName}
+        email={email}
+        autoSubmit={isSubmit}
+      /> */}
+      
       <form className={style.form} onSubmit={handleSubmit}>
         <motion.div
           initial='hidden'

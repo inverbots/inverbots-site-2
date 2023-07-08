@@ -6,7 +6,6 @@ import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import WhatsappBtnSimple from '@/components/whats-btn/WhatsBtnSimple'
 
-
 const slug = 'curso-virtual'
 
 const dataSEO = await fetchYoast(slug)

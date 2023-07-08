@@ -76,7 +76,7 @@ export default async function HomePage() {
           })}
         </div>
         <div className={style.tarder_btn}>
-          <Link className={style.btn} href='/'>Saber más</Link>
+          <Link className={style.btn} href='/aprende-a-invertir-con-ayuda-de-robots'>Saber más</Link>
         </div>
       </section>
       <section className={style.invest_robot}>

@@ -7,6 +7,10 @@ import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 
+import '@wordpress/block-library/build-style/common.css'
+import '@wordpress/block-library/build-style/style.css'
+import '@wordpress/block-library/build-style/theme.css'
+
 const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 
 const dataSEO = await fetchYoast(slug)
@@ -16,7 +20,7 @@ export const metadata = getMetadata(JSONYoast)
 
 export default async function CursoGratis () {
   const dataPage = await fetchPage(slug)
-  const { title, featured_image } = dataPage[0]
+  const { title, featured_image, content } = dataPage[0]
 
   return (
     <>
@@ -38,6 +42,10 @@ export default async function CursoGratis () {
           <Form />
         </div>
       </div>
+      <div className={style.page_content}>
+        <div dangerouslySetInnerHTML={{ __html: content}} />
+      </div>
+
     </>
   )
 }

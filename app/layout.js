@@ -14,9 +14,6 @@ export const metadata = {
     template:`%s | Inverbots - la mejor academia de trading con robots`
   },
   description: `la mejor academia de trading con ayuda de robots`,
-  verification: {
-    google:"google-site-verification=bPuKNVrJr2DOOOu0fhvQypoVd_yAnFBypnMclDZGbNE"
-  }
 }
 
 

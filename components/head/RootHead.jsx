@@ -1,5 +1,4 @@
 import Script from "next/script"
-import Yoast from "../yoast/Yoast"
 
 export default function RootHead(props) {
 

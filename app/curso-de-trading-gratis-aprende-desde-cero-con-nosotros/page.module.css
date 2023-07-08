@@ -47,6 +47,11 @@
   display: none;
 }
 
+.page_content {
+  max-width: 90%;
+  margin: auto;
+}
+
 @media(max-width:780px) {
   .free_curse {
     display: block;
