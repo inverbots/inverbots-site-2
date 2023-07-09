@@ -2,18 +2,10 @@
 import React, { useState } from 'react'
 import style from './Form.module.css'
 import countries from '../../services/countriesList.json'
-import jsonp from 'jsonp'
 import sendData from './send-data/SendData'
 import MailChimpForm from './mail-chimp/mail-chimp'
 
 import { motion, AnimatePresence } from 'framer-motion'
-
-const onSubmit = (fullName, email) => {
-  const url = 'https://Inverbots.us19.list-manage.com/subscribe/post?u=0244fb5a09c74b3b464ac5f2f&amp;id=2b71f672a6&amp;f_id=004f8ce0f0';
-  jsonp(`${url}&EMAIL=${email}`, { param: 'c' }, (_, data) => {
-      console.log(data)
-  });
-};
 
 export default function Form () {
   const [fullName, setFullName] = useState('')
@@ -45,21 +37,26 @@ export default function Form () {
 
     if (formData.acceptTerms) {
       setIsSubmit(true)
-      onSubmit(fullName, email)
       sendData(formData)
     }
   }
 
   return (
     <AnimatePresence>
-      {/* <MailChimpForm
-        key={2}
-        name={fullName}
-        email={email}
-        autoSubmit={isSubmit}
-      /> */}
+
+      <div class={style.displayNone} key={1}>
+        <MailChimpForm
+          key={2}
+          name={fullName}
+          email={email}
+          autoSubmit={isSubmit}
+        />
+      </div>
       
-      <form className={style.form} onSubmit={handleSubmit}>
+      <form
+        key={2}
+        className={style.form}
+        onSubmit={handleSubmit}>
         <motion.div
           initial='hidden'
           whileInView='visible'
