@@ -1,0 +1,519 @@
+.header_page {
+  opacity: 0;
+  display: block;
+  height: 0px;
+}
+
+nav.navbar.navbar-default.header-navigation.stricky {
+  display: none;
+}
+
+ul.list-inline {
+  display: none;
+}
+
+/** styles */
+
+/** Title banner */
+.site_title {
+  font-family: 'Century';
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  /* Aumenta el tamaño del título */
+  font-weight: bold;
+  color: black;
+  /* Cambia el color del título a negro */
+}
+
+.content_head {
+  padding-bottom: 23px;
+}
+
+.main_head {
+  min-height: 22px;
+  background: #f6b031;
+  color: #fff;
+  padding: 36px 10px;
+  padding-bottom: 0;
+  margin-bottom: 30px;
+}
+
+.site__titleimg {
+  position: relative;
+  text-align: center;
+  max-width: 45%;
+  margin: auto;
+}
+
+.site_title_sub {
+  font-size: 25px;
+  /* Disminuye el tamaño del subtítulo para acomodar tres renglones */
+  margin-top: 40px;
+  /* Aumenta el margen superior para separarlo del título */
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.site__gif {
+  position: absolute;
+  right: -27%;
+  top: -128%;
+}
+
+
+/** Hero banner */
+.hero_banner {
+  background: url(https://inverbots.com/wp-content/uploads/2018/06/009.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: -31px;
+  padding: 64px 0px;
+  position: relative;
+}
+
+.hero_banner::before {
+  content: '';
+  background: rgb(18 18 18 / 82%);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+}
+
+.hero_banner_content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 59% 40%;
+  gap: 10px;
+  max-width: 70%;
+  margin: auto;
+  color: white;
+  align-items: center;
+}
+
+.left_content_title {
+  text-align: left !important;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 63px;
+}
+
+.left_content_sub {
+  font-size: 30px;
+}
+
+.main_video iframe {
+  border-radius: 24px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+  width: 90%;
+  min-height: 450px;
+  margin-top: 30px;
+}
+
+/** Form componente */
+.form_section {
+  background: white;
+  border-radius: 10px;
+}
+
+.form_section {
+  background: #fff;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+  padding: 23px 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form_title {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.form_text {
+  font-size: 18px !important;
+  margin-top: 25px;
+}
+
+
+/**wp form styles */
+.hero_banner_content .wpcf7 p {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.hero_banner_content .wpcf7 input {
+  max-width: 90%;
+}
+
+.hero_banner_content .wpcf7 input {
+  max-width: 90%;
+  margin: auto;
+  border: solid 1px gray;
+  box-shadow: inherit;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.hero_banner_content .wpcf7-submit {
+  background-color: #f6b031 !important;
+  padding: 12px !important;
+}
+
+
+/** Banner braker */
+.content_braker {
+  padding: 50px 10px;
+  text-align: center;
+}
+
+/* 
+.braker_img {
+  width: 70%;
+} */
+
+.title_banner {
+  max-width: 60%;
+  margin: auto;
+}
+
+.title_banner p {
+  font-size: 40px !important;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  margin-top: 27px;
+}
+
+
+
+/** Information banner */
+
+.informative {
+  padding: 50px 10px;
+}
+
+.informative_content {
+  max-width: 60%;
+  margin: auto;
+}
+
+
+.info_group_title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.info_group_description {
+  font-size: 20px;
+}
+
+.info_group_description {
+  font-size: 20px;
+  text-align: center;
+}
+
+.info_group_data {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  gap: 2%;
+  margin-bottom: 60px;
+}
+
+.informative_content .info_group:nth-child(2n) .info_group_data {
+  flex-direction: row-reverse;
+}
+
+.group_list {
+  width: 58%;
+}
+
+.info_group_img {
+  width: 44%;
+}
+
+.info_group_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.group_list_title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.group_list_elements {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+/** Section steps */
+
+.step_promotion {
+  padding: 56px 10px;
+  background: black;
+  color: white;
+}
+
+.step_promotion__content {
+  max-width: 60%;
+  margin: auto;
+}
+
+.title__steps {
+  max-width: 80%;
+  margin: auto;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  text-align: center;
+}
+
+.step__element {
+  width: 31%;
+}
+
+.step__title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.step__text {
+  font-size: 21px !important;
+}
+
+/** Testimonials */
+
+.testimonials {
+  padding: 50px 10px;
+}
+
+.testimonials>div {
+  background-color: transparent !important;
+}
+
+.testimonials__content {
+  max-width: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonials__title {
+  font-weight: bold;
+}
+
+/** slider */
+.content_slider {
+  margin-top: 34px;
+}
+
+.slider__video iframe {
+  border-radius: 17px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.slider__content {
+  margin-top: 10px;
+}
+
+.slider__testimonial {
+  font-size: 22px !important;
+  text-align: center;
+}
+
+.slider__name {
+  font-size: 20px !important;
+  text-align: left;
+}
+
+/** swiper */
+
+.swiper-container {
+  width: 100%;
+}
+
+.slider__element iframe {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+/** Cal to action */
+.call_action {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+
+
+.call_action .title_banner p {
+  color: black;
+  margin-bottom: 50px;
+}
+
+.btn_call a {
+  padding: 9px 27px;
+  font-size: 50px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+
+@media(max-width:766px) {
+  .site_title {
+    font-size: 43px;
+  }
+
+  .site__titleimg {
+    max-width: 94%;
+  }
+
+  .site__gif {
+    position: relative;
+    right: 0;
+    top: 0;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .site_title_sub {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /**hero benner */
+  .hero_banner_content {
+    display: block;
+    max-width: 94%;
+  }
+
+  .left_content_title {
+    text-align: center !important;
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .left_content_sub {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .main_video iframe {
+    width: 100%;
+    min-height: 299px;
+  }
+
+  .form_title {
+    font-size: 26px;
+  }
+
+  /** Contact form */
+
+  .wpcf7-form {
+    margin: auto;
+  }
+
+  input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    font-size: 13px;
+  }
+
+  /** Banner */
+  .title_banner p {
+    font-size: 26px !important;
+    max-width: 85%;
+  }
+
+  .content_braker {
+    padding: 20px 10px;
+  }
+
+  /** Title banner */
+  .title_banner {
+    max-width: 97%;
+  }
+
+  /** Informative */
+  .informative_content {
+    max-width: 98%;
+  }
+
+  /** dta */
+  .info_group_description {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .info_group_data {
+    display: block !important;
+  }
+
+  .group_list {
+    width: 100%;
+  }
+
+  .group_list_content {
+    padding: 0px;
+  }
+
+  .info_group_img {
+    width: 100%;
+  }
+
+  /** steps banner */
+
+  .step_promotion__content {
+    max-width: 96%;
+  }
+
+  .step_promotion {
+    padding: 42px 10px;
+  }
+
+  .title__steps {
+    max-width: 90%;
+    font-size: 20px;
+  }
+
+  .steps {
+    display: block;
+  }
+
+  .step__element {
+    width: 100%;
+  }
+
+  .step__element img {
+    max-width: 188px;
+  }
+
+  .step__title {
+    font-size: 26px;
+  }
+
+  /** Testimonails*/
+  .testimonials__content {
+    max-width: 95%;
+  }
+
+  /** Call to action */
+  .btn_call a {
+    font-size: 24px;
+  }
+}
