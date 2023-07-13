@@ -36,8 +36,9 @@ export default function RootHead(props) {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1263003724583924');
+          fbq('init', '792391655723604');
           fbq('track', 'PageView');`}
+
       </Script>
       
       <Script type="text/javascript"
