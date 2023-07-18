@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 export default async function PageSite({ slug }) {
   
   const dataPage = await fetchPage(slug)
-  const redirection = dataPage[0].redirection_to
+  const redirection = dataPage[0]?.redirection_to
 
   return (
     !dataPage.length ? (
