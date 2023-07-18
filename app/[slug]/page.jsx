@@ -4,10 +4,12 @@ import HeroPost from '@/components/hero-post/HeroPost'
 import Shared from '@/components/shared/Shared'
 import RelatedPost from '@/components/related-post/RelatedPost'
 import fetchYoast from '@/services/fetchYoast'
+import PageSite from './pageSite'
 
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
+import { redirect } from 'next/navigation';
 
 const fetchSinglePost = (slug) => {
   return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
@@ -38,8 +40,10 @@ export async function generateMetadata({ params }) {
 export default async function Post ({ params }) {
   const { slug } = params
   const post = await fetchSinglePost(slug)
+  const catId = post[0]?.categories[0]
+  const redirection = post[0]?.acf?.redirection_to
 
-  const catId = post[0].categories[0]
+  redirection ? redirect(redirection) : ''
 
   const postData = post[0]?.content.rendered
   const regex = /youtube\.com\/embed\//
@@ -77,7 +81,9 @@ export default async function Post ({ params }) {
         </>
         )
       : (
-        <h2>Página no encontrada</h2>
+        <PageSite
+          slug={slug}
+        />
         )
   )
 }

@@ -38,7 +38,6 @@ export default function RootHead(props) {
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '792391655723604');
           fbq('track', 'PageView');`}
-
       </Script>
       
       <Script type="text/javascript"
@@ -51,7 +50,6 @@ export default function RootHead(props) {
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "hrj02ap8dk");`}
       </Script>
-
     </head>
   )
 }
