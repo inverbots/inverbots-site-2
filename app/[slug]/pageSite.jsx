@@ -8,7 +8,7 @@ export default async function PageSite({ slug }) {
 
   return (
     !dataPage.length ? (
-      <h2>Página no encntrada</h2>
+      <h2>404 página no encontrada</h2>
     ) : (
       redirect(redirection)
     )
