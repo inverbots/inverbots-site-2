@@ -11,22 +11,7 @@ export default function sendData(data) {
     response.text()
     const status = response.ok
     console.log(status, response)
-    
-    return (
-      <div class={style.displayNone} key={1}>
-
-        <MailChimpForm
-          key={2}
-          name={data.fullName}
-          email={data.email}
-          autoSubmit={true}
-        />
-        {status ? window.location.href = 'https://cursos.inverbots.com/registro/' : ''}
-
-      </div>
-      
-    )
-    
+    status ? window.location.href = 'https://cursos.inverbots.com/registro/' : ''    
   })
     .catch(error => {
       console.log(error)
