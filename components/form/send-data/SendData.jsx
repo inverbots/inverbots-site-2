@@ -10,19 +10,23 @@ export default function sendData(data) {
   }).then(response => {
     response.text()
     const status = response.ok
-    console.log(status, response) 
+    console.log(status, response)
     
     return (
       <div class={style.displayNone} key={1}>
+
         <MailChimpForm
           key={2}
           name={data.fullName}
           email={data.email}
           autoSubmit={true}
         />
-      </div>
-    )
+        {status ? window.location.href = 'https://cursos.inverbots.com/registro/' : ''}
 
+      </div>
+      
+    )
+    
   })
     .catch(error => {
       console.log(error)
