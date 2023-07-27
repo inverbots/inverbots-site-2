@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import style from './Form.module.css'
 import countries from '../../services/countriesList.json'
 import sendData from './send-data/SendData'
-import MailChimpForm from './mail-chimp/mail-chimp'
 
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -13,7 +12,6 @@ export default function Form () {
   const [selectedCountry, setSelectedCountry] = useState('')
   const [email, setEmail] = useState('')
   const [acceptTerms, setAcceptTerms] = useState(false)
-  const [isSubmit, setIsSubmit] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -36,22 +34,14 @@ export default function Form () {
     }
 
     if (formData.acceptTerms) {
-      setIsSubmit(true)
       sendData(formData)
+      //setTimeout(setIsSubmit(true), 1000);
+
     }
   }
 
   return (
     <AnimatePresence>
-
-      <div class={style.displayNone} key={1}>
-        <MailChimpForm
-          key={2}
-          name={fullName}
-          email={email}
-          autoSubmit={isSubmit}
-        />
-      </div>
       
       <form
         key={2}
