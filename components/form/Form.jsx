@@ -44,7 +44,7 @@ export default function Form () {
   return (
     <AnimatePresence>
       
-      <div class={'tutaina'} key={1}>
+      <div class={style.displayNone} key={1}>
         <MailChimpForm
           key={2}
           name={fullName}
