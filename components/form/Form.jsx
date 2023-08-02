@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import style from './Form.module.css'
 import countries from '../../services/countriesList.json'
 import sendData from './send-data/SendData'
-//import MailChimpForm from './mail-chimp/mail-chimp'
+import MailChimpForm from './mail-chimp/mail-chimp'
 
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -36,22 +36,22 @@ export default function Form () {
     }
 
     if (formData.acceptTerms) {
-      setIsSubmit(true)
       sendData(formData)
+      setIsSubmit(true)
     }
   }
 
   return (
     <AnimatePresence>
-
-      {/* <div class={style.displayNone} key={1}>
+      
+      <div class={'tutaina'} key={1}>
         <MailChimpForm
           key={2}
           name={fullName}
           email={email}
           autoSubmit={isSubmit}
         />
-      </div> */}
+      </div>
       
       <form
         key={2}
