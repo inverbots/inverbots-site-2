@@ -15,7 +15,6 @@ export const metadata = {
 
 export default async function Faq () {
   const listPost = await Postfetch()
-  console.log(listPost)
   return (
     <article class={style.content}>
       <div className={style.contain}>

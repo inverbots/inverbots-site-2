@@ -1,5 +1,4 @@
 const getMetadata = (JSONYoast) => {
-  console.log(JSONYoast)
   const metadata = {
     title: JSONYoast.title,
     description: JSONYoast.description,

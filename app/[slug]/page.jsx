@@ -11,6 +11,7 @@ import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
 import { redirect } from 'next/navigation';
+import Schema from '@/components/schema/schema'
 
 const fetchSinglePost = (slug) => {
   return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
@@ -22,7 +23,6 @@ export async function generateMetadata({ params }) {
   const dataSEO = await fetchYoast(slug)
   const JSONYoast = dataSEO.json  
   return getMetadata(JSONYoast)
-
 }
 
 export default async function Post({ params }) {
@@ -39,20 +39,12 @@ export default async function Post({ params }) {
 
   /** JsonLD */
   const dataSEO = await fetchYoast(slug)
-  const JSONYoast = dataSEO.json
-  const schema = JSONYoast.schema["@graph"]
-  const cleanSchema = JSON.stringify(schema).replace(/administrador./g, '')
-
-  const jsonLd = cleanSchema
 
   return (
     post.length > 0
       ? (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: jsonLd }}
-          />
+          <Schema dataSEO={ dataSEO} />
           <HeroPost
             title={post[0].title.rendered}
             featured_image={post[0].uagb_featured_image_src?.medium[0]}

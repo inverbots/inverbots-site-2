@@ -7,7 +7,6 @@ export default async function Yoast(props) {
   const slug = props.slug
   const post = await fetchSinglePost(slug)
   const JSONYoast = post.json
-  console.log(JSONYoast)
 
   return (
     <>

@@ -6,7 +6,6 @@ import Link from 'next/link'
 export default function Menu (props) {
   const [showMenu, setShowMenu] = useState('')
   const menuData = props.data
-  console.log(showMenu)
 
   return (
     <nav className={styles.navigation}>
