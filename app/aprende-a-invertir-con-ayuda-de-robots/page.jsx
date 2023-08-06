@@ -10,6 +10,7 @@ import MoreInformation from '@/components/more-info/MoreInfor'
 import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
+import Schema from '@/components/schema/schema'
 
 const slug = 'aprende-a-invertir-con-ayuda-de-robots'
 
@@ -24,6 +25,7 @@ export default async function CursoGratis () {
 
   return (
     <>
+      <Schema dataSEO={dataSEO} />
       <BannerLanding
         background={featured_image}
         title={hero_banner.titulo}

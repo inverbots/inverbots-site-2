@@ -4,6 +4,7 @@ import style from './gracia.module.css'
 import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata';
+import Schema from '@/components/schema/schema';
 
 const slug = 'gracias'
 
@@ -18,6 +19,8 @@ export default async function ThanYou() {
 
   const {src, width, height} = backgroundImage
   return (
+    <>
+    <Schema dataSEO={dataSEO} />
     <div className={style.content}>
       <Image
         className={style.background}
@@ -34,6 +37,7 @@ export default async function ThanYou() {
           {posts[0].excerpt}
         </p>
       </div>
-    </div>
+      </div>
+    </>
   )
 }

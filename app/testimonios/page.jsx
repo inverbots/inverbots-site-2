@@ -5,6 +5,7 @@ import style from './page.module.css'
 import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
+import Schema from '@/components/schema/schema'
 
 const slug = 'testimonios-2'
 
@@ -19,6 +20,7 @@ export default async function CursoGratis () {
 
   return (
     <>
+      <Schema dataSEO={dataSEO} />
       <HeroPost
         title={title}
         featured_image={featured_image}

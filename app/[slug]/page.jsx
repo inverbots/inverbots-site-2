@@ -5,6 +5,7 @@ import Shared from '@/components/shared/Shared'
 import RelatedPost from '@/components/related-post/RelatedPost'
 import fetchYoast from '@/services/fetchYoast'
 import PageSite from './pageSite'
+import getMetadata from '@/services/metadata'
 
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
@@ -17,29 +18,11 @@ const fetchSinglePost = (slug) => {
 }
 
 export async function generateMetadata({ params }) {
-
   const { slug } = params
   const dataSEO = await fetchYoast(slug)
   const JSONYoast = dataSEO.json  
+  return getMetadata(JSONYoast)
 
-   if (!dataSEO)
-    return {
-      title: "No found",
-      Description: "The page is not found"
-    }
-
-  return {
-    title: JSONYoast.title,
-    description: JSONYoast.description,
-    alternates: {
-      canonical: `/${slug}`
-    },
-    openGraph: {
-      title: JSONYoast.title,
-      description: JSONYoast.description,
-    },
-  }
-       
 }
 
 export default async function Post({ params }) {
@@ -58,20 +41,9 @@ export default async function Post({ params }) {
   const dataSEO = await fetchYoast(slug)
   const JSONYoast = dataSEO.json
   const schema = JSONYoast.schema["@graph"]
-  console.log(schema[0]["@type"])
+  const cleanSchema = JSON.stringify(schema).replace(/administrador./g, '')
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': schema[0]["@type"],
-    '@id':schema[0]["@id"],
-    'url':schema[0].url,
-    'name':schema[0].name,
-    'datePublished':schema[0].datePublished,
-    'dateModified': schema[0].dateModified,
-    'description':schema[0].description,
-    'inLanguage': schema[0].inLanguage,
-    'image':schema[4].logo.contentUrl
-  }
+  const jsonLd = cleanSchema
 
   return (
     post.length > 0
@@ -79,7 +51,7 @@ export default async function Post({ params }) {
         <>
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            dangerouslySetInnerHTML={{ __html: jsonLd }}
           />
           <HeroPost
             title={post[0].title.rendered}

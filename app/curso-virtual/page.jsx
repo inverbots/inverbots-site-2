@@ -5,6 +5,7 @@ import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import WhatsappBtnSimple from '@/components/whats-btn/WhatsBtnSimple'
+import Schema from '@/components/schema/schema'
 
 const slug = 'curso-virtual'
 
@@ -18,6 +19,8 @@ export default async function CursoVirtual() {
   const {featured_image, title_page, description, texto_en_bold, text_url_curso_vitual, url, texto_boton_whatsapp} = dataPage[0]
  
   return (
+    <>
+    <Schema dataSEO={dataSEO} />
     <main className={style.content}>
       <div className={style.content_grid}>
         <div className={style.content_grid__left}>
@@ -48,5 +51,6 @@ export default async function CursoVirtual() {
         </div>
       </div>
     </main>
+    </>
   )
 }

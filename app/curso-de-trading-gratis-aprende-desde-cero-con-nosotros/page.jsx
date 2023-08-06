@@ -6,6 +6,7 @@ import style from './page.module.css'
 import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
+import Schema from '@/components/schema/schema'
 
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
@@ -24,6 +25,7 @@ export default async function CursoGratis () {
 
   return (
     <>
+      <Schema dataSEO={dataSEO} />
       <HeroPost
         title={title}
         featured_image={featured_image}

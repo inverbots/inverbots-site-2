@@ -7,6 +7,7 @@ import PostFilter from '@/components/post-filter/PostFilter'
 import fetchYoast from '../services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
+import Schema from '@/components/schema/schema'
 
 const slug = 'home-v2'
 
@@ -16,11 +17,11 @@ export const metadata = getMetadata(JSONYoast)
 
 export default async function HomePage() {
   const dataPage = await fetchPage(slug)
-
   const { banner_principal, section_best_academy, seccion_invierte_con_robots } = dataPage[0]
 
   return (
     <>
+      <Schema dataSEO={dataSEO} />
       <div className={style.hero_banner}>
         <div className={style.hero_texts}>
           <h1 className={style.hero_title}>{banner_principal.titulo}</h1>
