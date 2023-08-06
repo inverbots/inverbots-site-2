@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang='es'>
-      <RootHead slug={'home-v2'} />
+      <RootHead/>
       <body>
         <Header />
         {children}

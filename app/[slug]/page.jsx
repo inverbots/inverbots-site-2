@@ -17,11 +17,12 @@ const fetchSinglePost = (slug) => {
 }
 
 export async function generateMetadata({ params }) {
+
   const { slug } = params
   const dataSEO = await fetchYoast(slug)
   const JSONYoast = dataSEO.json  
 
-  if (!dataSEO)
+   if (!dataSEO)
     return {
       title: "No found",
       Description: "The page is not found"
@@ -32,12 +33,16 @@ export async function generateMetadata({ params }) {
     description: JSONYoast.description,
     alternates: {
       canonical: `/${slug}`
-    }
+    },
+    openGraph: {
+      title: JSONYoast.title,
+      description: JSONYoast.description,
+    },
   }
        
 }
 
-export default async function Post ({ params }) {
+export default async function Post({ params }) {
   const { slug } = params
   const post = await fetchSinglePost(slug)
   const catId = post[0]?.categories[0]
@@ -49,10 +54,33 @@ export default async function Post ({ params }) {
   const regex = /youtube\.com\/embed\//
   const hasYoutubeIframe = regex.test(postData)
 
+  /** JsonLD */
+  const dataSEO = await fetchYoast(slug)
+  const JSONYoast = dataSEO.json
+  const schema = JSONYoast.schema["@graph"]
+  console.log(schema[0]["@type"])
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': schema[0]["@type"],
+    '@id':schema[0]["@id"],
+    'url':schema[0].url,
+    'name':schema[0].name,
+    'datePublished':schema[0].datePublished,
+    'dateModified': schema[0].dateModified,
+    'description':schema[0].description,
+    'inLanguage': schema[0].inLanguage,
+    'image':schema[4].logo.contentUrl
+  }
+
   return (
     post.length > 0
       ? (
         <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
           <HeroPost
             title={post[0].title.rendered}
             featured_image={post[0].uagb_featured_image_src?.medium[0]}
