@@ -3,10 +3,10 @@ import Script from "next/script"
 export default function HeadScript() {
   return(
   <>
-    {/* <Script
+    <Script
       strategy='afterInteractive'
       src='https://www.googletagmanager.com/gtag/js?id=UA-121855589-1'
-    /> */}
+    />
 
     <Script
       id='gooogle-analytics'

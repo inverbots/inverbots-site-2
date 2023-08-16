@@ -1,6 +1,6 @@
 .free_curse {
   display: grid;
-  grid-template-columns: 55% 43%;
+  grid-template-columns: 64% 35%;
   gap: 32px;
   margin-top: 54px;
   margin-bottom: 53px;
@@ -25,6 +25,9 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   overflow: hidden;
+  height: 500px;
+  position: sticky;
+  top: 80px;
 }
 
 .content_form div {
@@ -54,7 +57,7 @@
 
 @media(max-width:780px) {
   .free_curse {
-    display: block;
+    grid-template-columns: 100%;
   }
 
   .free_curse iframe {
@@ -64,6 +67,11 @@
   .content_form {
     padding: 11px;
     padding-bottom: 37px;
+    height: 700px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    top: 0;
   }
 
   .content_form div {

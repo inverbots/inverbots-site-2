@@ -157,9 +157,23 @@
 
 .anchor_succes {
   font-size: 18px;
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
+  background-color: white;
+  border: solid black 1px;
+  padding: 8px 10px;
+  margin-top: 15px;
+  transition: 0.35s;
+  display: inline-block;
+  margin-top: 7px;
+}
+
+.anchor_succes:hover {
+  color: white;
+  border: solid white 1px;
+  background-color: black;
+  transition: 0.35s;
 }
 
 .imagen img {

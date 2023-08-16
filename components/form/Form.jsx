@@ -42,8 +42,7 @@ export default function Form () {
   }
 
   return (
-    <AnimatePresence>
-      
+    <>
       <div class={style.displayNone} key={1}>
         <MailChimpForm
           key={2}
@@ -57,16 +56,6 @@ export default function Form () {
         key={2}
         className={style.form}
         onSubmit={handleSubmit}>
-        <motion.div
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: -100 },
-            visible: { opacity: 1, y: 0 }
-          }}
-        >
           <div className={style.nombre}>
             <input
               placeholder='Nombre completo:'
@@ -127,8 +116,7 @@ export default function Form () {
             </label>
           </div>
           <button className={style.buton} type='submit'>Enviar</button>
-        </motion.div>
       </form>
-    </AnimatePresence>
+    </>
   )
 }
