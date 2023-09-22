@@ -6,6 +6,7 @@ import RelatedPost from '@/components/related-post/RelatedPost'
 import fetchYoast from '@/services/fetchYoast'
 import PageSite from './pageSite'
 import getMetadata from '@/services/metadata'
+import Comments from '@/components/comments/comments'
 
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }) {
 export default async function Post({ params }) {
   const { slug } = params
   const post = await fetchSinglePost(slug)
+
   const catId = post[0]?.categories[0]
   const redirection = post[0]?.acf?.redirection_to
 
@@ -70,6 +72,7 @@ export default async function Post({ params }) {
           <div className={style.realted}>
             <RelatedPost id={catId} />
           </div>
+          <Comments id={post[0].id} />
         </>
         )
       : (
