@@ -11,11 +11,11 @@ export default async function Comments (props) {
     const commentsList = await fetchPostComments(props.id)    
 
     return (
-    commentsList[0].id &&
+    commentsList[0]?.id &&
     (<div className={style.comment_list}>
       <h2 className={style.comment_list__title}>Comentarios</h2>
       {commentsList.map((comment, key) =>{
-        const {id, author_name, date, content, author_avatar_urls} = comment
+        const {id, author_name, date, content, author_avatar_urls, parent} = comment
         return(
 
             <div className={style.comment_list__coment} key={id}>
