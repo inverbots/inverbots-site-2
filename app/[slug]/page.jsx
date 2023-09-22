@@ -6,7 +6,7 @@ import RelatedPost from '@/components/related-post/RelatedPost'
 import fetchYoast from '@/services/fetchYoast'
 import PageSite from './pageSite'
 import getMetadata from '@/services/metadata'
-import Comments from '@/components/comments/comments'
+// import Comments from '@/components/comments/comments'
 
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
@@ -72,7 +72,7 @@ export default async function Post({ params }) {
           <div className={style.realted}>
             <RelatedPost id={catId} />
           </div>
-          <Comments id={post[0].id} />
+          {/* <Comments id={post[0].id} /> */}
         </>
         )
       : (
