@@ -3,7 +3,6 @@ import '../styles/globals.css'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import WhatsappBtn from '@/components/whats-btn/WhatsBtn'
-import { Analytics } from '@vercel/analytics/react'
 import RootHead from '@/components/head/RootHead'
 
 
@@ -27,7 +26,6 @@ export default function RootLayout({ children }) {
         {children}
         <WhatsappBtn />
         <Footer />
-        <Analytics />
       </body>
     </html>
   )
