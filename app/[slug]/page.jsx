@@ -72,7 +72,7 @@ export default async function Post({ params }) {
           <div className={style.realted}>
             <RelatedPost id={catId} />
           </div>
-          <Comments id={post[0].id} />
+          <Comments id={post[0].id}/>
         </>
         )
       : (
