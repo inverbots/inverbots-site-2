@@ -35,6 +35,7 @@ export default function MailChimpForm({email, name, autoSubmit}){
               id="mce-EMAIL"
               required
               value={email}
+              readOnly
             />
           </div>
           <div className="mc-field-group">
@@ -45,6 +46,7 @@ export default function MailChimpForm({email, name, autoSubmit}){
                 className="text"
                 id="mce-FNAME"
                 value={name}
+                readOnly
               />
           </div>
           <div id="mce-responses" className="clearfalse">
@@ -64,7 +66,9 @@ export default function MailChimpForm({email, name, autoSubmit}){
                 type="text"
                 name="b_0244fb5a09c74b3b464ac5f2f_e269145051"
                 tabIndex="-1"
-                value />
+                value 
+                readOnly
+                />
           </div>
           <div className="clear">
             <input
@@ -73,6 +77,7 @@ export default function MailChimpForm({email, name, autoSubmit}){
               id="mc-embedded-subscribe"
               className="button"
               value="Subscribe"
+              readOnly
             />
           </div>
         </div>

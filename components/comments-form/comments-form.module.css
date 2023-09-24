@@ -1,0 +1,61 @@
+.form_content{
+    max-width: 70%;
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 6%);
+    padding: 27px 37px 18px;
+}
+
+.info_section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 15px;
+    min-height: 20px;
+    flex:1;
+}
+
+.name,
+.email,
+.textarea{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form__input{
+    border: none;
+    margin-top: 9px;
+    background: #d9d9d97a;
+    border-bottom: solid #949494;
+    height: 40px;
+}
+
+.form_textarea {
+    border: none;
+    margin-top: 9px;
+    background: #d9d9d97a;
+    border-bottom: solid #949494;
+    height: 80px;
+}
+
+.form_susbmit{
+    margin-top:15px;
+    font-size: 18px;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 9px 28px;
+    cursor: pointer;
+}
+
+.hidden{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    overflow:hidden;
+}
+
+.error {
+    color: red;
+}

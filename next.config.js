@@ -28,14 +28,7 @@ const nextConfig = {
       config.resolve.fallback.net = false;
       config.resolve.fallback.child_process = false;
     }
-    config.module.rules.push({
-      test: /\.tsx?$/,
-      loader: 'ts-loader',
-      options: {
-        configFile: false,
-      },
-    });
-
+   
     return config;
   },
 }

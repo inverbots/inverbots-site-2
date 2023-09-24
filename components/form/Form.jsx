@@ -43,7 +43,7 @@ export default function Form () {
 
   return (
     <>
-      <div class={style.displayNone} key={1}>
+      <div className={style.displayNone} key={1}>
         <MailChimpForm
           key={2}
           name={fullName}

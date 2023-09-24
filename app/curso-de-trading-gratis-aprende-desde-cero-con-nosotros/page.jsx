@@ -34,7 +34,7 @@ export default async function CursoGratis () {
         {/* <div className={style.left_column}>
           <iframe width='100%' height='80%' src='https://www.youtube.com/embed/aEtWRCayAzw' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' />
         </div> */}
-        <div class="content" dangerouslySetInnerHTML={{ __html: content}} />
+        <div className="content" dangerouslySetInnerHTML={{ __html: content}} />
         <div className={style.content_form}>
           <TextCallAction
             className={style.form_freecurse}

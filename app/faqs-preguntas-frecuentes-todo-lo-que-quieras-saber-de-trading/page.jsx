@@ -16,7 +16,7 @@ export const metadata = {
 export default async function Faq () {
   const listPost = await Postfetch()
   return (
-    <article class={style.content}>
+    <article className={style.content}>
       <div className={style.contain}>
         <PostAccordion data={listPost} />
       </div>

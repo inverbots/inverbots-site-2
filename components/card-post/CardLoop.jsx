@@ -50,7 +50,7 @@ export default function CardLoop(props) {
         </article>
       ))}
       </section>
-      <div class={style.pagination}>
+      <div className={style.pagination}>
         {(posts.length / postsPerPage > 1) &&          
           (<Pagination
             count={Math.ceil(posts.length / postsPerPage)}
