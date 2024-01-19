@@ -13,7 +13,7 @@ export default function PageTestimonials (props) {
           const { texto_complementarios_testimonio, url_video_testimonio } = list
           return (
             <div className={style.list_testimonials} key={key}>
-              <div dangerouslySetInnerHTML={{ __html: url_video_testimonio }} />
+              {/* <div dangerouslySetInnerHTML={{ __html: url_video_testimonio }} /> */}
               <p>{texto_complementarios_testimonio}</p>
             </div>
           )
