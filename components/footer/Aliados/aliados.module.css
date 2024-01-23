@@ -1,0 +1,46 @@
+.aliados__title{
+    color: white;
+    margin-bottom: 5px;
+}
+
+.aliados {
+    background: var(--wp--preset--color--black);
+}
+
+.aliados__content{
+    padding: 25px 0px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.aliados__logos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;;
+}
+
+.aliados__logo_ninja{
+    object-fit: contain;
+    height: 70px;
+    width: 208px;
+}
+
+.aliados__logo_kinecktik{
+    background-color: white;
+    padding: 8px;
+    object-fit: contain;
+    height: 47px;
+    width: 167px;
+}
+
+@media(max-width:780px) {
+    .aliados_aliados__title{
+        text-align: center;
+    }
+    
+    .aliados__logos{
+        justify-content: center;
+        gap: 0px;
+    }
+}
