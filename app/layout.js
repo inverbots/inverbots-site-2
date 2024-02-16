@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
         {children}
         <WhatsappBtn />
         <Footer />
+        <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/c96fd49b-b62f-4f7f-876e-91bb6fad0be1-loader.js" ></script>
       </body>
     </html>
   )
