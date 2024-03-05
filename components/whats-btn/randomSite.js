@@ -1,8 +1,6 @@
 const randomSite = (whatsappText) => {
   const sites = [
     `https://api.whatsapp.com/send?phone=573222109312&text=${whatsappText}`,
-    `https://api.whatsapp.com/send?phone=573222109312&text=${whatsappText}`,
-    `https://api.whatsapp.com/send?phone=573127887846&text=${whatsappText}`,
   ];
 
   const shuffledSites = shuffleArray(sites);
