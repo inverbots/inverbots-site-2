@@ -11,7 +11,7 @@ export default async function Header () {
   const menuData = await fetchMenu()
 
   return (
-    <header className={styles.header + ' ' + 'header_page'}>
+    <header className={styles.header + ' ' + 'header_page header-class'}>
       <Menu data={menuData} />
     </header>
   )
