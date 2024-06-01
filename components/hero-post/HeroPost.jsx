@@ -5,6 +5,8 @@ export default async function HeroPost (props) {
   return (
     <div>
       <div className={style.banner}>
+        
+        {props.logo ? <h3 class={style.logo_title}>INVERBOTS</h3> : ''}
         <h1 className={style.title} dangerouslySetInnerHTML={{ __html: props.title }} />
         {props.featured_image && (
           <div className={style.content_image}>

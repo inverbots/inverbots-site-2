@@ -30,11 +30,9 @@ export default async function CursoGratis () {
       <HeroPost
         title={title}
         featured_image={featured_image}
+        logo={true}
       />
       <div className={style.free_curse}>
-        {/* <div className={style.left_column}>
-          <iframe width='100%' height='80%' src='https://www.youtube.com/embed/aEtWRCayAzw' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' />
-        </div> */}
         <div className="content" dangerouslySetInnerHTML={{ __html: content}} />
         <div className={style.content_form}>
           <TextCallAction

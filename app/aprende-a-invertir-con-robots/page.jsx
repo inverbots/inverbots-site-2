@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+ /* eslint-disable camelcase */
 import BannerLanding from '@/components/banner-landing/BannerLanding'
 import Form from '@/components/form/Form'
 import Caracteristics from '@/components/caracteristics/Caracteristic'
@@ -34,6 +34,7 @@ export default async function CursoGratis () {
         url={hero_banner.boton_llamado_a_la_accion}
         textCallToAction={hero_banner.texto_boton_llamado_a_la_accion}
         video={hero_banner.video_youtube}
+        logo={true}
       />
       <section className={style.form_section}>
         <h2 className={style.section_title}>!Accede a nuestro curso gratuito y recibir más información</h2>

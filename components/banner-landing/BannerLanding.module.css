@@ -4,6 +4,18 @@
   background-size: cover;
 }
 
+.logo_title{
+  font-family: Century;
+  font-size: 45px;
+  position: relative;
+  top: -2px;
+  background: black;
+  padding: 11px 42px;
+  border: solid 0.1px;
+  display: inline-block;
+  margin: 0;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -56,5 +68,12 @@
     height: 350px;
     width: 100%;
     margin-top: 48px;
+  }
+
+  .logo_title{
+    font-size: 33px;
+    padding: 8px 21px;
+    top: 12px;
+    margin-bottom: 10px;
   }
 }
