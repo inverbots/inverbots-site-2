@@ -1,0 +1,22 @@
+.page-layout {
+	display: grid;
+	grid-template-columns: 65% 28%;
+	gap: 4%;
+}
+
+.o-h2-title {
+	color: var(--third-color);
+	font-size: 32px;
+	padding-bottom: 4%;
+	font-weight: bold;
+}
+
+@media(max-width:780px){
+	.page-layout{
+		display: block;
+	}
+
+	.float-card {
+			display: none;
+	}
+}

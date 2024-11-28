@@ -1,0 +1,112 @@
+.c-float--sticky{
+	top: 6px;
+}
+
+.c-float{
+	background-color: #F2E7DE;
+	border-radius: 0px;
+}
+
+.c-float img{
+	border: none;
+	margin: 0;
+	width: 90px;
+	height: 90px;
+}
+
+.c-form-whats {
+	max-width: 85%;
+	margin: auto;
+}
+
+.c-form-whats__asesora {
+	background: #116056;
+	display: flex;
+	align-items: center;
+	padding: 10px 10%;
+	color: white;
+	gap: 15px;
+}
+
+.c-form-whats__asesora-name {
+	font-size: 25px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.c-form-whats__title {
+	text-align: left;
+	font-style: italic;
+}
+
+.c-form-whats__text {
+	margin: auto;
+	background: white;
+	margin-top: 17px;
+	border-radius: 5px;
+	text-align: left;
+}
+
+.c-form-whats__sub-title {
+	color: #003510;
+	font-size: 16px;
+	padding: 15px;
+}
+
+.c-form-whats__form {
+	margin-top: 14px;
+}
+
+.c-form-whats__item .c-form-whats__input {
+	width: 100%;
+	background: #DAFEE5;
+	border: none;
+	padding: 10px 12px;
+	margin-bottom: 5px;
+	border-radius: 8px;
+	font-size: 18px;
+	color: #003510;
+}
+
+.c-form-whats__item .c-form-whats__input::placeholder{
+	color: #003510;
+	font-size: 20px;
+}
+
+.c-form-whats__item {
+	display: flex;
+	align-items: center;
+}
+
+#acepto {
+	width: 10%;
+	margin: 0;
+}
+
+.c-form-whats__label {
+	color: #116056;
+	font-size: 14px;
+}
+
+.c-form-whats__button {
+	margin-top: 18px;
+	margin-bottom: 18px;
+	width: 100%;
+	border: none;
+	color: white;
+	background: #116056;
+	border-radius: 5px;
+	padding: 9px 0px;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+@media(max-width:780px){
+	.c-form-whats{
+		max-width: 90%;
+	}
+}
+
+
+
+

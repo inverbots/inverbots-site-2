@@ -1,0 +1,49 @@
+.c-float {
+	position: relative;
+	top: 20px;
+	background: var(--fifth-color);
+	text-align: center;
+	border-radius: 24px;
+	transition: 0.35s;
+	width: 	28vw;
+}
+
+.c-float--sticky{
+	position: fixed;
+	top: 20px;
+	transition: 0.35s;
+}
+
+.c-float .c-form__form {
+	background: var(--sixth-color);
+	padding: 18px;
+	border-radius: 13px;
+}
+
+.c-float .c-form__title{
+	font-size: 26px;
+}
+
+.c-float .c-form__sub-title{
+	font-size: 13px;
+}
+
+.c-float img {
+	margin-bottom: -26px;
+	margin-top: 21px;
+	border-radius: 50%;
+	object-fit: cover;
+	width: 120px;
+	height: 120px;
+	border: solid var(--sixth-color);
+}
+
+@media(max-width:780px){
+	.c-float{
+		width: 100vw;
+	}
+
+	.c-float .c-form__form{
+		border-radius: 0px;
+	}
+}

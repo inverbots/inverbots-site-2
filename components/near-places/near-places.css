@@ -1,0 +1,35 @@
+.c-near {
+	max-width: 90%;
+	margin-left: auto;
+	padding-right: 18px;
+	margin-bottom: 14px;
+	margin-top: 50px;
+}
+
+.c-near__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 28px;
+}
+
+.c-near__element {
+	font-size: 19px;
+	padding-bottom: 7%;
+	padding-left: 3%;
+	color: #4a4a4a;
+}
+
+.c-near__element::marker {
+	font-size: 34px;
+	content: '■';
+	background: var(--fifth-color);
+	color: var(--fifth-color);
+}
+
+
+@media(max-width:780px){
+	.c-near__list{
+		grid-template-columns: 1fr;
+		gap: 0px;
+	}
+}

@@ -1,0 +1,12 @@
+.c-hero__imagen {
+	min-height: 50vh;
+	object-fit: cover;
+	width: 100%;
+}
+
+@media(max-width:780px){
+	.c-hero img {
+			height: 100%;
+			width: 100%;
+	}
+}

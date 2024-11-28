@@ -1,0 +1,16 @@
+/* From components */
+@import 'hero/hero.css';
+@import 'slider-zv/slider-zv.css';
+@import 'float-card/float-card.css';
+@import 'form/form.css';
+@import 'form/form-whats.css';
+@import 'description/description.css';
+@import 'map/map.css';
+@import 'near-places/near-places.css';
+@import 'aparments/aparments.css';
+@import 'whatsapp-btn/whatsapp-btn.css';
+@import 'popup/popup.css';
+
+/* From page */
+@import 'page-styles/home.css';
+@import 'footer/footer.css'

@@ -1,0 +1,28 @@
+.o-float {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}
+
+.o-float-flotante {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 7px;
+	color: white;
+	max-width: 96%;
+	margin: auto;
+	background: #128C7E;
+	padding: 16px;
+	border-radius: 12px 12px 0px 0px;
+	box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+}
+
+.o-float__whatsapp {
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: bold;
+}

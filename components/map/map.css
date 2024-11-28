@@ -1,0 +1,34 @@
+.c-map {
+	max-width: 90%;
+	margin-left: auto;
+	margin-top: 40px;
+}
+
+.c-map__map-content iframe{
+	width: 100%;
+}
+
+.c-map__btn-map {
+	display: flex;
+}
+
+.c-map__btn-map img {
+	width: 82px;
+}
+
+.c-map__btn-map {
+	display: flex;
+	gap: 32px;
+	margin: 20px 0px;
+}
+
+@media(max-width:780px){
+	.c-map{
+		max-width: 100%;
+	}
+
+	.c-map__btn-map {
+			max-width: 90%;
+			margin: auto;
+	}
+}

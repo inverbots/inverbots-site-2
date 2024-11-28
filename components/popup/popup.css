@@ -1,0 +1,46 @@
+.popup__content {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	color: white;
+}
+
+.popup-imagen {
+	max-width: 406px;
+	object-fit: cover;
+	height: 100%;
+	position: relative;
+	top: 22px;
+}
+
+.popup__close {
+	position: absolute;
+	font-size: 45px;
+	z-index: 1;
+	right: 22vw;
+	top: 33px;
+}
+
+/** Reset sticky */
+.popup__content .c-float--sticky{
+	position: relative;
+	top: 20px;
+}
+
+@media(max-width:779px){
+	.popup__content {
+		display: block;
+		justify-content: center;
+	}
+
+	.popup-imagen{
+		display: none;
+	}
+
+	.popup__close {
+		font-size: 36px;
+    right: 3vw;
+    top: 23px;
+	}
+	
+}
