@@ -16,7 +16,7 @@ import { redirect } from 'next/navigation';
 import Schema from '@/components/schema/schema'
 
 const fetchSinglePost = (slug) => {
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
+  return fetch(`https://inverbots.xyz/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

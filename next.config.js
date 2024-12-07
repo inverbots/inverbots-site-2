@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['inverbots.com', 'images.unsplash.com', 'administrador.inverbots.com', 'secure.gravatar.com'],
+    domains: ['inverbots.com', 'images.unsplash.com', 'inverbots.xyz', 'secure.gravatar.com'],
   },
   async rewrites() {
     return [

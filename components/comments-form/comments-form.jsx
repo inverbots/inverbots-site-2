@@ -12,7 +12,7 @@ const fetchPublicComment = (body) => {
   };
   
 
-  fetch('https://administrador.inverbots.com/wp-json/wp/v2/comment-post ', options)
+  fetch('https://inverbots.xyz/wp-json/wp/v2/comment-post ', options)
     .then(response => {
       if (!response.ok) {
         throw new Error(`La solicitud falló con estado ${response.status}`);

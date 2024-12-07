@@ -10,7 +10,7 @@ export default function PublicationLayout ({ children }) {
       <div className={style.hero_banner}>
         <HeroPost
           title='Operaciones más recientes'
-          featured_image='https://administrador.inverbots.com/wp-content/uploads/2019/10/trading.jpg'
+          featured_image='https://inverbots.xyz/wp-content/uploads/2019/10/trading.jpg'
         />
 
       </div>

@@ -1,10 +1,10 @@
 const fetchSinglePost = () => {
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/posts?per_page=1999&_fields=slug,modified`, { cache: 'no-store' })
+  return fetch(`https://inverbots.xyz/wp-json/wp/v2/posts?per_page=1999&_fields=slug,modified`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 
 const fetchSinglePages = () => {
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/pages?per_page=99&_fields=slug,modified`, { cache: 'no-store' })
+  return fetch(`https://inverbots.xyz/wp-json/wp/v2/pages?per_page=99&_fields=slug,modified`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

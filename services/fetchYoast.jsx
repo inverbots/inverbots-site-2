@@ -1,5 +1,5 @@
 const fetchYoast = (slug) => {
-  return fetch(`https://administrador.inverbots.com/wp-json/yoast/v1/get_head?url=https://administrador.inverbots.com/${slug}/`, { cache: 'no-store' })
+  return fetch(`https://inverbots.xyz/wp-json/yoast/v1/get_head?url=https://inverbots.xyz/${slug}/`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 

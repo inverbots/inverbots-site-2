@@ -3,7 +3,7 @@ import style from './comments.module.css'
 import Image from 'next/image'
 
 const fetchPostComments = (id) => {
-    return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/comments?post=${id}`, { cache: 'no-store' })
+    return fetch(`https://inverbots.xyz/wp-json/wp/v2/comments?post=${id}`, { cache: 'no-store' })
       .then(rest => rest.json())
   }
 

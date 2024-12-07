@@ -29,7 +29,7 @@ export default async function CursoGratis () {
             <h2 className={style.site_title_sub}>{getInfo.title}</h2>
             <Image
               className={style.site__gif}
-              src="https://administrador.inverbots.com/wp-content/uploads/2023/06/gif-robot-naranja.gif"
+              src="https://inverbots.xyz/wp-content/uploads/2023/06/gif-robot-naranja.gif"
               alt="Inverbots GIF"
               width="150"
               height="150" />
@@ -69,7 +69,7 @@ export default async function CursoGratis () {
         >
           <Image
             className={style.braker_img}
-            src="https://administrador.inverbots.com/wp-content/uploads/2023/05/Z6d5.gif"
+            src="https://inverbots.xyz/wp-content/uploads/2023/05/Z6d5.gif"
             alt="GIF"
             width={320}
             height={200}

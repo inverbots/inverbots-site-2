@@ -4,7 +4,7 @@ import PostAccordion from '@/components/post-accordion/PostAccordion'
 
 const Postfetch = () => {
   // eslint-disable-next-line quotes
-  return fetch(`https://administrador.inverbots.com/wp-json/wp/v2/publicaciones?post_type=bunch_faqs`, { cache: 'no-store' })
+  return fetch(`https://inverbots.xyz/wp-json/wp/v2/publicaciones?post_type=bunch_faqs`, { cache: 'no-store' })
     .then(rest => rest.json())
 }
 
