@@ -14,6 +14,7 @@ import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
 import { redirect } from 'next/navigation';
 import Schema from '@/components/schema/schema'
+import fetchTitle from '@/services/fetchTitle'
 
 const fetchSinglePost = (slug) => {
   return fetch(`https://inverbots.xyz/wp-json/wp/v2/posts?slug=${slug}`, { cache: 'no-store' })
@@ -22,9 +23,8 @@ const fetchSinglePost = (slug) => {
 
 export async function generateMetadata({ params }) {
   const { slug } = params
-  const dataSEO = await fetchYoast(slug)
-  const JSONYoast = dataSEO.json  
-  return getMetadata(JSONYoast)
+  const titleData = await fetchTitle(slug)
+  return getMetadata(titleData)
 }
 
 export default async function Post({ params }) {

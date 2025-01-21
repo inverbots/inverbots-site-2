@@ -7,13 +7,15 @@ import PostFilter from '@/components/post-filter/PostFilter'
 import fetchYoast from '../services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
+import fetchTitle from '@/services/fetchTitle'
 import Schema from '@/components/schema/schema'
 
 const slug = 'home-v2'
 
 const dataSEO = await fetchYoast(slug)
+const titleData =  await fetchTitle(slug)
 const JSONYoast = dataSEO.json
-export const metadata = getMetadata(JSONYoast)
+export const metadata = getMetadata(titleData)
 
 export default async function HomePage() {
   const dataPage = await fetchPage(slug)

@@ -8,10 +8,7 @@ import RootHead from '@/components/head/RootHead'
 
 export const metadata = {
   metadataBase: new URL("https://inverbots.com"),
-  title: {
-    default: "Inverbots - la mejor academia de trading con ayuda de robots",
-    template:`%s | Inverbots - la mejor academia de trading con robots`
-  },
+  title: "Inverbots - la mejor academia de trading con ayuda de robots",
   description: `la mejor academia de trading con ayuda de robots`,
 }
 

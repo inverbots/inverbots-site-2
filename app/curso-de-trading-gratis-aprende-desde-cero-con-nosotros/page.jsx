@@ -11,13 +11,13 @@ import Schema from '@/components/schema/schema'
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
+import fetchTitle from '@/services/fetchTitle'
 
 const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 
 const dataSEO = await fetchYoast(slug)
-const JSONYoast = dataSEO.json
-
-export const metadata = getMetadata(JSONYoast)
+const titleData = await fetchTitle(slug)
+export const metadata = getMetadata(titleData)
 
 export default async function CursoGratis () {
   const dataPage = await fetchPage(slug)

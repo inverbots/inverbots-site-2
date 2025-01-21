@@ -1,10 +1,11 @@
 const getMetadata = (JSONYoast) => {
+
   const metadata = {
-    title: JSONYoast.title,
-    description: JSONYoast.description,
+    title: JSONYoast[0]?.title + " |  Bienvenido a Inverbots ",
+    description: JSONYoast[0]?.description,
     openGraph: {
-      title: JSONYoast.title,
-      description: JSONYoast.description,
+      title: JSONYoast[0]?.title,
+      description: JSONYoast[0]?.description,
     },
   };
 
