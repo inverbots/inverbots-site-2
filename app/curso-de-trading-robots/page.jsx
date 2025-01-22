@@ -16,9 +16,10 @@ import '@wordpress/block-library/build-style/theme.css'
 const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 
 const dataSEO = await fetchYoast(slug)
+const titleData = await fetchTitle(slug)
 const JSONYoast = dataSEO.json
 
-export const metadata = getMetadata(JSONYoast)
+export const metadata = getMetadata(titleData)
 
 export default async function CursoGratis () {
   const dataPage = await fetchPage(slug)

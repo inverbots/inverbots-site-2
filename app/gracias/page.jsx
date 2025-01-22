@@ -9,9 +9,10 @@ import Schema from '@/components/schema/schema';
 const slug = 'gracias'
 
 const dataSEO = await fetchYoast(slug)
+const titleData = await fetchPage(slug)
 const JSONYoast = dataSEO.json
 
-export const metadata = getMetadata(JSONYoast)
+export const metadata = getMetadata(titleData)
 
 export default async function ThanYou() {
 

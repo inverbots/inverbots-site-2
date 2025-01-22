@@ -11,13 +11,15 @@ import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import Schema from '@/components/schema/schema'
+import fetchTitle from '@/services/fetchTitle'
 
 const slug = 'aprende-a-invertir-con-ayuda-de-robots'
 
 const dataSEO = await fetchYoast(slug)
+const titleData = await fetchTitle(slug)
 const JSONYoast = dataSEO.json
 
-export const metadata = getMetadata(JSONYoast)
+export const metadata = getMetadata(titleData)
 
 export default async function CursoGratis () {
   const dataPage = await fetchPage(slug)

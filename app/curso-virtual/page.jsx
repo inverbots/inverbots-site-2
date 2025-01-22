@@ -10,9 +10,10 @@ import Schema from '@/components/schema/schema'
 const slug = 'curso-virtual'
 
 const dataSEO = await fetchYoast(slug)
-const JSONYoast = dataSEO.json
+const titleData = await fetchTitle(slug)
+const JSONYoast = dataSEO.jsons
 
-export const metadata = getMetadata(JSONYoast)
+export const metadata = getMetadata(titleData)
 
 export default async function CursoVirtual() {
   const dataPage = await fetchPage(slug)
