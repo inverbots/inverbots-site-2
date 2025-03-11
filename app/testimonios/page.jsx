@@ -4,6 +4,7 @@ import PageTestimonials from '@/components/page-testimonials/PageTestimonials'
 import style from './page.module.css'
 import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
+import fetchTitle from '@/services/fetchTitle'
 import getMetadata from '@/services/metadata'
 import Schema from '@/components/schema/schema'
 
