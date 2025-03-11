@@ -7,6 +7,8 @@ import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import Schema from '@/components/schema/schema'
+import fetchTitle from '@/services/fetchTitle'
+
 
 const slug = 'inversion-con-robots-de-trading'
 
