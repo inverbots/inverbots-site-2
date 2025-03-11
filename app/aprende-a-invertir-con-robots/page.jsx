@@ -9,6 +9,7 @@ import VibrationBtn from '@/components/vibration-btn/VibrationBtn'
 import MoreInformation from '@/components/more-info/MoreInfor'
 import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
+
 import getMetadata from '@/services/metadata'
 import Schema from '@/components/schema/schema'
 import './page.css'
