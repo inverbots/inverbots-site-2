@@ -31,7 +31,7 @@
   width: 100%;
   height: 90vh;
   object-fit: cover;
-  filter: brightness(60%) grayscale(100%);
+  filter: brightness(60%) ;
 }
 
 /** The process Inverbots */
@@ -181,7 +181,7 @@
   object-fit: cover;
   object-position: center;
   width: 100%;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   transition: 0.35s;
 }
 
