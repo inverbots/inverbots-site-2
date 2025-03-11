@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import details from '../public/img/dots.png'
 import PostFilter from '@/components/post-filter/PostFilter'
-import fetchYoast from '../services/fetchYoast'
+import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import fetchTitle from '@/services/fetchTitle'
@@ -12,12 +12,13 @@ import Schema from '@/components/schema/schema'
 
 const slug = 'home-v2'
 
-const dataSEO = await fetchYoast(slug)
-const titleData =  await fetchTitle(slug)
-const JSONYoast = dataSEO.json
-export const metadata = getMetadata(titleData)
-
 export default async function HomePage() {
+  // 👇 Se mueven las llamadas dentro de la función
+  const dataSEO = await fetchYoast(slug)
+  const titleData = await fetchTitle(slug)
+  const JSONYoast = dataSEO.json
+
+  const metadata = getMetadata(titleData)
   const dataPage = await fetchPage(slug)
   const { banner_principal, section_best_academy, seccion_invierte_con_robots } = dataPage[0]
 
@@ -110,3 +111,4 @@ export default async function HomePage() {
     </>
   )
 }
+
