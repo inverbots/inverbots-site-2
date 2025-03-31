@@ -28,6 +28,8 @@ export default async function HomePage() {
       <div className={style.hero_banner}>
         <div className={style.hero_texts}>
           <h1 className={style.hero_title}>{banner_principal.titulo}</h1>
+           {/* Añade tu nuevo título aquí */}
+           <h1 className={style.new_hero_title}>INVIERTE CON INTELIGENCIA AUTOMATIZA TU TRADING</h1>
           <Link
             className={style.hero_button}
             href={banner_principal.enlace_de_banner}

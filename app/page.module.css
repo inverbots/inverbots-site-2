@@ -7,16 +7,18 @@
   z-index: 1;
   left: 0;
   right: 0;
-  top: 25vh;
+  top: 15vh; /* Ajusta la distancia desde la parte superior según necesites */
   text-align: center;
-  max-width: 50%;
-  margin: auto;
+  max-width: 60%; /* Ajusta el ancho máximo del contenedor para facilitar el salto de línea si es necesario */
+  margin: 0 auto;
 }
 
 .hero_title {
   color: white;
   font-size: 48px;
-  margin-bottom: 68px;
+  line-height: 1.2; /* Añade un espaciado entre líneas */
+  margin-bottom: 50px; /* Aumenta el espacio entre el título y el botón */
+  white-space: pre-line; /* Permite saltos de línea intencionales en el texto (si lo editas en el código) */
 }
 
 .hero_button {
@@ -24,16 +26,32 @@
   font-size: 20px;
   border: solid 3px white;
   text-decoration: none;
-  padding: 10px 20px
+  padding: 10px 20px;
+  display: block;
+  width: fit-content;
+  margin: 80px auto 0; /* Aumenta el margen superior para bajar el botón */
 }
 
 .hero_imagen {
   width: 100%;
   height: 90vh;
   object-fit: cover;
-  filter: brightness(60%) grayscale(0%) ;
+  filter: brightness(100%) grayscale(0%);
 }
 
+/* Estilos para tu nuevo título (si lo estás usando) */
+.new_hero_title {
+  color: #fdfafa;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px; /* Reduce el espacio con el botón */
+  margin-top: -70px; /* Sube el título */
+  text-align: center;
+  white-space: pre-line;
+  position: relative;
+  top: -20px; /* Ajusta la posición verticalmente */
+}
 /** The process Inverbots */
 .trader_process {
   padding-top: 85px;
