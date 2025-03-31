@@ -6,6 +6,8 @@ import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import WhatsappBtnSimple from '@/components/whats-btn/WhatsBtnSimple'
 import Schema from '@/components/schema/schema'
+import fetchTitle from '@/services/fetchTitle'
+
 
 const slug = 'curso-virtual'
 
