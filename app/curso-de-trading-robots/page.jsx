@@ -8,6 +8,7 @@ import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import Schema from '@/components/schema/schema'
 import './page.css'
+import fetchTitle from "@/utils/fetchTitle"
 
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
