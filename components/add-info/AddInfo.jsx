@@ -17,7 +17,7 @@ export default function Addinfo (props) {
               </div>
             </div>
             <div className={style.rigth_column}>
-              <Image
+              <img
                 className={style.img_element}
                 src={e.imagen_relacionada}
                 alt={e.titulo_del_texto}

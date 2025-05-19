@@ -23,7 +23,7 @@ export default async function ThanYou() {
     <>
     <Schema dataSEO={dataSEO} />
     <div className={style.content}>
-      <Image
+      <img
         className={style.background}
         src={src}
         width={width}
