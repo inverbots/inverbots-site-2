@@ -8,7 +8,7 @@ export default function CardPost (props) {
       <div className={style.content_card}>
         <div className={style.content_image}>
           <span className={style.date_post}>{props.date}</span>
-          <img
+          <Image
             src={props.image}
             alt={`Inverbots ${props.title}`}
             width={300}

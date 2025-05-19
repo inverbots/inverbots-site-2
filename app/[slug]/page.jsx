@@ -59,7 +59,7 @@ export default async function Post({ params }) {
             />
             <div className={style.content_image}>
               {!hasYoutubeIframe && (
-                <img
+                <Image
                   src={post[0].uagb_featured_image_src?.large[0]}
                   alt={post[0].title.rendered}
                   width={1440}

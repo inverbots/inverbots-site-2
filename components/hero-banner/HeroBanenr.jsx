@@ -19,7 +19,7 @@ export default async function HeroBaner (props) {
       <div className={style.banner}>
         <h1 className={style.title}>{DataSimple.title}</h1>
         {DataSimple.featured_image && (
-          <img
+          <Image
             src={DataSimple.featured_image}
             alt={DataSimple.title}
             width={1440}

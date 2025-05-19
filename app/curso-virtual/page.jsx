@@ -44,7 +44,7 @@ export default async function CursoVirtual() {
           </div>
         </div>
         <div className={style.content_grid__rigth}>
-          <img
+          <Image
             className={style.content__img}
             src={featured_image}
             width='350'

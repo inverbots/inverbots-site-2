@@ -21,7 +21,7 @@ export default async function Comments (props) {
             <div className={style.comment_list__coment} key={id}>
                 <div className={style.comment_list__content}>
                     <div className={style.comment__profile}>
-                        <img className={style.comment__avatar} src={author_avatar_urls[24]} alt="comment inverbots avatar" width={50} height={96} />
+                        <Image className={style.comment__avatar} src={author_avatar_urls[24]} alt="comment inverbots avatar" width={50} height={96} />
                     </div>
                     <div className={style.comment_list__comments}>
                         <h3  className={style.comment_list__author}>{author_name}</h3>

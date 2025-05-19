@@ -36,7 +36,7 @@ export default async function HomePage() {
           >{banner_principal.texto_call_to_action}
           </Link>
         </div>
-        <img
+        <Image
           className={style.hero_imagen}
           src={banner_principal.imagen_banner}
           width={1440}
@@ -54,7 +54,7 @@ export default async function HomePage() {
             const { title, descripcion, imagen } = steps
             return (
               <div className={style.card_step} key={key}>
-                <img
+                <Image
                   src={details}
                   width='150'
                   height='150'
@@ -69,7 +69,7 @@ export default async function HomePage() {
                   </div>
                 </div>
                 <div className={style.card_imagen}>
-                  <img
+                  <Image
                     className={style.card_img}
                     src={imagen}
                     width={250}
@@ -98,7 +98,7 @@ export default async function HomePage() {
           </div>
         </div>
         <div className={style.imagen}>
-          <img
+          <Image
             src={seccion_invierte_con_robots.imagen}
             alt={'Inverbots' + seccion_invierte_con_robots.titulo}
             width={980}
