@@ -7,7 +7,7 @@ export default function CardPost2 (props) {
     <div className={style.content_card}>
       <Link href={'/' + props.slug}>
         <div className={style.content_image}>
-          <Image
+          <img
             src={props.image}
             alt={`Inverbots ${props.title}`}
             width={300}

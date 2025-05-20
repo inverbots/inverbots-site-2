@@ -10,7 +10,7 @@ export default async function HeroPost (props) {
         <h1 className={style.title} dangerouslySetInnerHTML={{ __html: props.title }} />
         {props.featured_image && (
           <div className={style.content_image}>
-            <Image
+            <img
               src={props.featured_image}
               alt={props.title}
               width={1440}

@@ -30,7 +30,7 @@ export default async function CursoGratis () {
           <h1 className={style.site_title}>Inverbots</h1>
           <div className={style.site__titleimg}>
             <h2 className={style.site_title_sub}>{getInfo.title}</h2>
-            <Image
+            <img
               className={style.site__gif}
               src="https://inverbots.xyz/wp-content/uploads/2023/06/gif-robot-naranja.gif"
               alt="Inverbots GIF"
@@ -70,7 +70,7 @@ export default async function CursoGratis () {
           style={{backgroundColor:getInfo.rompe_banner.color_fondo_del_banner}}
           className={style.content_braker}
         >
-          <Image
+          <img
             className={style.braker_img}
             src="https://inverbots.xyz/wp-content/uploads/2023/05/Z6d5.gif"
             alt="GIF"
@@ -102,7 +102,7 @@ export default async function CursoGratis () {
                     </ul>
                   </div>
                   <div className={style.info_group_img}>
-                    <Image
+                    <img
                       src={info.imagen_complementaria}
                       alt="Inverbots"
                       width={500}
@@ -123,7 +123,7 @@ export default async function CursoGratis () {
               {getInfo.contenido_del_programa_.agregar_pasos.map((info, key) => {              
                 return (
                   <div className={style.step__element} key={key}>
-                      <Image 
+                      <img 
                         className={style.step__img}
                         src={info.imagen_descriptiva}
                         alt="inverbots"
