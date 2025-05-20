@@ -54,13 +54,13 @@ export default async function HomePage() {
             const { title, descripcion, imagen } = steps
             return (
               <div className={style.card_step} key={key}>
-                <Image
+                {/* <Image
                   src={details}
                   width='150'
                   height='150'
                   alt='details'
                   className={style.card_detail}
-                />
+                /> */}
                 <div className={style.card_info}>
                   <div className={style.card_content}>
                     <span className={style.card_number}>{key + 1}</span>
