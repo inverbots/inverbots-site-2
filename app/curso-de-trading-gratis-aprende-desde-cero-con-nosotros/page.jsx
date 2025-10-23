@@ -7,7 +7,6 @@ import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import Schema from '@/components/schema/schema'
-
 import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
@@ -15,22 +14,33 @@ import fetchTitle from '@/services/fetchTitle'
 
 const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 
-let dataSEO = null
-try {
-  dataSEO = await fetchYoast(slug)
-} catch (error) {
-  console.error('Error fetching Yoast:', error)
+export async function generateMetadata() {
+  try {
+    const titleData = await fetchTitle(slug)
+    return getMetadata(titleData)
+  } catch (error) {
+    console.error('Error generating metadata:', error)
+    return {
+      title: 'Curso de Trading Gratis - Inverbots',
+      description: 'Aprende desde cero con nuestro curso gratuito'
+    }
+  }
 }
-const titleData = await fetchTitle(slug)
-export const metadata = getMetadata(titleData)
 
-export default async function CursoGratis () {
+export default async function CursoGratis() {
+  let dataSEO = null
+  try {
+    dataSEO = await fetchYoast(slug)
+  } catch (error) {
+    console.error('Error fetching Yoast:', error)
+  }
+
   const dataPage = await fetchPage(slug)
   const { title, featured_image, content } = dataPage[0]
-
+  
   return (
     <>
-      <Schema dataSEO={dataSEO} />
+      {dataSEO && <Schema dataSEO={dataSEO} />}
       <HeroPost
         title={title}
         featured_image={featured_image}
@@ -52,7 +62,6 @@ export default async function CursoGratis () {
       </div>
       <div className={style.page_content}>
       </div>
-
     </>
   )
 }
