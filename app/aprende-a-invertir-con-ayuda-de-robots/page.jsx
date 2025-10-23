@@ -15,24 +15,33 @@ import fetchTitle from '@/services/fetchTitle'
 
 const slug = 'aprende-a-invertir-con-ayuda-de-robots'
 
-let dataSEO = null
-try {
-  dataSEO = await fetchYoast(slug)
-} catch (error) {
-  console.error('Error fetching Yoast:', error)
+export async function generateMetadata() {
+  try {
+    const titleData = await fetchTitle(slug)
+    return getMetadata(titleData)
+  } catch (error) {
+    console.error('Error generating metadata:', error)
+    return {
+      title: 'Aprende a invertir con robots - Inverbots',
+      description: 'Curso de trading con robots'
+    }
+  }
 }
-const titleData = await fetchTitle(slug)
 
+export default async function CursoGratis() {
+  let dataSEO = null
+  try {
+    dataSEO = await fetchYoast(slug)
+  } catch (error) {
+    console.error('Error fetching Yoast:', error)
+  }
 
-export const metadata = getMetadata(titleData)
-
-export default async function CursoGratis () {
   const dataPage = await fetchPage(slug)
   const { featured_image, hero_banner, Incluye_programa, testimonios, informacion_adicional_inverbots, conoce_mas_de_inverbots__videos__ } = dataPage[0]
-
+  
   return (
     <>
-      <Schema dataSEO={dataSEO} />
+      {dataSEO && <Schema dataSEO={dataSEO} />}
       <BannerLanding
         background={featured_image}
         title={hero_banner.titulo}
