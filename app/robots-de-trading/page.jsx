@@ -10,7 +10,12 @@ import Schema from '@/components/schema/schema'
 
 const slug = 'inversion-con-robots-de-trading'
 
-const dataSEO = await fetchYoast(slug)
+let dataSEO = null
+try {
+  dataSEO = await fetchYoast(slug)
+} catch (error) {
+  console.error('Error fetching Yoast:', error)
+}
 const titleData = await fetchPage(slug)
 const JSONYoast = dataSEO.json
 
