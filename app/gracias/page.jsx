@@ -15,7 +15,7 @@ try {
   console.error('Error fetching Yoast:', error)
 }
 const titleData = await fetchPage(slug)
-const JSONYoast = dataSEO.json
+
 
 export const metadata = getMetadata(titleData)
 
