@@ -12,19 +12,33 @@ import Schema from '@/components/schema/schema'
 
 const slug = 'home-v2'
 
-export default async function HomePage() {
-  // 👇 Se mueven las llamadas dentro de la función
-  const dataSEO = await fetchYoast(slug)
-  const titleData = await fetchTitle(slug)
-  const JSONYoast = dataSEO.json
+export async function generateMetadata() {
+  try {
+    const titleData = await fetchTitle(slug)
+    return getMetadata(titleData)
+  } catch (error) {
+    console.error('Error generating metadata:', error)
+    return {
+      title: 'Inverbots - Trading y educación financiera',
+      description: 'Aprende sobre trading, inversiones y mercados financieros'
+    }
+  }
+}
 
-  const metadata = getMetadata(titleData)
+export default async function HomePage() {
+  let dataSEO = null
+  try {
+    dataSEO = await fetchYoast(slug)
+  } catch (error) {
+    console.error('Error fetching Yoast:', error)
+  }
+
   const dataPage = await fetchPage(slug)
   const { banner_principal, section_best_academy, seccion_invierte_con_robots } = dataPage[0]
 
   return (
     <>
-      <Schema dataSEO={dataSEO} />
+      {dataSEO && <Schema dataSEO={dataSEO} />}
       <div className={style.hero_banner}>
         <div className={style.hero_texts}>
           <h1 className={style.hero_title}>{banner_principal.titulo}</h1>
@@ -113,4 +127,3 @@ export default async function HomePage() {
     </>
   )
 }
-
