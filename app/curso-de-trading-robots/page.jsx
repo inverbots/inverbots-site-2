@@ -16,7 +16,12 @@ import '@wordpress/block-library/build-style/theme.css'
 
 const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 
-const dataSEO = await fetchYoast(slug)
+let dataSEO = null
+try {
+  dataSEO = await fetchYoast(slug)
+} catch (error) {
+  console.error('Error fetching Yoast:', error)
+}
 const titleData = await fetchTitle(slug)
 const JSONYoast = dataSEO.json
 
