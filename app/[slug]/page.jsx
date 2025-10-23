@@ -39,7 +39,6 @@ export default async function Post({ params }) {
   const { slug } = params
   const post = await fetchSinglePost(slug)
   
-  // Si no hay post, mostrar PageSite
   if (!post || post.length === 0) {
     return <PageSite slug={slug} />
   }
@@ -54,8 +53,6 @@ export default async function Post({ params }) {
   const postData = post[0]?.content.rendered
   const regex = /youtube\.com\/embed\//
   const hasYoutubeIframe = regex.test(postData)
-  
-  /** JsonLD */
   const dataSEO = await fetchYoast(slug)
   
   return (
@@ -68,4 +65,26 @@ export default async function Post({ params }) {
       <article className={style.content_post}>
         <Shared
           className={style.shared_content}
-          title={post[0].title
+          title={post[0].title.rendered}
+        />
+        <div className={style.content_image}>
+          {!hasYoutubeIframe && (
+            <img
+              src={post[0].uagb_featured_image_src?.large[0]}
+              alt={post[0].title.rendered}
+              width={1440}
+              height={450}
+              className={style.post_imagen}
+            />
+          )}
+        </div>
+        <div className={style.element} dangerouslySetInnerHTML={{ __html: post[0].content.rendered }} />
+      </article>
+      <div className={style.realted}>
+        <RelatedPost id={catId} />
+      </div>
+      <Comments id={post[0].id}/>
+      <CommentsForm slug={slug}/>
+    </>
+  )
+}
