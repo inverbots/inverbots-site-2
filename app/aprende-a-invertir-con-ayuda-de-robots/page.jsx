@@ -15,7 +15,12 @@ import fetchTitle from '@/services/fetchTitle'
 
 const slug = 'aprende-a-invertir-con-ayuda-de-robots'
 
-const dataSEO = await fetchYoast(slug)
+let dataSEO = null
+try {
+  dataSEO = await fetchYoast(slug)
+} catch (error) {
+  console.error('Error fetching Yoast:', error)
+}
 const titleData = await fetchTitle(slug)
 const JSONYoast = dataSEO.json
 
