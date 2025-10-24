@@ -8,7 +8,7 @@ import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import fetchTitle from '@/services/fetchTitle'
 
-const slug = 'home-v2'
+const slug = 'inversion-con-robots-de-trading'
 
 export async function generateMetadata() {
   try {
