@@ -16,6 +16,12 @@ const slug = 'aprende-a-invertir-con-ayuda-de-robots'
 export async function generateMetadata() {
   try {
     const titleData = await fetchTitle(slug)
+    if (!titleData) {
+      return {
+        title: 'Aprende a invertir con robots - Inverbots',
+        description: 'Curso de trading con robots'
+      }
+    }
     return getMetadata(titleData)
   } catch (error) {
     console.error('Error generating metadata:', error)
@@ -27,23 +33,29 @@ export async function generateMetadata() {
 }
 
 export default async function CursoGratis() {
-  try {
-  } catch (error) {
-    console.error('Error fetching Yoast:', error)
+  const dataPage = await fetchPage(slug)
+  
+  // ✅ VALIDAR ANTES DE USAR
+  if (!dataPage || dataPage.length === 0) {
+    return (
+      <div>
+        <h1>Página no encontrada</h1>
+        <p>Lo sentimos, no pudimos cargar esta página.</p>
+      </div>
+    )
   }
 
-  const dataPage = await fetchPage(slug)
   const { featured_image, hero_banner, Incluye_programa, testimonios, informacion_adicional_inverbots, conoce_mas_de_inverbots__videos__ } = dataPage[0]
   
   return (
     <>
       <BannerLanding
         background={featured_image}
-        title={hero_banner.titulo}
-        description={hero_banner.texto_complementario}
-        url={hero_banner.boton_llamado_a_la_accion}
-        textCallToAction={hero_banner.texto_boton_llamado_a_la_accion}
-        video={hero_banner.video_youtube}
+        title={hero_banner?.titulo}
+        description={hero_banner?.texto_complementario}
+        url={hero_banner?.boton_llamado_a_la_accion}
+        textCallToAction={hero_banner?.texto_boton_llamado_a_la_accion}
+        video={hero_banner?.video_youtube}
       />
       <section className={style.form_section}>
         <h2 className={style.section_title}>!Accede a nuestro curso gratuito y recibir más información</h2>
