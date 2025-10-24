@@ -1,10 +1,8 @@
 import backgroundImage from './inverbot-contact.webp';
 import Image from 'next/image';
 import style from './gracia.module.css'
-import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata';
-import Schema from '@/components/schema/schema';
 
 const slug = 'gracias'
 
@@ -22,9 +20,7 @@ export async function generateMetadata() {
 }
 
 export default async function ThankYou() {
-  let dataSEO = null
   try {
-    dataSEO = await fetchYoast(slug)
   } catch (error) {
     console.error('Error fetching Yoast:', error)
   }
@@ -34,7 +30,6 @@ export default async function ThankYou() {
   
   return (
     <>
-      {dataSEO && <Schema dataSEO={dataSEO} />}
       <div className={style.content}>
         <img
           className={style.background}

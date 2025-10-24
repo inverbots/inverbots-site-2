@@ -2,22 +2,17 @@
 import HeroPost from '@/components/hero-post/HeroPost'
 import PageTestimonials from '@/components/page-testimonials/PageTestimonials'
 import style from './page.module.css'
-import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import fetchTitle from '@/services/fetchTitle'
 import getMetadata from '@/services/metadata'
-import Schema from '@/components/schema/schema'
 
 const slug = 'testimonios-2'
 
-let dataSEO = null
 try {
-  dataSEO = await fetchYoast(slug)
 } catch (error) {
   console.error('Error fetching Yoast:', error)
 }
 const titleData = await fetchPage(slug)
-const JSONYoast = dataSEO.json
 
 export const metadata = getMetadata(titleData)
 
@@ -27,7 +22,6 @@ export default async function CursoGratis () {
 
   return (
     <>
-      <Schema dataSEO={dataSEO} />
       <HeroPost
         title={title}
         featured_image={featured_image}

@@ -3,7 +3,6 @@ import Image from 'next/image'
 import HeroPost from '@/components/hero-post/HeroPost'
 import Shared from '@/components/shared/Shared'
 import RelatedPost from '@/components/related-post/RelatedPost'
-import fetchYoast from '@/services/fetchYoast'
 import PageSite from './pageSite'
 import getMetadata from '@/services/metadata'
 import Comments from '@/components/comments/comments'
@@ -12,7 +11,6 @@ import '@wordpress/block-library/build-style/common.css'
 import '@wordpress/block-library/build-style/style.css'
 import '@wordpress/block-library/build-style/theme.css'
 import { redirect } from 'next/navigation'
-import Schema from '@/components/schema/schema'
 import fetchTitle from '@/services/fetchTitle'
 
 const fetchSinglePost = (slug) => {
@@ -53,11 +51,9 @@ export default async function Post({ params }) {
   const postData = post[0]?.content.rendered
   const regex = /youtube\.com\/embed\//
   const hasYoutubeIframe = regex.test(postData)
-  const dataSEO = await fetchYoast(slug)
   
   return (
     <>
-      {dataSEO && <Schema dataSEO={dataSEO} />}
       <HeroPost
         title={post[0].title.rendered}
         featured_image={post[0].uagb_featured_image_src?.medium[0]}

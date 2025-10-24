@@ -1,19 +1,15 @@
 import style from './page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import WhatsappBtnSimple from '@/components/whats-btn/WhatsBtnSimple'
-import Schema from '@/components/schema/schema'
 import fetchTitle from '@/services/fetchTitle'
 
 
 const slug = 'curso-virtual'
 
-let dataSEO = null
 try {
-  dataSEO = await fetchYoast(slug)
 } catch (error) {
   console.error('Error fetching Yoast:', error)
 }
@@ -28,7 +24,6 @@ export default async function CursoVirtual() {
  
   return (
     <>
-    <Schema dataSEO={dataSEO} />
     <main className={style.content}>
       <div className={style.content_grid}>
         <div className={style.content_grid__left}>

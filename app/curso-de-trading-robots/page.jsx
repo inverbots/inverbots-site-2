@@ -3,10 +3,8 @@ import Form from '@/components/form/Form'
 import TextCallAction from '@/components/text-call-to-action/TextCallAction'
 import HeroPost from '@/components/hero-post/HeroPost'
 import style from './page.module.css'
-import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
-import Schema from '@/components/schema/schema'
 import './page.css'
 import fetchTitle from '@/services/fetchTitle'
 
@@ -16,9 +14,7 @@ import '@wordpress/block-library/build-style/theme.css'
 
 const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 
-let dataSEO = null
 try {
-  dataSEO = await fetchYoast(slug)
 } catch (error) {
   console.error('Error fetching Yoast:', error)
 }
@@ -32,7 +28,6 @@ export default async function CursoGratis () {
 
   return (
     <>
-      <Schema dataSEO={dataSEO} />
       <HeroPost
         title={title}
         featured_image={featured_image}

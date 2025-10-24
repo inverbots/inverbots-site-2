@@ -7,20 +7,16 @@ import style from './page.module.css'
 import Addinfo from '@/components/add-info/AddInfo'
 import VibrationBtn from '@/components/vibration-btn/VibrationBtn'
 import MoreInformation from '@/components/more-info/MoreInfor'
-import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import fetchTitle from '@/services/fetchTitle'
 
 
 import getMetadata from '@/services/metadata'
-import Schema from '@/components/schema/schema'
 import './page.css'
 
 const slug = 'aprende-a-invertir-con-ayuda-de-robots'
 
-let dataSEO = null
 try {
-  dataSEO = await fetchYoast(slug)
 } catch (error) {
   console.error('Error fetching Yoast:', error)
 }
@@ -35,7 +31,6 @@ export default async function CursoGratis () {
 
   return (
     <>
-      <Schema dataSEO={dataSEO} />
       <BannerLanding
         background={featured_image}
         title={hero_banner.titulo}

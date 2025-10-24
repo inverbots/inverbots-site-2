@@ -3,18 +3,14 @@ import Image from 'next/image'
 import Form from '@/components/form/Form'
 import Testimonials from '@/components/testimonios/Testimonios'
 import Link from 'next/link'
-import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
-import Schema from '@/components/schema/schema'
 import fetchTitle from '@/services/fetchTitle'
 
 
 const slug = 'inversion-con-robots-de-trading'
 
-let dataSEO = null
 try {
-  dataSEO = await fetchYoast(slug)
 } catch (error) {
   console.error('Error fetching Yoast:', error)
 }
@@ -29,7 +25,6 @@ export default async function CursoGratis () {
 
   return (
     <>
-      <Schema dataSEO={dataSEO} />
       <section className={style.main_head}>
         <div className={style.content_head}>
           <h1 className={style.site_title}>Inverbots</h1>

@@ -4,11 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import details from '../public/img/dots.png'
 import PostFilter from '@/components/post-filter/PostFilter'
-import fetchYoast from '@/services/fetchYoast'
 import fetchPage from '@/services/fetchPage'
 import getMetadata from '@/services/metadata'
 import fetchTitle from '@/services/fetchTitle'
-import Schema from '@/components/schema/schema'
 
 const slug = 'home-v2'
 
@@ -26,9 +24,7 @@ export async function generateMetadata() {
 }
 
 export default async function HomePage() {
-  let dataSEO = null
   try {
-    dataSEO = await fetchYoast(slug)
   } catch (error) {
     console.error('Error fetching Yoast:', error)
   }
@@ -38,7 +34,6 @@ export default async function HomePage() {
 
   return (
     <>
-      {dataSEO && <Schema dataSEO={dataSEO} />}
       <div className={style.hero_banner}>
         <div className={style.hero_texts}>
           <h1 className={style.hero_title}>{banner_principal.titulo}</h1>
