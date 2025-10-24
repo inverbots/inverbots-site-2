@@ -1,14 +1,20 @@
-import backgroundImage from './inverbot-contact.webp';
-import Image from 'next/image';
+import backgroundImage from './inverbot-contact.webp'
+import Image from 'next/image'
 import style from './gracia.module.css'
 import fetchPage from '@/services/fetchPage'
-import getMetadata from '@/services/metadata';
+import getMetadata from '@/services/metadata'
 
 const slug = 'gracias'
 
 export async function generateMetadata() {
   try {
     const titleData = await fetchPage(slug)
+    if (!titleData || titleData.length === 0) {
+      return {
+        title: 'Gracias - Inverbots',
+        description: 'Gracias por contactarnos'
+      }
+    }
     return getMetadata(titleData)
   } catch (error) {
     console.error('Error generating metadata:', error)
@@ -20,13 +26,19 @@ export async function generateMetadata() {
 }
 
 export default async function ThankYou() {
-  try {
-  } catch (error) {
-    console.error('Error fetching Yoast:', error)
+  const posts = await fetchPage(slug)
+  
+  // ✅ VALIDAR ANTES DE USAR
+  if (!posts || posts.length === 0) {
+    return (
+      <div>
+        <h1>Página no encontrada</h1>
+        <p>Lo sentimos, no pudimos cargar esta página.</p>
+      </div>
+    )
   }
 
-  const posts = await fetchPage(slug)
-  const {src, width, height} = backgroundImage
+  const { src, width, height } = backgroundImage
   
   return (
     <>
