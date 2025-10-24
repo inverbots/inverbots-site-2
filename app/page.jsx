@@ -13,6 +13,12 @@ const slug = 'home-v2'
 export async function generateMetadata() {
   try {
     const titleData = await fetchTitle(slug)
+    if (!titleData) {
+      return {
+        title: 'Inverbots - Trading y educación financiera',
+        description: 'Aprende sobre trading, inversiones y mercados financieros'
+      }
+    }
     return getMetadata(titleData)
   } catch (error) {
     console.error('Error generating metadata:', error)
@@ -24,30 +30,35 @@ export async function generateMetadata() {
 }
 
 export default async function HomePage() {
-  try {
-  } catch (error) {
-    console.error('Error fetching Yoast:', error)
+  const dataPage = await fetchPage(slug)
+  
+  // ✅ VALIDAR ANTES DE USAR
+  if (!dataPage || dataPage.length === 0) {
+    return (
+      <div>
+        <h1>Página no encontrada</h1>
+        <p>Lo sentimos, no pudimos cargar esta página.</p>
+      </div>
+    )
   }
 
-  const dataPage = await fetchPage(slug)
   const { banner_principal, section_best_academy, seccion_invierte_con_robots } = dataPage[0]
 
   return (
     <>
       <div className={style.hero_banner}>
         <div className={style.hero_texts}>
-          <h1 className={style.hero_title}>{banner_principal.titulo}</h1>
-           {/* Añade tu nuevo título aquí */}
+          <h1 className={style.hero_title}>{banner_principal?.titulo}</h1>
            <h1 className={style.new_hero_title}>INVIERTE CON INTELIGENCIA AUTOMATIZA TU TRADING</h1>
           <Link
             className={style.hero_button}
-            href={banner_principal.enlace_de_banner}
-          >{banner_principal.texto_call_to_action}
+            href={banner_principal?.enlace_de_banner || '#'}
+          >{banner_principal?.texto_call_to_action}
           </Link>
         </div>
         <img
           className={style.hero_imagen}
-          src={banner_principal.imagen_banner}
+          src={banner_principal?.imagen_banner}
           width={1440}
           height={450}
           alt='Inverbots'
@@ -59,17 +70,10 @@ export default async function HomePage() {
           <h3 className={style.trader_secondary}>El proceso que llevan nuestros traders</h3>
         </div>
         <div className={style.trader_process_grid}>
-          {section_best_academy.pasos_que_siguen_nuestro_traders.map((steps, key) => {
+          {section_best_academy?.pasos_que_siguen_nuestro_traders?.map((steps, key) => {
             const { title, descripcion, imagen } = steps
             return (
               <div className={style.card_step} key={key}>
-                {/* <Image
-                  src={details}
-                  width='150'
-                  height='150'
-                  alt='details'
-                  className={style.card_detail}
-                /> */}
                 <div className={style.card_info}>
                   <div className={style.card_content}>
                     <span className={style.card_number}>{key + 1}</span>
@@ -98,9 +102,9 @@ export default async function HomePage() {
         <div className={style.info}>
           <div className={style.info_content}>
             <h2 className={style.invest_title}>
-              {seccion_invierte_con_robots.titulo}
+              {seccion_invierte_con_robots?.titulo}
             </h2>
-            <div className={style.descripcion} dangerouslySetInnerHTML={{ __html: seccion_invierte_con_robots.descripcion }} />
+            <div className={style.descripcion} dangerouslySetInnerHTML={{ __html: seccion_invierte_con_robots?.descripcion }} />
             <div className={style.succes_case}>
               <Link className={style.anchor_succes} href='/testimonios'>Casos de éxito</Link>
             </div>
@@ -108,8 +112,8 @@ export default async function HomePage() {
         </div>
         <div className={style.imagen}>
           <img
-            src={seccion_invierte_con_robots.imagen}
-            alt={'Inverbots' + seccion_invierte_con_robots.titulo}
+            src={seccion_invierte_con_robots?.imagen}
+            alt={'Inverbots' + seccion_invierte_con_robots?.titulo}
             width={980}
             height={750}
           />
