@@ -3,23 +3,44 @@ import HeroPost from '@/components/hero-post/HeroPost'
 import PageTestimonials from '@/components/page-testimonials/PageTestimonials'
 import style from './page.module.css'
 import fetchPage from '@/services/fetchPage'
-import fetchTitle from '@/services/fetchTitle'
 import getMetadata from '@/services/metadata'
 
 const slug = 'testimonios-2'
 
-try {
-} catch (error) {
-  console.error('Error fetching Yoast:', error)
+export async function generateMetadata() {
+  try {
+    const titleData = await fetchPage(slug)
+    if (!titleData || titleData.length === 0) {
+      return {
+        title: 'Testimonios - Inverbots',
+        description: 'Testimonios de nuestros estudiantes'
+      }
+    }
+    return getMetadata(titleData)
+  } catch (error) {
+    console.error('Error generating metadata:', error)
+    return {
+      title: 'Testimonios - Inverbots',
+      description: 'Testimonios de nuestros estudiantes'
+    }
+  }
 }
-const titleData = await fetchPage(slug)
 
-export const metadata = getMetadata(titleData)
-
-export default async function CursoGratis () {
+export default async function CursoGratis() {
   const dataPage = await fetchPage(slug)
-  const { title, featured_image, video_principal, add_testimonials } = dataPage[0]
+  
+  // ✅ VALIDAR ANTES DE USAR
+  if (!dataPage || dataPage.length === 0) {
+    return (
+      <div>
+        <h1>Página no encontrada</h1>
+        <p>Lo sentimos, no pudimos cargar esta página.</p>
+      </div>
+    )
+  }
 
+  const { title, featured_image, video_principal, add_testimonials } = dataPage[0]
+  
   return (
     <>
       <HeroPost
