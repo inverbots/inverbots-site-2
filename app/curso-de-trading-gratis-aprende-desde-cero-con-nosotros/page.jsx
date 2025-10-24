@@ -15,6 +15,12 @@ const slug = 'curso-de-trading-gratis-aprende-desde-cero-con-nosotros'
 export async function generateMetadata() {
   try {
     const titleData = await fetchTitle(slug)
+    if (!titleData) {
+      return {
+        title: 'Curso de Trading Gratis - Inverbots',
+        description: 'Aprende desde cero con nuestro curso gratuito'
+      }
+    }
     return getMetadata(titleData)
   } catch (error) {
     console.error('Error generating metadata:', error)
@@ -26,12 +32,18 @@ export async function generateMetadata() {
 }
 
 export default async function CursoGratis() {
-  try {
-  } catch (error) {
-    console.error('Error fetching Yoast:', error)
+  const dataPage = await fetchPage(slug)
+  
+  // ✅ VALIDAR ANTES DE USAR
+  if (!dataPage || dataPage.length === 0) {
+    return (
+      <div>
+        <h1>Página no encontrada</h1>
+        <p>Lo sentimos, no pudimos cargar esta página.</p>
+      </div>
+    )
   }
 
-  const dataPage = await fetchPage(slug)
   const { title, featured_image, content } = dataPage[0]
   
   return (
@@ -41,10 +53,7 @@ export default async function CursoGratis() {
         featured_image={featured_image}
       />
       <div className={style.free_curse}>
-        {/* <div className={style.left_column}>
-          <iframe width='100%' height='80%' src='https://www.youtube.com/embed/aEtWRCayAzw' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' />
-        </div> */}
-        <div className="content" dangerouslySetInnerHTML={{ __html: content}} />
+        <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
         <div className={style.content_form}>
           <TextCallAction
             className={style.form_freecurse}
