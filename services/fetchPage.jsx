@@ -1,14 +1,15 @@
 const fetchPage = async (slug) => {
   try {
+    // Validar slug
     if (!slug || slug.endsWith('.shtml') || slug.includes('.')) {
       console.log(`Invalid slug: ${slug}`)
       return []
     }
     
     const response = await fetch(
-      `https://inverbots.xyz/wp-json/wp/v2/pages?slug=${slug}&acf_format=standard`, 
+      `https://inverbots.xyz/wp-json/wp/v2/get_pages?slug=${slug}`, 
       { 
-        cache: 'no-store',
+        // ✅ SOLO CAMBIO: Quitar cache: 'no-store' y dejar solo revalidate
         next: { revalidate: 60 }
       }
     )
@@ -18,6 +19,7 @@ const fetchPage = async (slug) => {
       return []
     }
     
+    // Verificar que la respuesta sea JSON
     const contentType = response.headers.get("content-type")
     if (!contentType || !contentType.includes("application/json")) {
       console.error(`Response is not JSON for ${slug}`)
@@ -25,16 +27,10 @@ const fetchPage = async (slug) => {
     }
     
     const data = await response.json()
-    
-    if (!data || data.length === 0) {
-      console.log(`No data found for ${slug}`)
-      return []
-    }
-    
     return data
     
   } catch (error) {
-    console.error(`Error fetching page for ${slug}:`, error)
+    console.error('Error fetching page:', error)
     return []
   }
 }
