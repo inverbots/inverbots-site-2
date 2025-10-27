@@ -2,7 +2,7 @@ const fetchSinglePost = async () => {
   try {
     const response = await fetch(
       `https://inverbots.xyz/wp-json/wp/v2/posts?per_page=1999&_fields=slug,modified`, 
-      { next: { revalidate: 3600 } }  // Cachea por 1 hora
+      { next: { revalidate: 3600 } }
     )
     
     if (!response.ok) {
@@ -33,7 +33,7 @@ const fetchSinglePages = async () => {
   try {
     const response = await fetch(
       `https://inverbots.xyz/wp-json/wp/v2/pages?per_page=99&_fields=slug,modified`, 
-      { next: { revalidate: 3600 } }  // Cachea por 1 hora
+      { next: { revalidate: 3600 } }
     )
     
     if (!response.ok) {
@@ -71,7 +71,6 @@ const formatingDate = (infoDate) => {
 }
 
 const getMapElements = (list, baseUrl) => {
-  // ✅ Validar que list sea un array
   if (!Array.isArray(list) || list.length === 0) {
     return []
   }
@@ -92,7 +91,7 @@ export default async function sitemap() {
   const allPost = await fetchSinglePost()
   const allPages = await fetchSinglePages()
 
-  const baseUrl = "https://inverbots.com/"  // ✅ Cambiado a https
+  const baseUrl = "https://inverbots.com/"
   const allPostUrl = getMapElements(allPost, baseUrl)
   const allPagesUrl = getMapElements(allPages, baseUrl)
 
@@ -103,26 +102,6 @@ export default async function sitemap() {
       url: baseUrl,
       lastModified: addDate
     },
-    ...allPagesUrl,
-    ...allPostUrl
-  ]
-}
-
-export default async function sitemap() {
-  const allPost = await fetchSinglePost()
-  const allPages = await fetchSinglePages()
-
-  const baseUrl = "http://inverbots.com/";
-  const allPostUrl = getMapElements(allPost, baseUrl)
-  const allPagesUrl = getMapElements(allPages, baseUrl)
-
-  const addDate = formatingDate(new Date())
-
-  return [
-    { url: baseUrl,
-      lastModified: addDate
-    },
-
     ...allPagesUrl,
     ...allPostUrl
   ]
