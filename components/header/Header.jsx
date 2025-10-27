@@ -1,22 +1,19 @@
 import styles from './Header.module.css'
 import Menu from './Menu/Menu'
 
-// ✅ Menú por defecto en caso de que falle la API
+// Menú por defecto
 const DEFAULT_MENU = [
   { title: 'Inicio', url: '/' },
   { title: 'Publicaciones', url: '/publicaciones' },
   { title: 'Testimonios', url: '/testimonios' },
-  // Agrega más items según tu menú real
+  { title: 'FAQs', url: '/faqs-preguntas-frecuentes-todo-lo-que-quieras-saber-de-trading' }
 ]
 
 const fetchMenu = async () => {
   try {
     const response = await fetch(
       `https://inverbots.xyz/wp-json/wp/v2/menu/3337`, 
-      { 
-        cache: 'no-store',
-        next: { revalidate: 3600 } // Cachea por 1 hora
-      }
+      { next: { revalidate: 3600 } }  // ✅ Solo revalidate
     )
     
     if (!response.ok) {
