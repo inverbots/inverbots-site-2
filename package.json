@@ -16,20 +16,21 @@
     "@mui/material": "^5.13.6",
     "@wordpress/block-library": "^8.9.0",
     "axios": "^1.4.0",
-    "eslint": "8.39.0",
+    "eslint": "^9.39.2",
     "framer-motion": "^10.12.12",
     "google-spreadsheet": "^3.3.0",
     "googleapis": "^118.0.0",
     "jsonp": "^0.2.1",
-    "next": "^13.4.6",
+    "lite-youtube-embed": "^0.3.4",
+    "next": "^16.1.0",
     "normalize.css": "^8.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-facebook-pixel": "^1.0.4",
     "swiper": "^9.3.2"
   },
   "devDependencies": {
-    "eslint-config-next": "^13.4.6",
+    "eslint-config-next": "^16.1.0",
     "standard": "^17.0.0"
   }
 }

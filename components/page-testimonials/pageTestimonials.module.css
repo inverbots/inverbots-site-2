@@ -1,24 +1,218 @@
-.testimonials_list {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #111;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* Featured Section */
+.featuredSection {
+  margin-bottom: 6rem;
+}
+
+.featuredCard {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  max-width: 85%;
-  margin: auto;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.testimonials_list iframe {
+.featuredVideoWrapper {
+  aspect-ratio: 16/9;
   width: 100%;
-  height: 200px;
+  height: 100%;
 }
 
-.main_video iframe {
+.featuredVideoWrapper lite-youtube {
   width: 100%;
-  height: 90vh
+  height: 100%;
+  border-radius: 0;
 }
 
-@media(max-width:780px) {
-  .main_video iframe {
-    width: 100%;
-    height: 50vh;
+.featuredContent {
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+}
+
+.featuredText {
+  font-size: 1.35rem;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+  position: relative;
+  font-weight: 500;
+}
+
+.featuredText::before {
+  content: '“';
+  font-size: 5rem;
+  color: #3b82f6;
+  opacity: 0.2;
+  position: absolute;
+  top: -2.5rem;
+  left: -2rem;
+  font-family: serif;
+  line-height: 1;
+}
+
+/* Grid Section */
+.grid {
+  display: grid;
+  /* Use grid-auto-flow dense to pack items if expansions create gaps */
+  grid-auto-flow: dense;
+  /* Base grid: 3 columns if space permits, but flexible */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* Smoother transition */
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Expanded State */
+.expanded {
+  /* Span 3 columns, or full width if grid calls for it */
+  grid-column: span 3;
+
+  /* Make it pop out more */
+  transform: scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  /* Ensure it sits above others if overlapping (though grid handles layout) */
+}
+
+.expanded .cardText {
+  display: none;
+}
+
+.expanded .videoWrapper {
+  height: 100%;
+  aspect-ratio: auto;
+  /* Let it fill the container */
+  flex-grow: 1;
+}
+
+.expanded .videoWrapper lite-youtube {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* If the viewport is too small for 3 columns, just span full width */
+@media (max-width: 1000px) {
+  .expanded {
+    grid-column: 1 / -1;
+  }
+}
+
+.card:hover:not(.expanded) {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.videoWrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.cardText {
+  padding: 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+  background: #fff;
+  flex-grow: 1;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .featuredCard {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredContent {
+    padding: 2.5rem;
+    order: 2;
+  }
+
+  .featuredVideoWrapper {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .expanded {
+    grid-column: 1 / -1;
+  }
+
+  .featuredContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .featuredText {
+    font-size: 1.15rem;
   }
 }
