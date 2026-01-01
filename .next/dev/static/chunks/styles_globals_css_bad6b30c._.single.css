@@ -1,0 +1,109 @@
+/* [project]/styles/globals.css [app-client] (css) */
+@font-face {
+  font-family: segoe;
+  src: url("../media/SegoeUI-Bold.4157b13b.eot");
+  src: url("../media/SegoeUI-Bold.4157b13b.eot") format("embedded-opentype"), url("../media/SegoeUI-Bold.c29fea89.woff2") format("woff2"), url("../media/SegoeUI-Bold.4eede427.woff") format("woff"), url("../media/SegoeUI-Bold.540c8094.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica LT Std;
+  src: url("../media/subset-HelveticaLTStd-Light.d48dfb31.eot");
+  src: url("../media/subset-HelveticaLTStd-Light.d48dfb31.eot") format("embedded-opentype"), url("../media/subset-HelveticaLTStd-Light.38560bd6.woff2") format("woff2"), url("../media/subset-HelveticaLTStd-Light.f6b6302c.woff") format("woff"), url("../media/subset-HelveticaLTStd-Light.fe8f2c07.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica LT Std;
+  src: url("../media/subset-HelveticaLTStd-LightObl.7c696343.eot");
+  src: url("../media/subset-HelveticaLTStd-LightObl.7c696343.eot") format("embedded-opentype"), url("../media/subset-HelveticaLTStd-LightObl.7e69c1bc.woff2") format("woff2"), url("../media/subset-HelveticaLTStd-LightObl.142217c3.woff") format("woff"), url("../media/subset-HelveticaLTStd-LightObl.59a98803.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Century;
+  src: url("../media/Century.68b8f692.eot");
+  src: url("../media/Century.68b8f692.eot") format("embedded-opentype"), url("../media/Century.4fb02f01.woff2") format("woff2"), url("../media/Century.0d2f7d96.woff") format("woff"), url("../media/Century.47f52c38.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+body {
+  background-color: #f2f2f2;
+  max-width: 1880px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: segoe;
+}
+
+span, p, label, ::placeholder, ul, li, select, button, input, a {
+  font-family: Helvetica LT Std;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: #000;
+  z-index: 10;
+  background: #fff;
+  border-radius: 38px;
+  padding: 9px 14px;
+  position: relative;
+  top: 47px;
+  left: 12px;
+  font-size: 19px !important;
+}
+
+.swiper-button-next:after {
+  left: -23px;
+}
+
+.content_form {
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  margin-top: 80px;
+  display: grid;
+}
+
+@media (max-width: 780px) {
+  .content_form {
+    grid-template-columns: 1fr;
+  }
+}
+
+body {
+  --wp--preset--color--black: #000;
+  --wp--preset--font-size--small: 13px;
+  --wp--preset--font-size--medium: 20px;
+  --wp--preset--font-size--large: 36px;
+}
+
+.has-small-font-size {
+  font-size: var(--wp--preset--font-size--small);
+}
+
+.has-medium-font-size {
+  font-size: var(--wp--preset--font-size--medium);
+}
+
+.has-large-font-size {
+  font-size: var(--wp--preset--font-size--large);
+}
+
+/*# sourceMappingURL=styles_globals_css_bad6b30c._.single.css.map*/

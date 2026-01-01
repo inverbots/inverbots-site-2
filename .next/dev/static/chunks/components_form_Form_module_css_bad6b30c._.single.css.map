@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/form/Form.module.css"],"sourcesContent":[".form {\r\n  min-height: 360px;\r\n}\r\n\r\n.form input,\r\n.form select {\r\n  border: none;\r\n  background: transparent;\r\n  font-size: 22px;\r\n  border-bottom: 1px solid;\r\n  font-style: italic;\r\n  padding: 12px;\r\n  color: black;\r\n  width: 100%;\r\n}\r\n\r\n.form input::placeholder {\r\n  color: #000;\r\n}\r\n\r\n.terms {\r\n  font-size: 14px;\r\n  padding: 20px 0px;\r\n}\r\n\r\n.buton {\r\n  font-size: 18px;\r\n  background-color: #000;\r\n  color: white;\r\n  border: none;\r\n  padding: 9px 28px;\r\n}\r\n\r\n\r\n.acceptTerms {\r\n  width: 22px !important;\r\n}\r\n\r\n@media(max-width:780px) {\r\n\r\n  .form {\r\n    max-width: 90%;\r\n    margin: auto;\r\n    overflow: hidden;\r\n    min-height: 380px;\r\n  }\r\n\r\n\r\n\r\n  .content_form {\r\n    max-height: 250px;\r\n  }\r\n}\r\n\r\n.displayNone {\r\n  display: none;\r\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;;;;;;AAYA;;;;AAIA;;;;;AAKA;;;;;;;;AASA;;;;AAIA;EAEE;;;;;;;EASA;;;;;AAKF"}}]
+}

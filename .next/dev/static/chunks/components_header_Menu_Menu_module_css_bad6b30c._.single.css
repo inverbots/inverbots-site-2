@@ -1,0 +1,212 @@
+/* [project]/components/header/Menu/Menu.module.css [app-client] (css) */
+.Menu-module__VqjLsq__navigation {
+  z-index: 2;
+  grid-template-columns: 20% 80%;
+  padding: 14px 0;
+  display: grid;
+  position: sticky;
+  top: 0;
+}
+
+.Menu-module__VqjLsq__logo_ref {
+  position: relative;
+}
+
+.Menu-module__VqjLsq__logo_title {
+  color: #fff;
+  letter-spacing: 1px;
+  background: #000;
+  margin: 0;
+  padding: 17px 21px;
+  font-family: Century;
+  font-size: 32px;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  top: -18px;
+}
+
+.Menu-module__VqjLsq__logo_title:after {
+  content: "";
+  border-bottom: 24px solid #f2f2f2;
+  border-left: 15px solid #0000;
+  position: absolute;
+  bottom: -1px;
+  right: -2px;
+}
+
+.Menu-module__VqjLsq__menu {
+  text-transform: uppercase;
+  color: #000;
+  justify-content: space-around;
+  max-width: 87%;
+  font-size: 14px;
+  list-style: none;
+  display: flex;
+}
+
+.Menu-module__VqjLsq__menu_link {
+  width: 100%;
+  position: relative;
+}
+
+.Menu-module__VqjLsq__menu_link a {
+  color: #000;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.Menu-module__VqjLsq__submenu {
+  z-index: 2;
+  background: #000;
+  border-top: 4px solid;
+  width: 120px;
+  max-height: 0;
+  padding: 0;
+  list-style: none;
+  transition: all .35s;
+  position: absolute;
+  top: 24px;
+  overflow: hidden;
+}
+
+.Menu-module__VqjLsq__menu_link:hover .Menu-module__VqjLsq__submenu {
+  z-index: 2;
+  max-height: 1000px;
+  padding: 10px;
+  transition: all .35s ease-in;
+}
+
+.Menu-module__VqjLsq__submenu_link {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+}
+
+.Menu-module__VqjLsq__submenu_link a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.Menu-module__VqjLsq__mobil_icon {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .Menu-module__VqjLsq__header {
+    background: #000;
+    height: 68px;
+  }
+
+  .Menu-module__VqjLsq__logo_title:after {
+    border-bottom: #0000;
+    border-left: #0000;
+  }
+
+  .Menu-module__VqjLsq__mobil_icon {
+    width: 45px;
+    height: 80%;
+    display: block;
+    position: absolute;
+    top: 70%;
+    right: 10px;
+  }
+
+  .Menu-module__VqjLsq__menu {
+    text-align: right;
+    color: #fff;
+    background: #000;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 17px;
+    transition: all .3s;
+    position: fixed;
+    top: 67px;
+    right: -100%;
+  }
+
+  .Menu-module__VqjLsq__showMenu {
+    transition: all .3s;
+    right: 0 !important;
+  }
+
+  .Menu-module__VqjLsq__line_menu {
+    transition: all .35s;
+  }
+
+  .Menu-module__VqjLsq__showMenu .Menu-module__VqjLsq__line__top {
+    top: inherit;
+    top: 10px;
+    transform: rotate(45deg);
+  }
+
+  .Menu-module__VqjLsq__showMenu {
+    opacity: 1;
+  }
+
+  .Menu-module__VqjLsq__showMenu .Menu-module__VqjLsq__line__middle {
+    opacity: 0;
+  }
+
+  .Menu-module__VqjLsq__line__botton {
+    top: inherit;
+    transform: rotate(0);
+  }
+
+  .Menu-module__VqjLsq__showMenu .Menu-module__VqjLsq__line__botton {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+
+  .Menu-module__VqjLsq__menu_link {
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+  }
+
+  .Menu-module__VqjLsq__menu_link a {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .Menu-module__VqjLsq__submenu {
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 0 !important;
+  }
+
+  .Menu-module__VqjLsq__mobil_icon {
+    width: 45px;
+    height: 80%;
+    transition: all .35s;
+    display: block;
+    position: absolute;
+    top: 70%;
+  }
+
+  .Menu-module__VqjLsq__line_menu {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 78%;
+    height: 3px;
+    position: absolute;
+  }
+
+  .Menu-module__VqjLsq__line__top {
+    top: auto;
+  }
+
+  .Menu-module__VqjLsq__line__middle {
+    top: 50%;
+  }
+
+  .Menu-module__VqjLsq__line__botton {
+    top: 100%;
+  }
+}
+
+/*# sourceMappingURL=components_header_Menu_Menu_module_css_bad6b30c._.single.css.map*/

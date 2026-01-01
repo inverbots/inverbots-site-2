@@ -1,0 +1,53 @@
+/* [project]/components/post-filter/PostFilter.module.css [app-client] (css) */
+.PostFilter-module__ITd9OG__contentFilter {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 90%;
+  margin: auto;
+  display: grid;
+}
+
+.PostFilter-module__ITd9OG__filter_options {
+  text-transform: uppercase;
+  cursor: pointer;
+  max-width: 80%;
+  margin: 25px auto 18px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+}
+
+.PostFilter-module__ITd9OG__content_btn {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.PostFilter-module__ITd9OG__btn {
+  color: #fff;
+  text-transform: uppercase;
+  filter: drop-shadow(0 4px 4px #00000040);
+  background-color: #000;
+  padding: 12px 20px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media (max-width: 780px) {
+  .PostFilter-module__ITd9OG__filter_options {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    max-width: 100%;
+    margin: 5px;
+    padding: 0;
+    font-size: 17px;
+  }
+
+  .PostFilter-module__ITd9OG__contentFilter {
+    grid-template-columns: 1fr;
+    margin-top: 25px;
+  }
+}
+
+/*# sourceMappingURL=components_post-filter_PostFilter_module_css_bad6b30c._.single.css.map*/

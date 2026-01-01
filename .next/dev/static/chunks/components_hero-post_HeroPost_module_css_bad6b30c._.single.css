@@ -1,0 +1,80 @@
+/* [project]/components/hero-post/HeroPost.module.css [app-client] (css) */
+.HeroPost-module__gPm8kq__banner {
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.HeroPost-module__gPm8kq__logo_title {
+  color: #fff;
+  z-index: 2;
+  background: #000;
+  border: .1px solid;
+  max-width: 50%;
+  margin: auto;
+  padding: 11px 42px;
+  font-family: Century;
+  font-size: 45px;
+  position: absolute;
+  top: 33%;
+  left: 10%;
+}
+
+.HeroPost-module__gPm8kq__title {
+  z-index: 2;
+  color: #fff;
+  max-width: 50%;
+  font-size: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 27%;
+  left: 10%;
+  font-family: Century !important;
+}
+
+.HeroPost-module__gPm8kq__featured_image {
+  object-fit: cover;
+  object-position: center;
+  min-width: 100%;
+  max-height: 300px;
+}
+
+.HeroPost-module__gPm8kq__content_image {
+  position: relative;
+}
+
+.HeroPost-module__gPm8kq__content_image:before {
+  content: "";
+  z-index: 1;
+  background-image: linear-gradient(to right, #000000bf, #0000);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.HeroPost-module__gPm8kq__content_image .HeroPost-module__gPm8kq__featured_image {
+  filter: blur(10px);
+  z-index: 2;
+}
+
+@media (max-width: 780px) {
+  .HeroPost-module__gPm8kq__title {
+    max-width: 100%;
+    font-size: 30px;
+    top: 35%;
+  }
+
+  .HeroPost-module__gPm8kq__logo_title {
+    max-width: 100%;
+    margin: auto;
+    padding: 11px 12px;
+    font-size: 32px;
+    top: 14%;
+    left: 10%;
+  }
+}
+
+/*# sourceMappingURL=components_hero-post_HeroPost_module_css_bad6b30c._.single.css.map*/

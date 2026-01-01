@@ -1,0 +1,36 @@
+/* [project]/components/text-call-to-action/style.module.css [app-client] (css) */
+.style-module__TO2-Pq__text_form {
+  max-width: 80%;
+  margin: auto;
+}
+
+.style-module__TO2-Pq__form_text {
+  background: #d9d9d9;
+  height: 380px;
+  margin: auto;
+  display: flex;
+}
+
+.style-module__TO2-Pq__form_content {
+  max-width: 80%;
+  margin: auto;
+}
+
+.style-module__TO2-Pq__form_title {
+  margin: 0;
+  font-size: 30px;
+}
+
+.style-module__TO2-Pq__from_description {
+  max-width: 80%;
+  font-size: 18px;
+}
+
+@media (max-width: 780px) {
+  .style-module__TO2-Pq__form_title {
+    margin: 0;
+    font-size: 23px;
+  }
+}
+
+/*# sourceMappingURL=components_text-call-to-action_style_module_css_bad6b30c._.single.css.map*/

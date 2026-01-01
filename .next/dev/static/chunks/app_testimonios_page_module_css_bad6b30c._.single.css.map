@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/testimonios/page.module.css"],"sourcesContent":[".testimonials_list {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\r\n  gap: 15px;\r\n  max-width: 95%;\r\n  margin: auto;\r\n}"],"names":[],"mappings":"AAAA"}}]
+}

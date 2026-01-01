@@ -1,0 +1,10 @@
+/* [project]/app/testimonios/page.module.css [app-client] (css) */
+.page-module__Jn7CWa__testimonials_list {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 95%;
+  margin: auto;
+  display: grid;
+}
+
+/*# sourceMappingURL=app_testimonios_page_module_css_bad6b30c._.single.css.map*/

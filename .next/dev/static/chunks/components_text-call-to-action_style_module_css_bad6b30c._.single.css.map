@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/text-call-to-action/style.module.css"],"sourcesContent":["/** Text form */\r\n.text_form {\r\n  max-width: 80%;\r\n  margin: auto;\r\n}\r\n\r\n.form_text {\r\n  background: #D9D9D9;\r\n  margin: auto;\r\n  height: 380px;\r\n  display: flex;\r\n}\r\n\r\n.form_content {\r\n  max-width: 80%;\r\n  margin: auto;\r\n}\r\n\r\n.form_title {\r\n  margin: 0px;\r\n  font-size: 30px;\r\n}\r\n\r\n.from_description {\r\n  max-width: 80%;\r\n  font-size: 18px;\r\n}\r\n\r\n@media(max-width:780px) {\r\n  .form_title {\r\n    margin: 0px;\r\n    font-size: 23px;\r\n  }\r\n}"],"names":[],"mappings":"AACA;;;;;AAKA;;;;;;;AAOA;;;;;AAKA;;;;;AAKA;;;;;AAKA;EACE"}}]
+}

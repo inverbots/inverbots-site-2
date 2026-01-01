@@ -1,0 +1,67 @@
+/* [project]/components/header/Header.module.css [app-client] (css) */
+.Header-module__-2yUHq__header {
+  z-index: 4;
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 8px #0000002b;
+}
+
+@media (max-width: 780px) {
+  .Header-module__-2yUHq__header {
+    background: #000;
+    height: 68px;
+  }
+
+  .Header-module__-2yUHq__logo_title:after {
+    border-bottom: #0000;
+    border-left: #0000;
+  }
+
+  .Header-module__-2yUHq__mobil_icon {
+    width: 45px;
+    height: 80%;
+    display: block;
+    position: absolute;
+    top: 70%;
+    right: 10px;
+  }
+
+  .Header-module__-2yUHq__menu {
+    text-align: right;
+    color: #fff;
+    background: #000;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 17px;
+    transition: all .3s;
+    position: absolute;
+    right: 0;
+  }
+
+  .Header-module__-2yUHq__menu.Header-module__-2yUHq__show__menu {
+    transition: all .3s;
+    right: -100%;
+  }
+
+  .Header-module__-2yUHq__menu_link {
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .Header-module__-2yUHq__menu_link a {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .Header-module__-2yUHq__submenu {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 16px 0 0 !important;
+  }
+}
+
+/*# sourceMappingURL=components_header_Header_module_css_bad6b30c._.single.css.map*/

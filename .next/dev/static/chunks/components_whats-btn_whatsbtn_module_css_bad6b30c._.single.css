@@ -1,0 +1,19 @@
+/* [project]/components/whats-btn/whatsbtn.module.css [app-client] (css) */
+.whatsbtn-module__KPKcoq__whatsapp_btn {
+  z-index: 9;
+  color: #fff;
+  cursor: pointer;
+  background-color: #25d366;
+  border-radius: 20px 0 0 20px;
+  margin: 0;
+  padding: 6px 14px 6px 16px;
+  font-size: 40px;
+  line-height: 0;
+  transition: all .35s;
+  position: fixed;
+  top: 75%;
+  right: 0;
+  box-shadow: 0 4px 4px #00000040;
+}
+
+/*# sourceMappingURL=components_whats-btn_whatsbtn_module_css_bad6b30c._.single.css.map*/

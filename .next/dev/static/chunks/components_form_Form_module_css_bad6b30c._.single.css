@@ -1,0 +1,55 @@
+/* [project]/components/form/Form.module.css [app-client] (css) */
+.Form-module__Dip6xq__form {
+  min-height: 360px;
+}
+
+.Form-module__Dip6xq__form input, .Form-module__Dip6xq__form select {
+  color: #000;
+  background: none;
+  border: none;
+  border-bottom: 1px solid;
+  width: 100%;
+  padding: 12px;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.Form-module__Dip6xq__form input::placeholder {
+  color: #000;
+}
+
+.Form-module__Dip6xq__terms {
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.Form-module__Dip6xq__buton {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 9px 28px;
+  font-size: 18px;
+}
+
+.Form-module__Dip6xq__acceptTerms {
+  width: 22px !important;
+}
+
+@media (max-width: 780px) {
+  .Form-module__Dip6xq__form {
+    max-width: 90%;
+    min-height: 380px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .Form-module__Dip6xq__content_form {
+    max-height: 250px;
+  }
+}
+
+.Form-module__Dip6xq__displayNone {
+  display: none;
+}
+
+/*# sourceMappingURL=components_form_Form_module_css_bad6b30c._.single.css.map*/

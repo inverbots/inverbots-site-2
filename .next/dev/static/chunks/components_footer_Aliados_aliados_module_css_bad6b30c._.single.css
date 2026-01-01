@@ -1,0 +1,49 @@
+/* [project]/components/footer/Aliados/aliados.module.css [app-client] (css) */
+.aliados-module__-bCvyq__aliados__title {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.aliados-module__-bCvyq__aliados {
+  background: var(--wp--preset--color--black);
+}
+
+.aliados-module__-bCvyq__aliados__content {
+  max-width: 90%;
+  margin: auto;
+  padding: 25px 0;
+}
+
+.aliados-module__-bCvyq__aliados__logos {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.aliados-module__-bCvyq__aliados__logo_ninja {
+  object-fit: contain;
+  width: 208px;
+  height: 70px;
+}
+
+.aliados-module__-bCvyq__aliados__logo_kinecktik {
+  object-fit: contain;
+  background-color: #fff;
+  width: 167px;
+  height: 47px;
+  padding: 8px;
+}
+
+@media (max-width: 780px) {
+  .aliados-module__-bCvyq__aliados_aliados__title {
+    text-align: center;
+  }
+
+  .aliados-module__-bCvyq__aliados__logos {
+    justify-content: center;
+    gap: 0;
+  }
+}
+
+/*# sourceMappingURL=components_footer_Aliados_aliados_module_css_bad6b30c._.single.css.map*/
